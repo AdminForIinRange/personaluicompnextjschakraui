@@ -1,18 +1,13 @@
 import Image from "next/image";
 import styles from "./page.module.css";
-import { Avatar, Box } from "@chakra-ui/react";
+import { Avatar, Box, Text } from "@chakra-ui/react";
 
 export default function Home() {
   return (
-   <>
-
-
-   <Box>
-
- 
-
-   </Box>
-   
-   </>
+    <>
+      <Box>
+        <Text>Testing Next.js + Chakra UI</Text>
+      </Box>
+    </>
   );
 }
