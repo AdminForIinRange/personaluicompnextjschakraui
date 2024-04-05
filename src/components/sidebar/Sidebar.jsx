@@ -19,7 +19,7 @@ const Sidebar = () => {
   useEffect(() => {
     const handleKeyDown = (event) => {
       // Check if the key combination is Ctrl + Z or Cmd + Z (for Mac)
-      if ((event.ctrlKey || event.metaKey) && event.key.toLowerCase() === "z") {
+      if ((event.shiftKey || event.metaKey) && event.key.toLowerCase() === "q") {
         if (isOpen) {
           onClose();
         } else {
