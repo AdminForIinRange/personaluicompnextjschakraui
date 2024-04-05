@@ -24,7 +24,7 @@ import { GiHypersonicBolt } from "react-icons/gi";
 
 const Hero = () => {
   const [isTablet] = useMediaQuery(
-    "(min-width: 768px) and (max-width: 1024px)"
+    "(min-width: 768px) and (max-width: 1024px)",
   );
 
   return (
@@ -36,17 +36,13 @@ const Hero = () => {
           w={["90%", "90%", "80%", "60%"]}
           mt={"100px"}
         >
-            
-
           <Text
             fontSize={["35px", "45px", "45px", "65px"]}
             fontWeight={700}
             textAlign={"center"}
             fontFamily={"Raleway"}
           >
-            Accelerate UI Development in React using
-            Amazing presets. 
- 
+            Accelerate UI Development in React using Amazing presets.
           </Text>
         </HStack>
 
@@ -60,7 +56,7 @@ const Hero = () => {
               transform: "scale(1.03)",
               boxShadow: "0 5px 25px gray",
               bgColor: " #D6BCFA",
-              width:"350px",
+              width: "350px",
               color: "#44337A",
             }}
             color={"white"}

@@ -87,7 +87,12 @@ const Sidebar = () => {
               mt={"20px"}
               w={"60%"}
             >
-              <Button variant={"ghost"} fontSize={"17px"} colorScheme={"gray"}          fontWeight={"400"}>
+              <Button
+                variant={"ghost"}
+                fontSize={"17px"}
+                colorScheme={"gray"}
+                fontWeight={"400"}
+              >
                 🃏 Cards
               </Button>
               <Button

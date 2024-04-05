@@ -1,10 +1,8 @@
-import Sidebar from '@/components/sidebar/Sidebar'
-import React from 'react'
+import Sidebar from "@/components/sidebar/Sidebar";
+import React from "react";
 
 const ComponentsPage = () => {
-  return (
-    <div></div>
-  )
-}
+  return <div></div>;
+};
 
-export default ComponentsPage
+export default ComponentsPage;
