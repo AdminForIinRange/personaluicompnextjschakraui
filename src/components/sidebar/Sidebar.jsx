@@ -14,6 +14,11 @@ import {
 } from "@chakra-ui/react";
 
 const Sidebar = () => {
+  //-------------------------------------------------------------------
+  // if you dont wnat a drawer , then aplly 2 hstacks on either sides,
+  //and one more hstack preanting them both together, simple
+  //-------------------------------------------------------------------
+
   const { isOpen, onOpen, onClose } = useDisclosure();
   const btnRef = useRef();
 
