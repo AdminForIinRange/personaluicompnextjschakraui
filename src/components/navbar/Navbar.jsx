@@ -20,9 +20,7 @@ import { FaPen } from "react-icons/fa";
 import React from "react";
 
 const Navbar = () => {
-  const [isTablet] = useMediaQuery(
-    "(max-width: 1024px)"
-  );
+  const [isTablet] = useMediaQuery("(max-width: 1024px)");
 
   return (
     <>
@@ -33,11 +31,16 @@ const Navbar = () => {
         justify={"center"}
         align={"center"}
         // boxShadow={"xl"}\
-mt={"15px"}
+        mt={"15px"}
         px={5}
         gap={"20px"}
       >
-        <Box w={"70px"} h={"70px"} borderRadius={"100px"} bgColor={"purple.200"} />
+        <Box
+          w={"70px"}
+          h={"70px"}
+          borderRadius={"100px"}
+          bgColor={"purple.200"}
+        />
         <Button variant={"solid"} color={"black"}>
           <Text color={"black"}>Example</Text>
         </Button>
