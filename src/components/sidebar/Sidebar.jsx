@@ -44,6 +44,22 @@ const Sidebar = () => {
     };
   }, [isOpen, onClose, onOpen]);
 
+  const CompItems = [
+    
+    { title: "🃏 Cards", path: "" },
+    { title: "📦 Modal", path: "" },
+    { title: "🖼️ frames", path: "" },
+    { title: "🏃‍♂️Animations", path: "" },
+    { title: "📈 Charts", path: "" },
+  ];
+
+
+  const PresetItems = [
+    { title: "🪵 Login Form", path: "" },
+    { title: "🦸 Hero", path: "" },
+
+  ];
+
   return (
     <>
       <Drawer
@@ -52,87 +68,68 @@ const Sidebar = () => {
         placement="left"
         onClose={onClose}
         finalFocusRef={btnRef}
+           // Remove boxShadow style
+           overlayStyle={{ zIndex: "unset" }} // Adjust zIndex of overlay to prevent shadow
+           // Adjust DrawerContent styles
+           drawerContentProps={{ bg: "transparent", shadow: "none" }}
       >
         <DrawerContent>
-          <DrawerBody p={"10"}>
+          <DrawerBody p={"10"} overflowX={"hidden"}> 
             <Text fontSize={"22.5px"} fontWeight={"600"}>
               Presets
             </Text>
             <VStack
               justify={"left"}
               align={"left"}
-              gap={"10px"}
+              gap={"30px"}
               mt={"20px"}
-              w={"60%"}
+              w={"100%"}
             >
-              <Button
-                variant={"none"}
-                fontSize={"17px"}
-                colorScheme={"gray"}
-                fontWeight={"400"}
-              >
-                🪵 Login Form
-              </Button>
-              <Button
-                variant={"none"}
-                fontWeight={"400"}
-                fontSize={"17px"}
-                colorScheme={"gray"}
-              >
-                🦸 Hero Text
-              </Button>
+             {PresetItems.map((item, index) => (
+                <Text
+                  key={index}
+                  cursor={"pointer"}
+                  transition="transform, 0.3s ease-in-out"
+                  _hover={{
+           
+                    marginLeft: "40px",
+                  }}
+                  w={"100%"}
+                  textAlign={"left"}
+                  fontSize={"17px"}
+                  fontWeight={"400"}
+                >
+                  {item.title}
+                </Text>
+              ))}
             </VStack>
             <Text mt={"100px"} fontSize={"22.5px"} fontWeight={"600"}>
-              Components
+              Presets
             </Text>
             <VStack
               justify={"left"}
               align={"left"}
-              gap={"10px"}
+              gap={"30px"}
               mt={"20px"}
-              w={"60%"}
+              w={"100%"}
             >
-              <Button
-                variant={"ghost"}
-                fontSize={"17px"}
-                colorScheme={"gray"}
-                fontWeight={"400"}
-              >
-                🃏 Cards
-              </Button>
-              <Button
-                variant={"none"}
-                fontWeight={"400"}
-                fontSize={"17px"}
-                colorScheme={"gray"}
-              >
-                📦 Modal
-              </Button>
-              <Button
-                variant={"none"}
-                fontWeight={"400"}
-                fontSize={"17px"}
-                colorScheme={"gray"}
-              >
-                🖼️ frames
-              </Button>
-
-              <Button
-                variant={"none"}
-                fontWeight={"400"}
-                fontSize={"17px"}
-                colorScheme={"gray"}
-              >
-                🏃‍♂️Animations
-              </Button>
-              <Button
-                variant={"none"}
-                fontWeight={"400"}
-                fontSize={"17px"}
-                colorScheme={"gray"}
-              >
-                📈 Charts
-              </Button>
+             {CompItems.map((item, index) => (
+                <Text
+                  key={index}
+                  cursor={"pointer"}
+                  transition="transform, 0.3s ease-in-out"
+                  _hover={{
+           
+                    marginLeft: "40px",
+                  }}
+                  w={"100%"}
+                  textAlign={"left"}
+                  fontSize={"17px"}
+                  fontWeight={"400"}
+                >
+                  {item.title}
+                </Text>
+              ))}
             </VStack>
           </DrawerBody>
           <DrawerFooter></DrawerFooter>
