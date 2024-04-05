@@ -68,12 +68,10 @@ const Sidebar = () => {
         placement="left"
         onClose={onClose}
         finalFocusRef={btnRef}
-           // Remove boxShadow style
-           overlayStyle={{ zIndex: "unset" }} // Adjust zIndex of overlay to prevent shadow
-           // Adjust DrawerContent styles
-           drawerContentProps={{ bg: "transparent", shadow: "none" }}
+        
+       
       >
-        <DrawerContent>
+        <DrawerContent boxShadow={"none"}   >
           <DrawerBody p={"10"} overflowX={"hidden"}> 
             <Text fontSize={"22.5px"} fontWeight={"600"}>
               Presets
@@ -92,7 +90,7 @@ const Sidebar = () => {
                   transition="transform, 0.3s ease-in-out"
                   _hover={{
            
-                    marginLeft: "40px",
+                    marginLeft: "15px",
                   }}
                   w={"100%"}
                   textAlign={"left"}
@@ -104,7 +102,7 @@ const Sidebar = () => {
               ))}
             </VStack>
             <Text mt={"100px"} fontSize={"22.5px"} fontWeight={"600"}>
-              Presets
+              Components
             </Text>
             <VStack
               justify={"left"}
@@ -120,7 +118,7 @@ const Sidebar = () => {
                   transition="transform, 0.3s ease-in-out"
                   _hover={{
            
-                    marginLeft: "40px",
+                    marginLeft: "15px",
                   }}
                   w={"100%"}
                   textAlign={"left"}
