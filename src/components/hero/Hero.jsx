@@ -20,6 +20,7 @@ import { GoGoal } from "react-icons/go";
 import { FaPen } from "react-icons/fa";
 import React from "react";
 import { HiArrowLongRight } from "react-icons/hi2";
+import { GiHypersonicBolt } from "react-icons/gi";
 
 const Hero = () => {
   const [isTablet] = useMediaQuery(
@@ -35,14 +36,17 @@ const Hero = () => {
           w={["90%", "90%", "80%", "60%"]}
           mt={"100px"}
         >
+            
+
           <Text
             fontSize={["35px", "45px", "45px", "65px"]}
             fontWeight={700}
             textAlign={"center"}
             fontFamily={"Raleway"}
           >
-            Accelerate UI Development in React using Amazing presets.{" "}
-            <Text as={"span"}> </Text>
+            Accelerate UI Development in React using
+            Amazing presets. 
+ 
           </Text>
         </HStack>
 
