@@ -20,7 +20,8 @@ import { FaPen } from "react-icons/fa";
 import React from "react";
 import fruitImage from "../img/fruit3.png";
 import Image from "next/image";
-const Navbar = () => {
+const Navbar = () => {  // Sepatre the dynamic and static components, for isolate teh btn's and 
+  //meunu as they are dynamically changing and requires user input
   const [isTablet] = useMediaQuery("(max-width: 1024px)");
 
   return (

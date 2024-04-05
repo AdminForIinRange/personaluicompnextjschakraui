@@ -60,6 +60,7 @@ const Hero = () => {
               transform: "scale(1.03)",
               boxShadow: "0 5px 25px gray",
               bgColor: " #D6BCFA",
+              width:"350px",
               color: "#44337A",
             }}
             color={"white"}
