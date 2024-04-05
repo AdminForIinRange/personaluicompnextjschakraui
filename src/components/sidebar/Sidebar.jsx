@@ -45,7 +45,6 @@ const Sidebar = () => {
   }, [isOpen, onClose, onOpen]);
 
   const CompItems = [
-    
     { title: "🃏 Cards", path: "" },
     { title: "📦 Modal", path: "" },
     { title: "🖼️ frames", path: "" },
@@ -53,11 +52,9 @@ const Sidebar = () => {
     { title: "📈 Charts", path: "" },
   ];
 
-
   const PresetItems = [
     { title: "🪵 Login Form", path: "" },
     { title: "🦸 Hero", path: "" },
-
   ];
 
   return (
@@ -68,11 +65,9 @@ const Sidebar = () => {
         placement="left"
         onClose={onClose}
         finalFocusRef={btnRef}
-        
-       
       >
-        <DrawerContent   >
-          <DrawerBody p={"10"} overflowX={"hidden"}> 
+        <DrawerContent>
+          <DrawerBody p={"10"} overflowX={"hidden"}>
             <Text fontSize={"22.5px"} fontWeight={"600"}>
               Presets
             </Text>
@@ -83,13 +78,12 @@ const Sidebar = () => {
               mt={"20px"}
               w={"100%"}
             >
-             {PresetItems.map((item, index) => (
+              {PresetItems.map((item, index) => (
                 <Text
                   key={index}
                   cursor={"pointer"}
                   transition="transform, 0.3s ease-in-out"
                   _hover={{
-           
                     marginLeft: "15px",
                   }}
                   w={"100%"}
@@ -111,13 +105,12 @@ const Sidebar = () => {
               mt={"20px"}
               w={"100%"}
             >
-             {CompItems.map((item, index) => (
+              {CompItems.map((item, index) => (
                 <Text
                   key={index}
                   cursor={"pointer"}
                   transition="transform, 0.3s ease-in-out"
                   _hover={{
-           
                     marginLeft: "15px",
                   }}
                   w={"100%"}
