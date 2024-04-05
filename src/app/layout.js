@@ -3,6 +3,7 @@ import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
 import { ChakraProvider } from "@chakra-ui/react";
+import Navbar from "@/components/navbar/Navbar";
 
 export const metadata = {
   title: {
@@ -15,8 +16,22 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>
-        <ChakraProvider>{children}</ChakraProvider>
+      <head>
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="anonymous"
+        />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+          rel="stylesheet"
+        />
+      </head>
+      <body className="RootLayout">
+        <ChakraProvider>
+          <Navbar />
+          {children}
+        </ChakraProvider>
       </body>
     </html>
   );

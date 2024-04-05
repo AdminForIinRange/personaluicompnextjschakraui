@@ -2,7 +2,7 @@ import Image from "next/image";
 import styles from "./page.module.css";
 import { Avatar, Box, Text } from "@chakra-ui/react";
 
-export default function Home() {
+export default function Home() { // Landing Page
   return (
     <>
       <Box>
