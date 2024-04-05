@@ -1,9 +1,10 @@
+import Sidebar from '@/components/sidebar/Sidebar'
 import React from 'react'
 
-const page = () => {
+const ComponentsPage = () => {
   return (
-    <div>page</div>
+    <div></div>
   )
 }
 
-export default page
+export default ComponentsPage
