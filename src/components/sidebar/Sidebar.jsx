@@ -9,7 +9,6 @@ import {
   DrawerContent,
   DrawerCloseButton,
   Text,
-  ButtonGroup,
   useDisclosure,
   Button,
 } from "@chakra-ui/react";
@@ -43,29 +42,86 @@ const Sidebar = () => {
   return (
     <>
       <Drawer
+        size={"xs"}
         isOpen={isOpen}
         placement="left"
         onClose={onClose}
         finalFocusRef={btnRef}
       >
         <DrawerContent>
-          <DrawerCloseButton />
           <DrawerBody p={"10"}>
-            <Text fontSize={"22.5px"} fontWeight={"600"}>Presets</Text>
-            <VStack justify={"center"} align={"left"} gap={"10px"} mt={"20px"} >
-                <ButtonGroup></ButtonGroup>
-              <Button variant={"ghost"} fontSize={"17px"} colorScheme={"gray"}>
+            <Text fontSize={"22.5px"} fontWeight={"600"}>
+              Presets
+            </Text>
+            <VStack
+              justify={"left"}
+              align={"left"}
+              gap={"10px"}
+              mt={"20px"}
+              w={"60%"}
+            >
+              <Button
+                variant={"none"}
+                fontSize={"17px"}
+                colorScheme={"gray"}
+                fontWeight={"400"}
+              >
                 🪵 Login Form
               </Button>
-              <Button variant={"ghost"} fontSize={"17px"} colorScheme={"gray"}>
-                🪵 Login Form
+              <Button
+                variant={"none"}
+                fontWeight={"400"}
+                fontSize={"17px"}
+                colorScheme={"gray"}
+              >
+                🦸 Hero Text
               </Button>
-              <Button variant={"ghost"} fontSize={"17px"} colorScheme={"gray"}>
-                🪵 Login Form
+            </VStack>
+            <Text mt={"100px"} fontSize={"22.5px"} fontWeight={"600"}>
+              Components
+            </Text>
+            <VStack
+              justify={"left"}
+              align={"left"}
+              gap={"10px"}
+              mt={"20px"}
+              w={"60%"}
+            >
+              <Button variant={"ghost"} fontSize={"17px"} colorScheme={"gray"}          fontWeight={"400"}>
+                🃏 Cards
+              </Button>
+              <Button
+                variant={"none"}
+                fontWeight={"400"}
+                fontSize={"17px"}
+                colorScheme={"gray"}
+              >
+                📦 Modal
+              </Button>
+              <Button
+                variant={"none"}
+                fontWeight={"400"}
+                fontSize={"17px"}
+                colorScheme={"gray"}
+              >
+                🖼️ frames
               </Button>
 
-              <Button variant={"ghost"} fontSize={"17px"} colorScheme={"gray"}>
-                🪵 Login Form
+              <Button
+                variant={"none"}
+                fontWeight={"400"}
+                fontSize={"17px"}
+                colorScheme={"gray"}
+              >
+                🏃‍♂️Animations
+              </Button>
+              <Button
+                variant={"none"}
+                fontWeight={"400"}
+                fontSize={"17px"}
+                colorScheme={"gray"}
+              >
+                📈 Charts
               </Button>
             </VStack>
           </DrawerBody>
