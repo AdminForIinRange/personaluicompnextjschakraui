@@ -32,7 +32,7 @@ const Hero = () => {
         <HStack
           justify={"center"}
           align={"center"}
-          w={["90%", "90%", "80%", "70%"]}
+          w={["90%", "90%", "80%", "60%"]}
           mt={"100px"}
         >
           <Text
