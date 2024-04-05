@@ -2,14 +2,16 @@
 
 import React, { useRef, useEffect } from "react";
 import {
+  VStack,
   Drawer,
   DrawerBody,
   DrawerFooter,
   DrawerContent,
   DrawerCloseButton,
   Text,
+  ButtonGroup,
   useDisclosure,
-  Button
+  Button,
 } from "@chakra-ui/react";
 
 const Sidebar = () => {
@@ -19,7 +21,10 @@ const Sidebar = () => {
   useEffect(() => {
     const handleKeyDown = (event) => {
       // Check if the key combination is Ctrl + Z or Cmd + Z (for Mac)
-      if ((event.shiftKey || event.metaKey) && event.key.toLowerCase() === "q") {
+      if (
+        (event.shiftKey || event.metaKey) &&
+        event.key.toLowerCase() === "q"
+      ) {
         if (isOpen) {
           onClose();
         } else {
@@ -37,7 +42,6 @@ const Sidebar = () => {
 
   return (
     <>
-    
       <Drawer
         isOpen={isOpen}
         placement="left"
@@ -46,9 +50,24 @@ const Sidebar = () => {
       >
         <DrawerContent>
           <DrawerCloseButton />
-          <DrawerBody>
-            <Text >Presets</Text>
-            <Text>🪵 Login Form</Text>
+          <DrawerBody p={"10"}>
+            <Text fontSize={"22.5px"} fontWeight={"600"}>Presets</Text>
+            <VStack justify={"center"} align={"left"} gap={"10px"} mt={"20px"} >
+                <ButtonGroup></ButtonGroup>
+              <Button variant={"ghost"} fontSize={"17px"} colorScheme={"gray"}>
+                🪵 Login Form
+              </Button>
+              <Button variant={"ghost"} fontSize={"17px"} colorScheme={"gray"}>
+                🪵 Login Form
+              </Button>
+              <Button variant={"ghost"} fontSize={"17px"} colorScheme={"gray"}>
+                🪵 Login Form
+              </Button>
+
+              <Button variant={"ghost"} fontSize={"17px"} colorScheme={"gray"}>
+                🪵 Login Form
+              </Button>
+            </VStack>
           </DrawerBody>
           <DrawerFooter></DrawerFooter>
         </DrawerContent>
