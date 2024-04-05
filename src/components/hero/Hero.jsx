@@ -50,7 +50,13 @@ const Hero = () => {
             p={"15px"}
             variant={"solid"}
             bgColor={"#CEFF8F"}
-            _hover={{ bgColor: "purple.200" }}
+           
+            transition="transform, 0.3s ease-in-out"
+            _hover={{
+              transform: "scale(1.03)",
+              boxShadow: "0 0px 25px gray",
+               bgColor: "purple.200" 
+            }}
             color={"black"}
             fontSize={"16px"}
             h={"50px"}
