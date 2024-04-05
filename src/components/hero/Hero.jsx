@@ -25,6 +25,10 @@ const Hero = () => {
   const [isTablet] = useMediaQuery(
     "(min-width: 768px) and (max-width: 1024px)"
   );
+  
+
+
+
 
   return (
     <>
@@ -45,7 +49,7 @@ const Hero = () => {
           </Text>
         </HStack>
 
-        <HStack justify={"center"} align={"center"} mt={"50px"}>
+        <HStack justify={"center"} align={"center"} mt={"50px"} >
           <Button
           
             p={"15px"}

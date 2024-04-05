@@ -18,7 +18,8 @@ import { HamburgerIcon } from "@chakra-ui/icons";
 import { GoGoal } from "react-icons/go";
 import { FaPen } from "react-icons/fa";
 import React from "react";
-
+import fruitImage from "../img/fruit.png";
+import Image from "next/image";
 const Navbar = () => {
   const [isTablet] = useMediaQuery("(max-width: 1024px)");
 
@@ -29,18 +30,16 @@ const Navbar = () => {
         h={"60px"}
         w={"100%"}
         justify={"center"}
-        align={"center"}
+        align={"end"}
         // boxShadow={"xl"}\
         mt={"15px"}
         px={5}
         gap={"20px"}
       >
-        <Box
-          w={"70px"}
-          h={"70px"}
-          borderRadius={"100px"}
-          bgColor={"purple.200"}
-        />
+        <Box w={"60px"} h={"100%"}>
+          <Image src={fruitImage} alt="Fruit Image" />
+        </Box>
+
         <Button variant={"solid"} color={"black"}>
           <Text color={"black"}>Example</Text>
         </Button>
