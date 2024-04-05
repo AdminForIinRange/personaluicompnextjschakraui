@@ -47,6 +47,7 @@ const Hero = () => {
 
         <HStack justify={"center"} align={"center"} mt={"50px"}>
           <Button
+          
             p={"15px"}
             variant={"solid"}
             bgColor={"#CEFF8F"}
@@ -54,13 +55,14 @@ const Hero = () => {
             transition="transform, 0.3s ease-in-out"
             _hover={{
               transform: "scale(1.03)",
-              boxShadow: "0 0px 25px gray",
-               bgColor: "purple.200" 
+              boxShadow: "0 5px 25px gray",
+               bgColor:" #C0FF70" 
             }}
             color={"black"}
             fontSize={"16px"}
+            boxShadow={"0 1px 8px gray"}
             h={"50px"}
-            w={"300px"}
+            w={["100%", "250px", "300px", "300px"]}
             borderRadius={"15px"}
           >
             {" "}
