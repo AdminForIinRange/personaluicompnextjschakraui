@@ -25,10 +25,6 @@ const Hero = () => {
   const [isTablet] = useMediaQuery(
     "(min-width: 768px) and (max-width: 1024px)"
   );
-  
-
-
-
 
   return (
     <>
@@ -45,24 +41,24 @@ const Hero = () => {
             textAlign={"center"}
             fontFamily={"Raleway"}
           >
-            Accelerate UI Development in React using Amazing presets.
+            Accelerate UI Development in React using Amazing presets.{" "}
+            <Text as={"span"}> </Text>
           </Text>
         </HStack>
 
-        <HStack justify={"center"} align={"center"} mt={"50px"} >
+        <HStack justify={"center"} align={"center"} mt={"50px"}>
           <Button
-          
             p={"15px"}
             variant={"solid"}
-            bgColor={"#CEFF8F"}
-           
+            bgColor={"#B794F4"}
             transition="transform, 0.3s ease-in-out"
             _hover={{
               transform: "scale(1.03)",
               boxShadow: "0 5px 25px gray",
-               bgColor:" #C0FF70" 
+              bgColor: " #D6BCFA",
+              color: "#44337A",
             }}
-            color={"black"}
+            color={"white"}
             fontSize={"16px"}
             boxShadow={"0 1px 8px gray"}
             h={"50px"}

@@ -18,7 +18,7 @@ import { HamburgerIcon } from "@chakra-ui/icons";
 import { GoGoal } from "react-icons/go";
 import { FaPen } from "react-icons/fa";
 import React from "react";
-import fruitImage from "../img/fruit.png";
+import fruitImage from "../img/fruit3.png";
 import Image from "next/image";
 const Navbar = () => {
   const [isTablet] = useMediaQuery("(max-width: 1024px)");
@@ -27,25 +27,25 @@ const Navbar = () => {
     <>
       <HStack
         fontFamily={"Raleway"}
-        h={"60px"}
+       h={"100%"}
         w={"100%"}
         justify={"center"}
-        align={"end"}
+        align={"center"}
         // boxShadow={"xl"}\
         mt={"15px"}
-        px={5}
+        px={7}
         gap={"20px"}
       >
-        <Box w={"60px"} h={"100%"}>
+    <Box
+          w={"60px"}
+          borderRadius={"100px"}
+          overflow={"hidden"}
+          transform={"rotate(25deg)"}
+        >
           <Image src={fruitImage} alt="Fruit Image" />
         </Box>
 
-        <Button variant={"solid"} color={"black"}>
-          <Text color={"black"}>Example</Text>
-        </Button>
-        <Button variant={"solid"} color={"black"}>
-          <Text color={"black"}>Test</Text>
-        </Button>
+      
 
         <Spacer />
         <HStack fontWeight={500}>
