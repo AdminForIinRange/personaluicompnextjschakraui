@@ -71,7 +71,7 @@ const Sidebar = () => {
         
        
       >
-        <DrawerContent boxShadow={"none"}   >
+        <DrawerContent   >
           <DrawerBody p={"10"} overflowX={"hidden"}> 
             <Text fontSize={"22.5px"} fontWeight={"600"}>
               Presets
