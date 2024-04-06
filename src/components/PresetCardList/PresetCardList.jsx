@@ -17,8 +17,13 @@ import {
 } from "@chakra-ui/react";
 import Side from "../side/Side";
 import Link from "next/link";
+import Comp from "@/data/CompItems.json";
+import Preset from "@/data/PresetItems.json";
+const PresetCardList = () => {
 
-const PresetCardList = ({ PresetItems, CompItems }) => {
+  const { CompItems } = Comp;
+  const { PresetItems } = Preset;
+
   return (
     <>
       <VStack justify={"center"} px={10} fontFamily={"Raleway"}>

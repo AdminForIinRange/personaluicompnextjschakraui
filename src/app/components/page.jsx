@@ -22,9 +22,9 @@ const ComponentsPage = () => {
   return (
     <div>
       <HStack align={"start"} gap={"100px"} >
-      <Side CompItems={CompItems} PresetItems={PresetItems} />
+      <Side  />
 
-      <PresetCardList CompItems={CompItems} PresetItems={PresetItems}  />
+      <PresetCardList   />
       </HStack>
 
     </div>

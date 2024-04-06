@@ -1,27 +1,21 @@
 import React from "react";
 import {
   HStack,
-  Button,
   Text,
-  MenuButton,
-  Menu,
-  MenuList,
-  MenuItem,
-  Spacer,
-  ButtonGroup,
-  useMediaQuery,
-  Divider,
   Box,
   VStack,
 } from "@chakra-ui/react";
 
-
-import CompItems from "@/data/compItems.json";
-import PresetItems from "@/data/presetItems.json";
+import Comp from "@/data/CompItems.json";
+import Preset from "@/data/PresetItems.json";
 
 const Side = () => {
+  const { CompItems } = Comp;
+  const { PresetItems } = Preset;
+
   return (
     <VStack px={"20px"}>
+      {/* Presets Section */}
       <HStack justify={"left"} w={"100%"}>
         <Text
           fontSize={"22.5px"}
@@ -32,10 +26,8 @@ const Side = () => {
           Presets
         </Text>
       </HStack>
-
       <HStack w={"100%"} align={"start"}>
         <Box h={"200px"} w={"1px"} bgColor={"black"}></Box>
-
         <VStack
           ml={"5px"}
           justify={"left"}
@@ -44,9 +36,10 @@ const Side = () => {
           mt={"20px"}
           w={"100%"}
         >
-          {PresetItems.map((item, index) => (
+          {/* Mapping over PresetItems */}
+          {PresetItems.map(({title, path}) => (
             <Text
-              key={index}
+              key={title}
               cursor={"pointer"}
               transition="transform, 0.3s ease-in-out"
               _hover={{
@@ -57,12 +50,13 @@ const Side = () => {
               fontSize={"17px"}
               fontWeight={"500"}
             >
-              {item.title}
+              {title}
             </Text>
           ))}
         </VStack>
       </HStack>
 
+      {/* Components Section */}
       <HStack justify={"left"} w={"100%"}>
         <Text
           fontSize={"22.5px"}
@@ -73,7 +67,6 @@ const Side = () => {
           Components
         </Text>
       </HStack>
-
       <HStack w={"100%"} align={"start"}>
         <Box h={"350"} w={"1px"} bgColor={"black"}></Box>
         <VStack
@@ -84,9 +77,10 @@ const Side = () => {
           mt={"20px"}
           w={"100%"}
         >
-          {CompItems.map((item, index) => (
+          {/* Mapping over CompItems */}
+          {CompItems.map(({title, path}) => (
             <Text
-              key={index}
+              key={title}
               cursor={"pointer"}
               transition="transform, 0.3s ease-in-out"
               _hover={{
@@ -97,7 +91,7 @@ const Side = () => {
               fontSize={"17px"}
               fontWeight={"500"}
             >
-              {item.title}
+              {title}
             </Text>
           ))}
         </VStack>
