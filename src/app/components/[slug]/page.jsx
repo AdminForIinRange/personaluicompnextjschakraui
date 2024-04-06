@@ -73,7 +73,7 @@ const Single = ( {params}) => {
   return (
     <div>
 
-<HStack>
+<HStack align={"start"} gap={"100px"}>
 <Side />
 <SlugPrams params={params} />
 </HStack>
