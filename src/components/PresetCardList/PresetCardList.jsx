@@ -36,34 +36,36 @@ const PresetCardList = ({ PresetItems, CompItems }) => {
           w={"100%"}
           gap={"50px"}
         >
-          {PresetItems.map(({ title, path }) => (
-            <Box
-              key={title}
-              w={"200px"}
-              h={"210px"}
-              border={"1.8px solid #B5B5B5"}
-              rounded={"xl"}
-              transition="transform, 0.3s ease-in-out"
-              _hover={{
-                transform: "scale(1.03)",
-                boxShadow: "0 5px 25px gray",
-              }}
-            >
-              <VStack justify={"end"} align={"end"} h={"100%"} w={"100%"}>
-                <Box w={"100%"} h={"50px"} borderTop={"1.8px solid #B5B5B5"}>
-                  <HStack
-                    justify={"center"}
-                    align={"center"}
-                    w={"100%"}
-                    h={"100%"}
-                  >
-                    <Text align={"center"} fontSize={"17px"}>
-                      {title}
-                    </Text>
-                  </HStack>
-                </Box>
-              </VStack>
-            </Box>
+                {PresetItems.map(({ title, path }) => (
+            <Link key={title} href={`${path}`}>
+              <Box
+                w={"200px"}
+                h={"210px"}
+                border={"1.8px solid #B5B5B5"}
+                rounded={"xl"}
+                transition="transform, 0.3s ease-in-out"
+                _hover={{
+                  transform: "scale(1.03)",
+                  boxShadow: "0 5px 25px gray",
+                }}
+              > 
+              
+                <VStack justify={"end"} align={"end"} h={"100%"} w={"100%"}>
+                  <Box w={"100%"} h={"50px"} borderTop={"1.8px solid #B5B5B5"}>
+                    <HStack
+                      justify={"center"}
+                      align={"center"}
+                      w={"100%"}
+                      h={"100%"}
+                    >
+                      <Text align={"center"} fontSize={"17px"}>
+                        {title}
+                      </Text>
+                    </HStack>
+                  </Box>
+                </VStack>
+              </Box>
+            </Link>
           ))}
         </HStack>
 
