@@ -46,6 +46,23 @@ const Card = () => {
         <ImageSimpleCard />
           
         </HStack>
+
+        <HStack
+            justify={"left"}
+            w={"100%"}
+            h={"100%"}
+            mt={"20px"}
+            align={"left"}
+          >
+            <Text fontSize={"30"} fontWeight={"400"}>
+            Collage
+            </Text>
+          </HStack>
+
+        <HStack mt={"20px"} justify={"left"} w={"100%"} h={"100%"} gap={"15px"} flexWrap={"wrap"}  align={"left"}>
+
+
+        </HStack>
       </VStack>
     </>
   );
