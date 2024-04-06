@@ -43,6 +43,7 @@ const PresetCardList = () => {
             </Text>
           </HStack>
           <HStack
+             flexWrap={"wrap"}
             mt={"20px"}
             align={"left"}
             justify={"left"}
@@ -86,7 +87,7 @@ const PresetCardList = () => {
               Components
             </Text>
           </HStack>
-          
+
           <HStack
           flexWrap={"wrap"}
             mt={"20px"}
