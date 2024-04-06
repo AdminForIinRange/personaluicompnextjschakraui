@@ -31,6 +31,7 @@ const Card = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <>
+    
       <VStack px={10}>
         <VStack justify={"left"} w={"100%"} h={"100%"} align={"left"}>
           <Text fontSize={"50"} fontWeight={"600"}>

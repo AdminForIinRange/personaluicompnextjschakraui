@@ -6,9 +6,12 @@ import {
   VStack,
 } from "@chakra-ui/react";
 import { HiArrowLongRight } from "react-icons/hi2";
+import FallbackLoadingFruit from "@/components/Loading/fallbackLoadingFruit";
+
 const CollageCard = () => {
   return (
     <>
+     
       {" "}
       <Box
         w={"650px"}
@@ -21,6 +24,7 @@ const CollageCard = () => {
        
           <HStack justify={"left"} align={"start"} w={"100%"} h={"100%"}>
             <HStack w={"100%"} h={"100%"}>
+           
               <Box
                 w={"100%"}
                 h={"100%"}
@@ -32,6 +36,7 @@ const CollageCard = () => {
                 bgSize={"cover"}
                 bgPos={["bottom right", " bottom right", "bottom", "bottom", "bottom"]}
               ></Box>
+               
             </HStack>
             <HStack w={"100%"} h={"100%"}>
               <Box
