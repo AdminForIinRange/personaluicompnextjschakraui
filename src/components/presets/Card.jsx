@@ -1,8 +1,29 @@
+import {
+    HStack,
+    Button,
+    Text,
+    MenuButton,
+    Menu,
+    MenuList,
+    MenuItem,
+    Spacer,
+    ButtonGroup,
+    useMediaQuery,
+    Divider,
+    Box,
+    VStack,
+  } from "@chakra-ui/react";
+
 import React from 'react'
 
 const Card = () => {
   return (
-    <div>Card</div>
+    <div>
+        
+        <Text >
+        Cards
+        </Text>
+    </div>
   )
 }
 

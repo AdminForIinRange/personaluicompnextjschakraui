@@ -2,7 +2,23 @@ import NotFound from '@/app/not-found';
 import Card from '@/components/presets/Card';
 import React from 'react';
 
-const Single = ({ params }) => {
+import {
+    HStack,
+    Button,
+    Text,
+    MenuButton,
+    Menu,
+    MenuList,
+    MenuItem,
+    Spacer,
+    ButtonGroup,
+    useMediaQuery,
+    Divider,
+    Box,
+    VStack,
+  } from "@chakra-ui/react";
+import Side from '@/components/side/Side';
+const SlugPrams = ({ params }) => {
   if (params.slug === 'cards') {
     return (
       <div>
@@ -49,5 +65,21 @@ const Single = ({ params }) => {
     return <NotFound />;
   }
 };
+
+
+
+
+const Single = ( {params}) => {
+  return (
+    <div>
+
+<HStack>
+<Side />
+<SlugPrams params={params} />
+</HStack>
+    </div>
+  )
+}
+
 
 export default Single;

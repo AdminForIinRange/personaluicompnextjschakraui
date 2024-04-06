@@ -15,7 +15,11 @@ import {
   VStack,
 } from "@chakra-ui/react";
 
-const Side = ({ PresetItems, CompItems }) => {
+
+import CompItems from "@/data/compItems.json";
+import PresetItems from "@/data/presetItems.json";
+
+const Side = () => {
   return (
     <VStack px={"20px"}>
       <HStack justify={"left"} w={"100%"}>
@@ -32,9 +36,8 @@ const Side = ({ PresetItems, CompItems }) => {
       <HStack w={"100%"} align={"start"}>
         <Box h={"200px"} w={"1px"} bgColor={"black"}></Box>
 
-
         <VStack
-        ml={"5px"}
+          ml={"5px"}
           justify={"left"}
           align={"left"}
           gap={"30px"}
@@ -74,7 +77,7 @@ const Side = ({ PresetItems, CompItems }) => {
       <HStack w={"100%"} align={"start"}>
         <Box h={"350"} w={"1px"} bgColor={"black"}></Box>
         <VStack
-        ml={"5px"}
+          ml={"5px"}
           justify={"left"}
           align={"left"}
           gap={"30px"}

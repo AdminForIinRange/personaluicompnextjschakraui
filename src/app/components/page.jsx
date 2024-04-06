@@ -18,19 +18,7 @@ import {
 } from "@chakra-ui/react";
 const ComponentsPage = () => {
 
-  const CompItems = [
-    { title: "🃏 Cards", path: "/components/cards" },
-    { title: "📦 Modal", path: "/components/modal" },
-    { title: "🖼️ frames", path: "/components/frames" },
-    { title: "🏃‍♂️ Animations", path: "/components/animations" },
-    { title: "📈 Charts", path: "/components/charts" },
-  ];
 
-  const PresetItems = [
-    { title: "🪵 Login Form", path: "/components/loginForm" },
-    { title: "🦸 Hero", path: "/components/Hero" },
-    
-  ];
   return (
     <div>
       <HStack align={"start"} gap={"100px"} >
