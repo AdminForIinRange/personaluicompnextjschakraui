@@ -27,14 +27,7 @@ const CollageCard = () => {
         p={"4"}
       >
         <VStack w={"100%"} h={"100%"} align={"left"} px={2}>
-        <Text
-              align={"center"}
-              fontSize={"24px"}
-              fontWeight={"700"}
-              textAlign={"left"}
-            >
-        Box Collage
-            </Text>
+       
           <HStack justify={"left"} align={"start"} w={"100%"} h={"100%"}>
             <HStack w={"100%"} h={"100%"}>
               <Box

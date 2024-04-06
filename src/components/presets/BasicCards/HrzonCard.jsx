@@ -15,7 +15,7 @@ import {
   VStack,
 } from "@chakra-ui/react";
 import { HiArrowLongRight } from "react-icons/hi2";
-const HrzonCard = () => {
+const CollageCard = () => {
   return (
     <>
       {" "}
@@ -26,27 +26,33 @@ const HrzonCard = () => {
         rounded={"xl"}
         p={"4"}
       >
-        <VStack w={"100%"} h={"100%"} align={"left"} px={2}>
-        <Text
-              align={"center"}
-              fontSize={"24px"}
-              fontWeight={"700"}
-              textAlign={"left"}
-            >
-        Box Collage
-            </Text>
+        <HStack w={"100%"} h={"100%"} align={"left"} px={2}>
+       
           <HStack justify={"left"} align={"start"} w={"100%"} h={"100%"}>
-            <HStack w={"100%"} h={"100%"}>
+          <HStack w={"100%"} h={"100%"}>
               <Box
                 w={"100%"}
                 h={"100%"}
                 bgColor={"black"}
                 rounded={"xl"}
                 bgImage={
-                  "https://source.unsplash.com/aerial-photography-of-mountain-range-covered-with-snow-under-white-and-blue-sky-at-daytime-9wg5jCEPBsw"
+                  "https://source.unsplash.com/random/600x400?rainforest"
                 }
                 bgSize={"cover"}
-                bgPos={["bottom right", " bottom right", "bottom", "bottom", "bottom"]}
+                bgPos={["top left", " top left", "top left", "top left", "top left"]}
+              ></Box>
+            </HStack>
+            <HStack w={"200%"} h={"100%"}>
+              <Box
+                w={"100%"}
+                h={"100%"}
+                bgColor={"black"}
+                rounded={"xl"}
+                bgImage={
+                  "https://source.unsplash.com/random/600x400?field"
+                }
+                bgSize={"cover"}
+                bgPos={["top ", " top ", "top", "top", "top"]}
               ></Box>
             </HStack>
             <HStack w={"100%"} h={"100%"}>
@@ -56,45 +62,30 @@ const HrzonCard = () => {
                 bgColor={"black"}
                 rounded={"xl"}
                 bgImage={
-                  "https://source.unsplash.com/sea-of-clouds-during-daytime-kSY5T6js2KE"
+                  "https://source.unsplash.com/random/600x400?green hill"
                 }
                 bgSize={"cover"}
-                bgPos={["bottom right", " bottom right", "bottom", "bottom", "bottom"]}
+                bgPos={["top right", " top right", "top right ", "top right ", "top right"]}
+              ></Box>
+            </HStack>
+            <HStack w={"50%"} h={"100%"}>
+              <Box
+                w={"100%"}
+                h={"100%"}
+                bgColor={"black"}
+                rounded={"xl"}
+                bgImage={
+                  "https://source.unsplash.com/random/600x400?green leaves background"
+                }
+                bgSize={"cover"}
+                bgPos={["top right", " top right", "top right", "top right", "top "]}
               ></Box>
             </HStack>
           </HStack>
-          <HStack justify={"left"} align={"start"} w={"100%"} h={"100%"}>
-            <HStack w={"100%"} h={"100%"}>
-              <Box
-                w={"100%"}
-                h={"100%"}
-                bgColor={"black"}
-                rounded={"xl"}
-                bgImage={
-                  "https://source.unsplash.com/above-cloud-photo-of-blue-skies-yQorCngxzwI"
-                }
-                bgSize={"cover"}
-                bgPos={["bottom right", " bottom right", "bottom", "bottom", "bottom"]}
-              ></Box>
-            </HStack>
-            <HStack w={"100%"} h={"100%"}>
-              <Box
-                w={"100%"}
-                h={"100%"}
-                bgColor={"black"}
-                rounded={"xl"}
-                bgImage={
-                  "https://source.unsplash.com/blue-body-of-water-under-blue-and-white-sky-during-daytime-ueGaQiHV86o"
-                }
-                bgSize={"cover"}
-                bgPos={["center right", " center right", "center", "center", "center"]}
-              ></Box>
-            </HStack>
-          </HStack>
-        </VStack>
+        </HStack>
       </Box>
     </>
   );
 };
 
-export default HrzonCard
+export default CollageCard;
