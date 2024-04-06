@@ -31,8 +31,7 @@ import ImageSimpleCard from "./BasicCards/ImageSimpleCard";
 import CollageCard from "./BasicCards/collage/CollageCard";
 import HrzonCard from "./BasicCards/collage/HrzonCard";
 import TicketCard from "./ComplexCards/TicketCard";
-import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import { dark } from "react-syntax-highlighter/dist/esm/styles/prism";
+
 
 const Card = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();

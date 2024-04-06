@@ -8,7 +8,7 @@ import {
   Menu,
   MenuList,
   MenuItem,
-  Highlight,
+  
   Spacer,
   ButtonGroup,
   useMediaQuery,
@@ -42,53 +42,38 @@ const Hero = () => {
             textAlign={"center"}
             fontFamily={"Raleway"}
           >
-            <span>
-              <Highlight
-                query="Accelerate"
-                styles={{
-                  px: "5",
-                  py: "0",
-                  color: "#230F37",
-                  rounded: "full",
-                  bg: "#B794F4",
-                }}
-              >
-                Accelerate
-              </Highlight>
-            </span>
-            UI Development in React using Amazing presets.
+            Accelerate UI Development in React using Amazing presets.
           </Text>
         </HStack>
 
         <HStack justify={"center"} align={"center"} mt={"50px"}>
-          <Link href="/components">
-            <Button
-              className={isTablet ? " " : "infinite-up-down-hover"}
-              p={"15px"}
-              variant={"solid"}
-              bgColor={"#B794F4"}
-              transition="transform, 0.3s ease-in-out"
-              _hover={{
-                transform: "scale(1.03)",
-                boxShadow: "0 5px 25px gray",
-                bgColor: " #D6BCFA",
-                width: "350px",
-                color: "#44337A",
-              }}
-              color={"white"}
-              fontSize={"16px"}
-              boxShadow={"0 1px 8px gray"}
-              h={"50px"}
-              w={["100%", "250px", "300px", "300px"]}
-              borderRadius={"15px"}
-            >
+      <Link href="/components"> 
+          <Button className={ isTablet ? " " : "infinite-up-down-hover"}
+            p={"15px"}
+            variant={"solid"}
+            bgColor={"#B794F4"}
+            transition="transform, 0.3s ease-in-out"
+            _hover={{
+              transform: "scale(1.03)",
+              boxShadow: "0 5px 25px gray",
+              bgColor: " #D6BCFA",
+              width: "350px",
+              color: "#44337A",
+            }}
+            color={"white"}
+            fontSize={"16px"}
+            boxShadow={"0 1px 8px gray"}
+            h={"50px"}
+            w={["100%", "250px", "300px", "300px"]}
+            borderRadius={"15px"}
+          >
+            {" "}
+            Browse the library <Spacer />
+            <Text as={"span"} ml={"10px"}>
               {" "}
-              Browse the library <Spacer />
-              <Text as={"span"} ml={"10px"}>
-                {" "}
-                <HiArrowLongRight fontSize={"35px"} />{" "}
-              </Text>{" "}
-            </Button>
+              <HiArrowLongRight fontSize={"35px"} />{" "}
+            </Text>{" "}
+          </Button>
           </Link>
         </HStack>
       </VStack>
