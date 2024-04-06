@@ -7,10 +7,10 @@ import {
   DrawerBody,
   DrawerFooter,
   DrawerContent,
-  DrawerCloseButton,
+
   Text,
   useDisclosure,
-  Button,
+
 } from "@chakra-ui/react";
 
 const Sidebar = () => {

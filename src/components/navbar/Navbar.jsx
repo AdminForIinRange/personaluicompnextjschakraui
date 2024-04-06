@@ -1,26 +1,10 @@
 "use client";
+import { HStack, Spacer, useMediaQuery } from "@chakra-ui/react";
 
-import {
-  HStack,
-  Button,
-  Text,
-  MenuButton,
-  Menu,
-  MenuList,
-  MenuItem,
-  Spacer,
-  ButtonGroup,
-  useMediaQuery,
-  Box,
-} from "@chakra-ui/react";
-import { FaCog } from "react-icons/fa";
-import { HamburgerIcon } from "@chakra-ui/icons";
-import { GoGoal } from "react-icons/go";
-import { FaPen } from "react-icons/fa";
 import React from "react";
-import fruitImage from "../img/fruit3.png";
-import Image from "next/image";
-import Link from "next/link";
+
+import MoibleMenuLinks from "./Links/MoibleMenuLinks";
+import { Links } from "./Links/Links";
 
 const Navbar = () => {
   //---------------------------------------
@@ -45,55 +29,9 @@ const Navbar = () => {
         px={7}
         gap={"20px"}
       >
-        <Link href={"/"}>
-          <Box
-            cursor={"pointer"}
-            w={"60px"}
-            borderRadius={"100px"}
-            overflow={"hidden"}
-            transform={"rotate(25deg)"}
-          >
-            <Image src={fruitImage} alt="Fruit Image" />
-          </Box>
-        </Link>
-
         <Spacer />
         <HStack fontWeight={500}>
-          {isTablet ? (
-            <Menu>
-              <MenuButton as={Button} color={"black"} variant="outline">
-                <HamburgerIcon />
-              </MenuButton>
-              <MenuList>
-                <MenuItem gap={"10px"}>
-                  <FaPen size={"23px"} />
-                  sum
-                </MenuItem>
-                <MenuItem gap={"10px"}>
-                  <GoGoal size={"23px"} />
-                  sum
-                </MenuItem>
-                <MenuItem gap={"10px"}>
-                  <FaCog size={"23px"} />
-                  sum
-                </MenuItem>
-              </MenuList>
-            </Menu>
-          ) : (
-            <ButtonGroup gap={"25px"}>
-              <Button variant={"solid"} color={"black"}>
-                <Text color={"black"}>Example</Text>
-              </Button>
-
-              <Button variant={"solid"} color={"black"}>
-                <Text color={"black"}>Example</Text>
-              </Button>
-
-              <Button variant={"solid"} color={"black"}>
-                <Text color={"black"}>Example</Text>
-              </Button>
-            </ButtonGroup>
-          )}
+          {isTablet ? <MoibleMenuLinks /> : <Links />}
         </HStack>
       </HStack>
     </>

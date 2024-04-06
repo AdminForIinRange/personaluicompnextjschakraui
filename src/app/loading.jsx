@@ -3,15 +3,9 @@ import React from "react";
 import {
   HStack,
   VStack,
-  Button,
+
   Text,
-  MenuButton,
-  Menu,
-  MenuList,
-  MenuItem,
-  Spacer,
-  ButtonGroup,
-  useMediaQuery,
+
   Box,
 } from "@chakra-ui/react";
 import Image from "next/image";

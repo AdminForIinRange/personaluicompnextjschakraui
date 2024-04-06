@@ -3,18 +3,7 @@ import Side from "@/components/SidePanel/SidePanel";
 import React from "react";
 import {
   HStack,
-  Button,
-  Text,
-  MenuButton,
-  Menu,
-  MenuList,
-  MenuItem,
-  Spacer,
-  ButtonGroup,
-  useMediaQuery,
-  Divider,
-  Box,
-  VStack,
+  
 } from "@chakra-ui/react";
 const ComponentsPage = () => {
   return (

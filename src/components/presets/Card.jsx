@@ -3,13 +3,7 @@ import {
   HStack,
   Button,
   Text,
-  MenuButton,
-  Menu,
-  MenuList,
-  MenuItem,
-  Spacer,
-  ButtonGroup,
-  useMediaQuery,
+
   Modal,
   ModalOverlay,
   ModalContent,
@@ -18,7 +12,7 @@ import {
   useDisclosure,
   ModalBody,
   ModalCloseButton,
-  Divider,
+
   Box,
   VStack,
 } from "@chakra-ui/react";
