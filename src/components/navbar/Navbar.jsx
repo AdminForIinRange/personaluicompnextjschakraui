@@ -3,7 +3,7 @@ import { HStack, Spacer, useMediaQuery } from "@chakra-ui/react";
 
 import React from "react";
 
-import MoibleMenuLinks from "./Links/MoibleMenuLinks";
+import MobileMenuLinks from "./Links/MobileMenuLinks";
 import { Links } from "./Links/Links";
 import Logo from "./Links/Logo";
 
@@ -33,7 +33,7 @@ const Navbar = () => {
         <Logo />
         <Spacer />
         <HStack fontWeight={500}>
-          {isTablet ? <MoibleMenuLinks /> : <Links />}
+          {isTablet ? <MobileMenuLinks /> : <Links />}
         </HStack>
       </HStack>
     </>

@@ -14,7 +14,7 @@ import { HamburgerIcon } from "@chakra-ui/icons";
 import { GoGoal } from "react-icons/go";
 import { FaPen } from "react-icons/fa";
 import { FaCog } from "react-icons/fa";
-const MoibleMenuLinks = () => {
+const MobileMenuLinks = () => {
   return (
     <>
   
@@ -45,4 +45,4 @@ const MoibleMenuLinks = () => {
   );
 };
 
-export default MoibleMenuLinks;
+export default MobileMenuLinks;
