@@ -17,11 +17,7 @@ import {
 import { HiArrowLongRight } from "react-icons/hi2";
 const CollageCard = () => {
 
-  const bgImageTop = [
-    "https://source.unsplash.com/aerial-photography-of-mountain-range-covered-with-snow-under-white-and-blue-sky-at-daytime-9wg5jCEPBsw",
-    "https://source.unsplash.com/sea-of-clouds-during-daytime-kSY5T6js2KE"
-
-  ];
+ 
   const bgImageBottom = [
     "https://source.unsplash.com/above-cloud-photo-of-blue-skies-yQorCngxzwI",
     "https://source.unsplash.com/blue-body-of-water-under-blue-and-white-sky-during-daytime-ueGaQiHV86o"
@@ -65,7 +61,7 @@ const CollageCard = () => {
            
           </HStack>
           <HStack justify={"left"} align={"start"} w={"100%"} h={"100%"}>
-            <HStack w={"100%"} h={"100%"} transition="transform, 0.3s ease-in-out" 
+           { bgImageBottom.map((image, index) => ( <HStack key={index} w={"100%"} h={"100%"} transition="transform, 0.3s ease-in-out" 
                 _hover={{
                   width: "300%",
                  
@@ -76,9 +72,7 @@ const CollageCard = () => {
                 h={"100%"}
                 bgColor={"black"}
                 rounded={"xl"}
-                bgImage={
-                  "https://source.unsplash.com/above-cloud-photo-of-blue-skies-yQorCngxzwI"
-                }
+                bgImage={image}
                 bgSize={"cover"}
                 bgPos={[
                   "bottom right",
@@ -88,31 +82,8 @@ const CollageCard = () => {
                   "bottom",
                 ]}
               ></Box>
-            </HStack>
-            <HStack w={"100%"} h={"100%"} transition="transform, 0.3s ease-in-out" 
-                _hover={{
-                  width: "300%",
-                
-                
-                }}>
-              <Box
-                w={"100%"}
-                h={"100%"}
-                bgColor={"black"}
-                rounded={"xl"}
-                bgImage={
-                  "https://source.unsplash.com/blue-body-of-water-under-blue-and-white-sky-during-daytime-ueGaQiHV86o"
-                }
-                bgSize={"cover"}
-                bgPos={[
-                  "center right",
-                  " center right",
-                  "center",
-                  "center",
-                  "center",
-                ]}
-              ></Box>
-            </HStack>
+            </HStack>))}
+          
           </HStack>
         </VStack>
       </Box>
