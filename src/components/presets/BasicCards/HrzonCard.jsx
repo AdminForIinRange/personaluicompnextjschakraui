@@ -36,10 +36,10 @@ const CollageCard = () => {
                 bgColor={"black"}
                 rounded={"xl"}
                 bgImage={
-                  "https://source.unsplash.com/random/600x400?rainforest"
+                  "https://source.unsplash.com/pathway-between-green-trees-F_hft1Wiyj8"
                 }
                 bgSize={"cover"}
-                bgPos={["top left", " top left", "top left", "top left", "top left"]}
+                bgPos={["center", " center", "center", "center", "center"]}
               ></Box>
             </HStack>
             <HStack w={"200%"} h={"100%"}>
@@ -49,7 +49,7 @@ const CollageCard = () => {
                 bgColor={"black"}
                 rounded={"xl"}
                 bgImage={
-                  "https://source.unsplash.com/random/600x400?field"
+                  "https://source.unsplash.com/birds-eye-view-photograph-of-green-mountains-01_igFr7hd4"
                 }
                 bgSize={"cover"}
                 bgPos={["top ", " top ", "top", "top", "top"]}
@@ -62,10 +62,10 @@ const CollageCard = () => {
                 bgColor={"black"}
                 rounded={"xl"}
                 bgImage={
-                  "https://source.unsplash.com/random/600x400?green hill"
+                  "https://source.unsplash.com/aerial-photo-of-green-trees-ugnrXk1129g" //cache
                 }
                 bgSize={"cover"}
-                bgPos={["top right", " top right", "top right ", "top right ", "top right"]}
+                bgPos={["bottom right", " bottom right", "bottom right ", "bottom right ", "bottom right"]}
               ></Box>
             </HStack>
             <HStack w={"50%"} h={"100%"}>
@@ -75,7 +75,7 @@ const CollageCard = () => {
                 bgColor={"black"}
                 rounded={"xl"}
                 bgImage={
-                  "https://source.unsplash.com/random/600x400?green leaves background"
+                  "https://source.unsplash.com/photo-of-green-plants-7APM4YyW_JU"
                 }
                 bgSize={"cover"}
                 bgPos={["top right", " top right", "top right", "top right", "top "]}
