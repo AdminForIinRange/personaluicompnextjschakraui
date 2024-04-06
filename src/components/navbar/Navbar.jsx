@@ -46,16 +46,15 @@ const Navbar = () => {
         gap={"20px"}
       >
         <Link href={"/"}>
-       
-        <Box
-        cursor={"pointer"}
-          w={"60px"}
-          borderRadius={"100px"}
-          overflow={"hidden"}
-          transform={"rotate(25deg)"}
-        >
-          <Image src={fruitImage} alt="Fruit Image" />
-        </Box>
+          <Box
+            cursor={"pointer"}
+            w={"60px"}
+            borderRadius={"100px"}
+            overflow={"hidden"}
+            transform={"rotate(25deg)"}
+          >
+            <Image src={fruitImage} alt="Fruit Image" />
+          </Box>
         </Link>
 
         <Spacer />

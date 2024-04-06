@@ -8,7 +8,6 @@ import {
   MenuList,
   MenuItem,
   Spacer,
-  
   ButtonGroup,
   useMediaQuery,
   Modal,
@@ -32,15 +31,15 @@ import ImageSimpleCard from "./BasicCards/ImageSimpleCard";
 import CollageCard from "./BasicCards/collage/CollageCard";
 import HrzonCard from "./BasicCards/collage/HrzonCard";
 import TicketCard from "./ComplexCards/TicketCard";
-import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
-import { dark } from 'react-syntax-highlighter/dist/esm/styles/prism';
+import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
+import { dark } from "react-syntax-highlighter/dist/esm/styles/prism";
 
 const Card = () => {
-    const { isOpen, onOpen, onClose } = useDisclosure()
+  const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <>
-      <VStack px={10}  >
-        <VStack justify={"left"} w={"100%"} h={"100%"} align={"left"}    >
+      <VStack px={10}>
+        <VStack justify={"left"} w={"100%"} h={"100%"} align={"left"}>
           <Text fontSize={"50"} fontWeight={"600"}>
             Card
           </Text>
@@ -57,47 +56,70 @@ const Card = () => {
           </HStack>
         </VStack>
 
-        <HStack mt={"20px"} justify={"left"} w={"100%"} h={"100%"} gap={"15px"} flexWrap={"wrap"}  align={"left"}>
-        <SimpleCard />
-        <WideSimpleCard />
-        <ImageSimpleCard />
-          
+        <HStack
+          mt={"20px"}
+          justify={"left"}
+          w={"100%"}
+          h={"100%"}
+          gap={"15px"}
+          flexWrap={"wrap"}
+          align={"left"}
+        >
+          <SimpleCard />
+          <WideSimpleCard />
+          <ImageSimpleCard />
         </HStack>
 
         <HStack
-            justify={"left"}
-            w={"100%"}
-            h={"100%"}
-            mt={"20px"}
-            align={"left"}
-          >
-            <Text fontSize={"30"} fontWeight={"400"}>
+          justify={"left"}
+          w={"100%"}
+          h={"100%"}
+          mt={"20px"}
+          align={"left"}
+        >
+          <Text fontSize={"30"} fontWeight={"400"}>
             Collage
-            </Text>
-          </HStack>
-
-        <HStack mt={"20px"} justify={"left"} w={"100%"} h={"100%"} gap={"15px"} flexWrap={"wrap"}  align={"left"}>
- <CollageCard />
- <Box as={"div"} onClick={onOpen} > <HrzonCard /></Box>
-
-
+          </Text>
         </HStack>
 
         <HStack
-            justify={"left"}
-            w={"100%"}
-            h={"100%"}
-            mt={"20px"}
-            align={"left"}
-          >
-            <Text fontSize={"30"} fontWeight={"400"}>
+          mt={"20px"}
+          justify={"left"}
+          w={"100%"}
+          h={"100%"}
+          gap={"15px"}
+          flexWrap={"wrap"}
+          align={"left"}
+        >
+          <CollageCard />
+          <Box as={"div"} onClick={onOpen}>
+            {" "}
+            <HrzonCard />
+          </Box>
+        </HStack>
+
+        <HStack
+          justify={"left"}
+          w={"100%"}
+          h={"100%"}
+          mt={"20px"}
+          align={"left"}
+        >
+          <Text fontSize={"30"} fontWeight={"400"}>
             Complex
-            </Text>
-          </HStack>
+          </Text>
+        </HStack>
 
-        <HStack mt={"20px"} justify={"left"} w={"100%"} h={"100%"} gap={"15px"} flexWrap={"wrap"}  align={"left"}>
-<TicketCard />
-
+        <HStack
+          mt={"20px"}
+          justify={"left"}
+          w={"100%"}
+          h={"100%"}
+          gap={"15px"}
+          flexWrap={"wrap"}
+          align={"left"}
+        >
+          <TicketCard />
         </HStack>
       </VStack>
 
@@ -106,16 +128,13 @@ const Card = () => {
         <ModalContent>
           <ModalHeader>Code</ModalHeader>
           <ModalCloseButton />
-          <ModalBody>
-
-
-          </ModalBody>
+          <ModalBody></ModalBody>
 
           <ModalFooter>
-            <Button colorScheme='blue' mr={3} onClick={onClose}>
+            <Button colorScheme="blue" mr={3} onClick={onClose}>
               Close
             </Button>
-            <Button variant='ghost'>Secondary Action</Button>
+            <Button variant="ghost">Secondary Action</Button>
           </ModalFooter>
         </ModalContent>
       </Modal>

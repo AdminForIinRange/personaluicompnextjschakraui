@@ -59,14 +59,7 @@ const WideSimpleCard = () => {
                 "https://source.unsplash.com/brown-wooden-house-on-green-grass-field-near-snow-covered-mountain-during-daytime-ZI9zYWhLyy0"
               }
               bgSize={"cover"}
-         
-              bgPos={[
-                "top right",
-                " top right",
-                "top",
-                "top",
-                "top",
-              ]}
+              bgPos={["top right", " top right", "top", "top", "top"]}
             ></Box>
           </HStack>
         </VStack>

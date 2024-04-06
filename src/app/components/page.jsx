@@ -17,16 +17,13 @@ import {
   VStack,
 } from "@chakra-ui/react";
 const ComponentsPage = () => {
-
-
   return (
     <div>
-      <HStack align={"start"} gap={"100px"} >
-      <Side  />
+      <HStack align={"start"} gap={"100px"}>
+        <Side />
 
-      <PresetCardList   />
+        <PresetCardList />
       </HStack>
-
     </div>
   );
 };

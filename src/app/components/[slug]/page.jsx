@@ -1,61 +1,61 @@
-import NotFound from '@/app/not-found';
-import Card from '@/components/presets/Card';
-import React from 'react';
+import NotFound from "@/app/not-found";
+import Card from "@/components/presets/Card";
+import React from "react";
 
 import {
-    HStack,
-    Button,
-    Text,
-    MenuButton,
-    Menu,
-    MenuList,
-    MenuItem,
-    Spacer,
-    ButtonGroup,
-    useMediaQuery,
-    Divider,
-    Box,
-    VStack,
-  } from "@chakra-ui/react";
-import Side from '@/components/SidePanel/SidePanel';
+  HStack,
+  Button,
+  Text,
+  MenuButton,
+  Menu,
+  MenuList,
+  MenuItem,
+  Spacer,
+  ButtonGroup,
+  useMediaQuery,
+  Divider,
+  Box,
+  VStack,
+} from "@chakra-ui/react";
+import Side from "@/components/SidePanel/SidePanel";
 const SlugPrams = ({ params }) => {
-  if (params.slug === 'cards') {
+  if (params.slug === "cards") {
     return (
       <div>
         <Card />
       </div>
     );
-  } else if (params.slug === 'modal') {
+  } else if (params.slug === "modal") {
     return (
       <div>
         <hi>Modal</hi>
       </div>
     );
-  } else if (params.slug === 'frames') {
+  } else if (params.slug === "frames") {
     return (
       <div>
         <hi>Frames</hi>
       </div>
     );
-  } else if (params.slug === 'animations') {
+  } else if (params.slug === "animations") {
     return (
       <div>
         <hi>Animations</hi>
       </div>
     );
-  } else if (params.slug === 'charts') {
+  } else if (params.slug === "charts") {
     return (
       <div>
         <hi>Charts</hi>
       </div>
     );
-  } else if (params.slug === 'loginForm') {
+  } else if (params.slug === "loginForm") {
     return (
       <div>
         <hi>Login Form</hi>
       </div>
     );
-  } else if (params.slug === 'Hero') {
+  } else if (params.slug === "Hero") {
     return (
       <div>
         <hi>Hero</hi>
@@ -66,20 +66,15 @@ const SlugPrams = ({ params }) => {
   }
 };
 
-
-
-
-const Single = ( {params}) => {
+const Single = ({ params }) => {
   return (
     <div>
-
-<HStack align={"start"} gap={"100px"}>
-<Side />
-<SlugPrams params={params} />
-</HStack>
+      <HStack align={"start"} gap={"100px"}>
+        <Side />
+        <SlugPrams params={params} />
+      </HStack>
     </div>
-  )
-}
-
+  );
+};
 
 export default Single;

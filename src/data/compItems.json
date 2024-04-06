@@ -1,10 +1,9 @@
 {
-    "CompItems": [
-      { "title": "🃏 Cards", "path": "/components/cards" },
-      { "title": "📦 Modal", "path": "/components/modal" },
-      { "title": "🖼️ Frames", "path": "/components/frames" },
-      { "title": "🏃‍♂️ Animations", "path": "/components/animations" },
-      { "title": "📈 Charts", "path": "/components/charts" }
-    ]
-  }
-  
+  "CompItems": [
+    { "title": "🃏 Cards", "path": "/components/cards" },
+    { "title": "📦 Modal", "path": "/components/modal" },
+    { "title": "🖼️ Frames", "path": "/components/frames" },
+    { "title": "🏃‍♂️ Animations", "path": "/components/animations" },
+    { "title": "📈 Charts", "path": "/components/charts" }
+  ]
+}

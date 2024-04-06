@@ -56,11 +56,10 @@ const ImageSimpleCard = () => {
               fontWeight={"500"}
               textAlign={"left"}
             >
-              When the Sun's energy meets Earth's magnetic field. 
+              When the Sun's energy meets Earth's magnetic field.
               <br />
-              They dance
-              together and send tiny particles toward the poles, creating a
-              magical light show in the sky
+              They dance together and send tiny particles toward the poles,
+              creating a magical light show in the sky
             </Text>
             <HStack
               cursor={"pointer"}

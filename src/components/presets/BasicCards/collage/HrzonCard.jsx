@@ -27,9 +27,8 @@ const CollageCard = () => {
         p={"4"}
       >
         <HStack w={"100%"} h={"100%"} align={"left"} px={2}>
-       
           <HStack justify={"left"} align={"start"} w={"100%"} h={"100%"}>
-          <HStack w={"100%"} h={"100%"}>
+            <HStack w={"100%"} h={"100%"}>
               <Box
                 w={"100%"}
                 h={"100%"}
@@ -65,7 +64,13 @@ const CollageCard = () => {
                   "https://source.unsplash.com/aerial-photo-of-green-trees-ugnrXk1129g" //cache
                 }
                 bgSize={"cover"}
-                bgPos={["bottom right", " bottom right", "bottom right ", "bottom right ", "bottom right"]}
+                bgPos={[
+                  "bottom right",
+                  " bottom right",
+                  "bottom right ",
+                  "bottom right ",
+                  "bottom right",
+                ]}
               ></Box>
             </HStack>
             <HStack w={"50%"} h={"100%"}>
@@ -78,7 +83,13 @@ const CollageCard = () => {
                   "https://source.unsplash.com/photo-of-green-plants-7APM4YyW_JU"
                 }
                 bgSize={"cover"}
-                bgPos={["top right", " top right", "top right", "top right", "top "]}
+                bgPos={[
+                  "top right",
+                  " top right",
+                  "top right",
+                  "top right",
+                  "top ",
+                ]}
               ></Box>
             </HStack>
           </HStack>

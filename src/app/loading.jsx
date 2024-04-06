@@ -22,17 +22,19 @@ const loading = () => {
     <>
       <VStack justify={"center"} align={"center"} w={"100%"} h={"100%"}>
         <HStack justify={"center"} align={"center"}>
-        <Box
-        as="div"
-        animation="spin 2s linear infinite" // Apply CSS animation to rotate the image
-      >
-        <Image src={fruitImage} alt="Fruit Image" />
-      </Box>
-      
+          <Box
+            as="div"
+            animation="spin 2s linear infinite" // Apply CSS animation to rotate the image
+          >
+            <Image src={fruitImage} alt="Fruit Image" />
+          </Box>
         </HStack>
         <HStack justify={"center"} align={"center"} w={"100%"} h={"100%"}>
-<Text fontSize={"26"} fontWeight={"600"} > Loading 🌀</Text>
-      </HStack>
+          <Text fontSize={"26"} fontWeight={"600"}>
+            {" "}
+            Loading 🌀
+          </Text>
+        </HStack>
       </VStack>
     </>
   );

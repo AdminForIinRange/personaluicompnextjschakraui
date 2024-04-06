@@ -1,10 +1,5 @@
 import React from "react";
-import {
-  HStack,
-  Text,
-  Box,
-  VStack,
-} from "@chakra-ui/react";
+import { HStack, Text, Box, VStack } from "@chakra-ui/react";
 
 import Comp from "@/data/CompItems.json";
 import Preset from "@/data/PresetItems.json";
@@ -14,7 +9,7 @@ const SidePanel = () => {
   const { PresetItems } = Preset;
 
   return (
-    <VStack px={"20px"} >
+    <VStack px={"20px"}>
       {/* Presets Section */}
       <HStack justify={"left"} w={"100%"}>
         <Text
@@ -37,7 +32,7 @@ const SidePanel = () => {
           w={"100%"}
         >
           {/* Mapping over PresetItems */}
-          {PresetItems.map(({title, path}) => (
+          {PresetItems.map(({ title, path }) => (
             <Text
               key={title}
               cursor={"pointer"}
@@ -78,7 +73,7 @@ const SidePanel = () => {
           w={"100%"}
         >
           {/* Mapping over CompItems */}
-          {CompItems.map(({title, path}) => (
+          {CompItems.map(({ title, path }) => (
             <Text
               key={title}
               cursor={"pointer"}

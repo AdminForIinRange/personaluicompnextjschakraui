@@ -20,13 +20,12 @@ import Link from "next/link";
 import Comp from "@/data/CompItems.json";
 import Preset from "@/data/PresetItems.json";
 const PresetCardList = () => {
-
   const { CompItems } = Comp;
   const { PresetItems } = Preset;
 
   return (
     <>
-      <VStack  px={10} >
+      <VStack px={10}>
         <HStack justify={"left"} w={"100%"} h={"100%"}>
           <Text fontSize={"30"} fontWeight={"600"}>
             Presets
@@ -41,7 +40,7 @@ const PresetCardList = () => {
           w={"100%"}
           gap={"50px"}
         >
-                {PresetItems.map(({ title, path }) => (
+          {PresetItems.map(({ title, path }) => (
             <Link key={title} href={`${path}`}>
               <Box
                 w={"290px"}
@@ -53,8 +52,7 @@ const PresetCardList = () => {
                   transform: "scale(1.03)",
                   boxShadow: "0 5px 25px gray",
                 }}
-              > 
-              
+              >
                 <VStack justify={"end"} align={"end"} h={"100%"} w={"100%"}>
                   <Box w={"100%"} h={"50px"} borderTop={"1.8px solid #B5B5B5"}>
                     <HStack
@@ -63,7 +61,11 @@ const PresetCardList = () => {
                       w={"100%"}
                       h={"100%"}
                     >
-                      <Text align={"center"} fontSize={"17px"} fontWeight={"500"}>
+                      <Text
+                        align={"center"}
+                        fontSize={"17px"}
+                        fontWeight={"500"}
+                      >
                         {title}
                       </Text>
                     </HStack>
@@ -92,8 +94,8 @@ const PresetCardList = () => {
           {CompItems.map(({ title, path }) => (
             <Link key={title} href={`${path}`}>
               <Box
-               w={"290px"}
-               h={"310px"}
+                w={"290px"}
+                h={"310px"}
                 border={"1.8px solid #B5B5B5"}
                 rounded={"xl"}
                 transition="transform, 0.3s ease-in-out"
@@ -101,8 +103,7 @@ const PresetCardList = () => {
                   transform: "scale(1.03)",
                   boxShadow: "0 5px 25px gray",
                 }}
-              > 
-              
+              >
                 <VStack justify={"end"} align={"end"} h={"100%"} w={"100%"}>
                   <Box w={"100%"} h={"50px"} borderTop={"1.8px solid #B5B5B5"}>
                     <HStack
@@ -111,7 +112,11 @@ const PresetCardList = () => {
                       w={"100%"}
                       h={"100%"}
                     >
-                      <Text align={"center"} fontSize={"17px"} fontWeight={"500"} >
+                      <Text
+                        align={"center"}
+                        fontSize={"17px"}
+                        fontWeight={"500"}
+                      >
                         {title}
                       </Text>
                     </HStack>
