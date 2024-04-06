@@ -1,8 +1,11 @@
 import React from 'react'
 
-const Single = () => {
+const Single = ({ params }) => {
   return (
-    <div>Single</div>
+    
+    <div>
+      <h1>{params.slug}</h1>
+    </div>
   )
 }
 
