@@ -11,8 +11,15 @@ const Logo = () => {
   return (
     <>
     
-    <Link href={"/"}>
+    <Link href={"/"}    transition="transform, 0.3s ease-in-out"
+              _hover={{
+                marginLeft: "5px",
+              }} >
           <Box
+           transition="transform, 0.3s ease-in-out"
+           _hover={{
+             marginLeft: "5px",
+           }} 
             cursor={"pointer"}
             w={"60px"}
             borderRadius={"100px"}
