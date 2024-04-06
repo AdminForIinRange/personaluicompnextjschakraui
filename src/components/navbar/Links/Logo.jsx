@@ -11,22 +11,26 @@ const Logo = () => {
   return (
     <>
     
-    <Link href={"/"}    transition="transform, 0.3s ease-in-out"
-              _hover={{
-                marginLeft: "5px",
-              }} >
+    <Link href={"/"}   >
           <Box
            transition="transform, 0.3s ease-in-out"
+           
            _hover={{
-             marginLeft: "5px",
+            
+            filter: "drop-shadow(0px 0px 55px purple)",
+          transform: "rotate(0deg)" ,// Reset the rotation on hover
+         dropShadow: ("0px 0px 10px #B794F4")
+         
            }} 
             cursor={"pointer"}
             w={"60px"}
             borderRadius={"100px"}
             overflow={"hidden"}
             transform={"rotate(25deg)"}
+    
+            filter={"drop-shadow(0px 0px 1px #B794F4)"}
           >
-            <Image src={fruitImage} alt="Fruit Image" />
+            <Image src={fruitImage} alt="Fruit Image"  />
           </Box>
         </Link>
         
