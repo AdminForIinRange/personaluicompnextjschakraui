@@ -22,22 +22,22 @@ const TicketCard = () => {
       {" "}
       <Box
         w={"415px"}
-        h={"310px"}
+        h={"295px"}
         border={"1.8px solid #B5B5B5"}
         rounded={"xl"}
-        p={"4"}
+      
       >
-        <VStack justify={"left"} align={"inherit"} w={"100%"} h={"100%"}>
-          <HStack w={"100%"}>
+        <VStack justify={"left"} align={"inherit"} w={"100%"} h={"100%"} >
+          <HStack w={"100%"}   p={"4"}>
             <Text
               align={"center"}
-              fontSize={"20px"}
+              fontSize={"23px"}
               fontWeight={"700"}
               textAlign={"left"}
             >
               Ticket{" "}
               <Text fontFamily={"sans-serif"} as={"span"}>
-                #11{" "}
+                #123{" "}
               </Text>
             </Text>
 
@@ -56,18 +56,18 @@ const TicketCard = () => {
             </VStack>
           </HStack>
 
-          <VStack w={"100%"} py={"20px"}>
+          <VStack w={"100%"} py={"8px"}   px={"4"}>
             <Text
               align={"center"}
               fontSize={"18px"}
               fontWeight={"500"}
               textAlign={"left"}
             >
-              The printer on Floor 2 has ceased working. Prompt assistance would
-              be greatly appreciated to resolve the issue
+              The printer on Floor 2 has ceased working. Assistance would
+              be greatly appreciated to resolve the issue.
             </Text>
 
-            <HStack w={"100%"} justify={"left"} align={"left"}>
+            <HStack w={"100%"} justify={"left"} align={"left"} gap={"12px"} mt={"5px"}>
               <Badge p={"5px"} borderRadius={"5px"} colorScheme="green">
                 IT Support
               </Badge>
@@ -78,8 +78,26 @@ const TicketCard = () => {
                 Printer
               </Badge>
             </HStack>
+
+            
           </VStack>
-          <HStack w={"100%"} h={"100%"}></HStack>
+          <VStack justify={"end"} align={"end"} h={"100%"} w={"100%"}>
+                  <Box w={"100%"} h={"50px"} borderTop={"1.8px solid #B5B5B5"}>
+                    <HStack
+                      justify={"left"}
+                      align={"center"}
+                      w={"100%"}
+                      h={"100%"}
+                    >
+                      <Text align={"center"} fontSize={"17px"} fontWeight={"500"} p={"10px"} fontFamily={"sans-serif"}  >
+                      ID: 123
+                      </Text>
+                      <Text align={"center"} fontSize={"17px"} fontWeight={"500"} p={"10px"} fontFamily={"sans-serif"}  >
+                      User: ABC
+                      </Text>
+                    </HStack>
+                  </Box>
+                </VStack>
         </VStack>
       </Box>
     </>

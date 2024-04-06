@@ -81,6 +81,7 @@ const Card = () => {
 
         <HStack mt={"20px"} justify={"left"} w={"100%"} h={"100%"} gap={"15px"} flexWrap={"wrap"}  align={"left"}>
 <TicketCard />
+
         </HStack>
       </VStack>
     </>
