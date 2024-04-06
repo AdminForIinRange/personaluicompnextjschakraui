@@ -1,7 +1,8 @@
-import React from 'react'
+import React from "react";
 
 import {
   HStack,
+  VStack,
   Button,
   Text,
   MenuButton,
@@ -16,14 +17,25 @@ import {
 import Image from "next/image";
 import fruitImage from "../components/img/fruit3.png";
 const loading = () => {
-  return ( // fuuit rotates in teh background
-    <div>
+  return (
+    // fuuit rotates in teh background
+    <>
+      <VStack justify={"center"} align={"center"} w={"100%"} h={"100%"}>
+        <HStack justify={"center"} align={"center"}>
+        <Box
+        as="div"
+        animation="spin 2s linear infinite" // Apply CSS animation to rotate the image
+      >
+        <Image src={fruitImage} alt="Fruit Image" />
+      </Box>
       
-      <HStack>
-        
-        
-        </HStack><Image src={fruitImage} alt="Fruit Image" /></div>
-  )
-}
+        </HStack>
+        <HStack justify={"center"} align={"center"} w={"100%"} h={"100%"}>
+<Text fontSize={"26"} fontWeight={"600"} > Loading 🌀</Text>
+      </HStack>
+      </VStack>
+    </>
+  );
+};
 
-export default loading
+export default loading;
