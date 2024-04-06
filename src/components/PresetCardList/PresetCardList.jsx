@@ -21,7 +21,7 @@ import Link from "next/link";
 const PresetCardList = ({ PresetItems, CompItems }) => {
   return (
     <>
-      <VStack justify={"center"} px={10}>
+      <VStack justify={"center"} px={10} fontFamily={"Raleway"}>
         <HStack justify={"left"} w={"100%"} h={"100%"}>
           <Text fontSize={"30"} fontWeight={"600"}>
             Presets
@@ -39,8 +39,8 @@ const PresetCardList = ({ PresetItems, CompItems }) => {
                 {PresetItems.map(({ title, path }) => (
             <Link key={title} href={`${path}`}>
               <Box
-                w={"200px"}
-                h={"210px"}
+                w={"290px"}
+                h={"310px"}
                 border={"1.8px solid #B5B5B5"}
                 rounded={"xl"}
                 transition="transform, 0.3s ease-in-out"
@@ -58,7 +58,7 @@ const PresetCardList = ({ PresetItems, CompItems }) => {
                       w={"100%"}
                       h={"100%"}
                     >
-                      <Text align={"center"} fontSize={"17px"}>
+                      <Text align={"center"} fontSize={"17px"} fontWeight={"500"}>
                         {title}
                       </Text>
                     </HStack>
@@ -87,8 +87,8 @@ const PresetCardList = ({ PresetItems, CompItems }) => {
           {CompItems.map(({ title, path }) => (
             <Link key={title} href={`${path}`}>
               <Box
-                w={"200px"}
-                h={"210px"}
+               w={"290px"}
+               h={"310px"}
                 border={"1.8px solid #B5B5B5"}
                 rounded={"xl"}
                 transition="transform, 0.3s ease-in-out"
@@ -106,7 +106,7 @@ const PresetCardList = ({ PresetItems, CompItems }) => {
                       w={"100%"}
                       h={"100%"}
                     >
-                      <Text align={"center"} fontSize={"17px"}>
+                      <Text align={"center"} fontSize={"17px"} fontWeight={"500"} >
                         {title}
                       </Text>
                     </HStack>

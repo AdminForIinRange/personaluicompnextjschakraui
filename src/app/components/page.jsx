@@ -33,7 +33,7 @@ const ComponentsPage = () => {
   ];
   return (
     <div>
-      <HStack align={"start"} >
+      <HStack align={"start"} gap={"100px"} >
       <Side CompItems={CompItems} PresetItems={PresetItems} />
 
       <PresetCardList CompItems={CompItems} PresetItems={PresetItems}  />
