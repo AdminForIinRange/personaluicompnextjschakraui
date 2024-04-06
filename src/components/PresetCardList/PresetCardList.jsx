@@ -26,7 +26,7 @@ const PresetCardList = () => {
 
   return (
     <>
-      <VStack justify={"center"} px={10} fontFamily={"Raleway"}>
+      <VStack  px={10} >
         <HStack justify={"left"} w={"100%"} h={"100%"}>
           <Text fontSize={"30"} fontWeight={"600"}>
             Presets

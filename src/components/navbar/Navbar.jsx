@@ -20,6 +20,8 @@ import { FaPen } from "react-icons/fa";
 import React from "react";
 import fruitImage from "../img/fruit3.png";
 import Image from "next/image";
+import Link from "next/link";
+
 const Navbar = () => {
   //---------------------------------------
 
@@ -43,7 +45,10 @@ const Navbar = () => {
         px={7}
         gap={"20px"}
       >
+        <Link href={"/"}>
+       
         <Box
+        cursor={"pointer"}
           w={"60px"}
           borderRadius={"100px"}
           overflow={"hidden"}
@@ -51,6 +56,7 @@ const Navbar = () => {
         >
           <Image src={fruitImage} alt="Fruit Image" />
         </Box>
+        </Link>
 
         <Spacer />
         <HStack fontWeight={500}>

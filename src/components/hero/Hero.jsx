@@ -21,6 +21,7 @@ import { FaPen } from "react-icons/fa";
 import React from "react";
 import { HiArrowLongRight } from "react-icons/hi2";
 import { GiHypersonicBolt } from "react-icons/gi";
+import Link from "next/link";
 
 const Hero = () => {
   const [isTablet] = useMediaQuery(
@@ -47,6 +48,7 @@ const Hero = () => {
         </HStack>
 
         <HStack justify={"center"} align={"center"} mt={"50px"}>
+      <Link href="/components"> 
           <Button
             p={"15px"}
             variant={"solid"}
@@ -73,6 +75,7 @@ const Hero = () => {
               <HiArrowLongRight fontSize={"35px"} />{" "}
             </Text>{" "}
           </Button>
+          </Link>
         </HStack>
       </VStack>
     </>

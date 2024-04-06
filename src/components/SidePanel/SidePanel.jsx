@@ -14,7 +14,7 @@ const SidePanel = () => {
   const { PresetItems } = Preset;
 
   return (
-    <VStack px={"20px"}>
+    <VStack px={"20px"} >
       {/* Presets Section */}
       <HStack justify={"left"} w={"100%"}>
         <Text
@@ -26,7 +26,7 @@ const SidePanel = () => {
           Presets
         </Text>
       </HStack>
-      <HStack w={"100%"} align={"start"}>
+      <HStack w={"200px"} align={"start"}>
         <Box h={"200px"} w={"1px"} bgColor={"black"}></Box>
         <VStack
           ml={"5px"}
@@ -67,7 +67,7 @@ const SidePanel = () => {
           Components
         </Text>
       </HStack>
-      <HStack w={"100%"} align={"start"}>
+      <HStack w={"200px"} align={"start"}>
         <Box h={"350"} w={"1px"} bgColor={"black"}></Box>
         <VStack
           ml={"5px"}
