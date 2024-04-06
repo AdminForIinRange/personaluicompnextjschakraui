@@ -17,7 +17,7 @@ import {
     Box,
     VStack,
   } from "@chakra-ui/react";
-import Side from '@/components/side/Side';
+import Side from '@/components/SidePanel/SidePanel';
 const SlugPrams = ({ params }) => {
   if (params.slug === 'cards') {
     return (

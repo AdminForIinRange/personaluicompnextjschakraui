@@ -1,5 +1,5 @@
 import PresetCardList from "@/components/PresetCardList/PresetCardList";
-import Side from "@/components/Side/Side";
+import Side from "@/components/SidePanel/SidePanel";
 import React from "react";
 import {
   HStack,

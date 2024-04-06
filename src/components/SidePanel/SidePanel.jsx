@@ -9,7 +9,7 @@ import {
 import Comp from "@/data/CompItems.json";
 import Preset from "@/data/PresetItems.json";
 
-const Side = () => {
+const SidePanel = () => {
   const { CompItems } = Comp;
   const { PresetItems } = Preset;
 
@@ -100,4 +100,4 @@ const Side = () => {
   );
 };
 
-export default Side;
+export default SidePanel;
