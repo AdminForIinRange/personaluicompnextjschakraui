@@ -19,7 +19,7 @@ import {
 const ComponentsPage = () => {
 
   const CompItems = [
-    { title: "🃏 Cards", path: "" },
+    { title: "🃏 Cards", path: "/blog/cards" },
     { title: "📦 Modal", path: "" },
     { title: "🖼️ frames", path: "" },
     { title: "🏃‍♂️Animations", path: "" },
@@ -27,7 +27,7 @@ const ComponentsPage = () => {
   ];
 
   const PresetItems = [
-    { title: "🪵 Login Form", path: "" },
+    { title: "🪵 Login Form", path: "/blog/login" },
     { title: "🦸 Hero", path: "" },
     
   ];
@@ -36,7 +36,7 @@ const ComponentsPage = () => {
       <HStack align={"start"} >
       <Side CompItems={CompItems} PresetItems={PresetItems} />
 
-      <PresetCardList />
+      <PresetCardList CompItems={CompItems} PresetItems={PresetItems}  />
       </HStack>
 
     </div>

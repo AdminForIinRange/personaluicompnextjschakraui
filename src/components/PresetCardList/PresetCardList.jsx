@@ -18,20 +18,8 @@ import {
 import Side from "../side/Side";
 
 
-const PresetCardList = () => {
-  const CompItems = [
-    { title: "🃏 Cards", path: "" },
-    { title: "📦 Modal", path: "" },
-    { title: "🖼️ frames", path: "" },
-    { title: "🏃‍♂️Animations", path: "" },
-    { title: "📈 Charts", path: "" },
-  ];
-
-  const PresetItems = [
-    { title: "🪵 Login Form", path: "" },
-    { title: "🦸 Hero", path: "" },
-    
-  ];
+const PresetCardList = ({PresetItems, CompItems}) => {
+ 
   return (
     <>
 
