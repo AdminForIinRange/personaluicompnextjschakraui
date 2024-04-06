@@ -15,7 +15,7 @@ import {
   VStack,
 } from "@chakra-ui/react";
 import { HiArrowLongRight } from "react-icons/hi2";
-const CollageCard = () => {
+const HrzonCard = () => {
   return (
     <>
       {" "}
@@ -97,4 +97,4 @@ const CollageCard = () => {
   );
 };
 
-export default CollageCard;
+export default HrzonCard
