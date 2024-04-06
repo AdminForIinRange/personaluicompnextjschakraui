@@ -8,6 +8,7 @@ import {
   Menu,
   MenuList,
   MenuItem,
+  Highlight ,
   Spacer,
   ButtonGroup,
   useMediaQuery,
@@ -24,9 +25,7 @@ import { GiHypersonicBolt } from "react-icons/gi";
 import Link from "next/link";
 
 const Hero = () => {
-  const [isTablet] = useMediaQuery(
-    "(min-width: 768px) and (max-width: 1024px)",
-  );
+  const [isTablet] = useMediaQuery("(max-width: 1024px)");
 
   return (
     <>
@@ -43,13 +42,28 @@ const Hero = () => {
             textAlign={"center"}
             fontFamily={"Raleway"}
           >
-            Accelerate UI Development in React using Amazing presets.
+
+<span>
+        <Highlight
+          query="Accelerate"
+          styles={{
+            px: "5",
+            py: "0",
+            color: "#230F37",
+            rounded: "full",
+            bg: "#B794F4",
+          }}
+        >
+        Accelerate 
+        </Highlight>
+        </span>
+             UI Development in React using Amazing presets.
           </Text>
         </HStack>
 
         <HStack justify={"center"} align={"center"} mt={"50px"}>
       <Link href="/components"> 
-          <Button
+          <Button className={ isTablet ? " " : "infinite-up-down-hover"}
             p={"15px"}
             variant={"solid"}
             bgColor={"#B794F4"}

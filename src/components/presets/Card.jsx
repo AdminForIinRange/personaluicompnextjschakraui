@@ -1,3 +1,4 @@
+"use client";
 import {
   HStack,
   Button,
@@ -9,6 +10,14 @@ import {
   Spacer,
   ButtonGroup,
   useMediaQuery,
+  Modal,
+  ModalOverlay,
+  ModalContent,
+  ModalHeader,
+  ModalFooter,
+  useDisclosure,
+  ModalBody,
+  ModalCloseButton,
   Divider,
   Box,
   VStack,
@@ -23,6 +32,7 @@ import CollageCard from "./BasicCards/collage/CollageCard";
 import HrzonCard from "./BasicCards/collage/HrzonCard";
 import TicketCard from "./ComplexCards/TicketCard";
 const Card = () => {
+    const { isOpen, onOpen, onClose } = useDisclosure()
   return (
     <>
       <VStack px={10}  >
