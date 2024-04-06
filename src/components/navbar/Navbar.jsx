@@ -5,6 +5,7 @@ import React from "react";
 
 import MoibleMenuLinks from "./Links/MoibleMenuLinks";
 import { Links } from "./Links/Links";
+import Logo from "./Links/Logo";
 
 const Navbar = () => {
   //---------------------------------------
@@ -29,6 +30,7 @@ const Navbar = () => {
         px={7}
         gap={"20px"}
       >
+        <Logo />
         <Spacer />
         <HStack fontWeight={500}>
           {isTablet ? <MoibleMenuLinks /> : <Links />}
