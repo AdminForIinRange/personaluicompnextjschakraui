@@ -19,16 +19,16 @@ import {
 const ComponentsPage = () => {
 
   const CompItems = [
-    { title: "🃏 Cards", path: "/blog/cards" },
-    { title: "📦 Modal", path: "" },
-    { title: "🖼️ frames", path: "" },
-    { title: "🏃‍♂️Animations", path: "" },
-    { title: "📈 Charts", path: "" },
+    { title: "🃏 Cards", path: "/components/cards" },
+    { title: "📦 Modal", path: "/components/modal" },
+    { title: "🖼️ frames", path: "/components/frames" },
+    { title: "🏃‍♂️ Animations", path: "/components/animations" },
+    { title: "📈 Charts", path: "/components/charts" },
   ];
 
   const PresetItems = [
-    { title: "🪵 Login Form", path: "/blog/login" },
-    { title: "🦸 Hero", path: "" },
+    { title: "🪵 Login Form", path: "/components/loginForm" },
+    { title: "🦸 Hero", path: "/components/Hero" },
     
   ];
   return (

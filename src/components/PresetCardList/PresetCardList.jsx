@@ -16,78 +16,75 @@ import {
   VStack,
 } from "@chakra-ui/react";
 import Side from "../side/Side";
+import Link from "next/link";
 
-
-const PresetCardList = ({PresetItems, CompItems}) => {
- 
+const PresetCardList = ({ PresetItems, CompItems }) => {
   return (
     <>
-
-    
-        <VStack justify={"center"} px={10}  >
-          <HStack justify={"left"} w={"100%"} h={"100%"}>
-            <Text fontSize={"30"} fontWeight={"600"}>
-              Presets
-            </Text>
-          </HStack>
-          <HStack
-             flexWrap={"wrap"}
-            mt={"20px"}
-            align={"left"}
-            justify={"left"}
-            h={"100%"}
-            w={"100%"}
-            gap={"50px"}
-          >
-            {PresetItems.map((item) => (
-              <Box
-                key={item.title}
-                w={"200px"}
-                h={"210px"}
-                border={"1.8px solid #B5B5B5"}
-                rounded={"xl"}
-                transition="transform, 0.3s ease-in-out"
-                _hover={{
-                  transform: "scale(1.03)",
-                  boxShadow: "0 5px 25px gray",
-                }}
-              >
-                <VStack justify={"end"} align={"end"} h={"100%"} w={"100%"}>
-                  <Box w={"100%"} h={"50px"} borderTop={"1.8px solid #B5B5B5"}>
-                    <HStack
-                      justify={"center"}
-                      align={"center"}
-                      w={"100%"}
-                      h={"100%"}
-                    >
-                      <Text align={"center"} fontSize={"17px"}>
-                        {item.title}
-                      </Text>
-                    </HStack>
-                  </Box>
-                </VStack>
-              </Box>
-            ))}
-          </HStack>
-
-          <HStack justify={"left"} w={"100%"} h={"100%"} mt={"50px"}   >
-            <Text fontSize={"30"} fontWeight={"600"}>
-              Components
-            </Text>
-          </HStack>
-
-          <HStack
+      <VStack justify={"center"} px={10}>
+        <HStack justify={"left"} w={"100%"} h={"100%"}>
+          <Text fontSize={"30"} fontWeight={"600"}>
+            Presets
+          </Text>
+        </HStack>
+        <HStack
           flexWrap={"wrap"}
-            mt={"20px"}
-            align={"left"}
-            justify={"left"}
-            h={"100%"}
-            w={"100%"}
-            gap={"50px"}
-          >
-            {CompItems.map((item) => (
+          mt={"20px"}
+          align={"left"}
+          justify={"left"}
+          h={"100%"}
+          w={"100%"}
+          gap={"50px"}
+        >
+          {PresetItems.map(({ title, path }) => (
+            <Box
+              key={title}
+              w={"200px"}
+              h={"210px"}
+              border={"1.8px solid #B5B5B5"}
+              rounded={"xl"}
+              transition="transform, 0.3s ease-in-out"
+              _hover={{
+                transform: "scale(1.03)",
+                boxShadow: "0 5px 25px gray",
+              }}
+            >
+              <VStack justify={"end"} align={"end"} h={"100%"} w={"100%"}>
+                <Box w={"100%"} h={"50px"} borderTop={"1.8px solid #B5B5B5"}>
+                  <HStack
+                    justify={"center"}
+                    align={"center"}
+                    w={"100%"}
+                    h={"100%"}
+                  >
+                    <Text align={"center"} fontSize={"17px"}>
+                      {title}
+                    </Text>
+                  </HStack>
+                </Box>
+              </VStack>
+            </Box>
+          ))}
+        </HStack>
+
+        <HStack justify={"left"} w={"100%"} h={"100%"} mt={"50px"}>
+          <Text fontSize={"30"} fontWeight={"600"}>
+            Components
+          </Text>
+        </HStack>
+
+        <HStack
+          flexWrap={"wrap"}
+          mt={"20px"}
+          align={"left"}
+          justify={"left"}
+          h={"100%"}
+          w={"100%"}
+          gap={"50px"}
+        >
+          {CompItems.map(({ title, path }) => (
+            <Link key={title} href={`${path}`}>
               <Box
-                key={item.title}
                 w={"200px"}
                 h={"210px"}
                 border={"1.8px solid #B5B5B5"}
@@ -97,7 +94,8 @@ const PresetCardList = ({PresetItems, CompItems}) => {
                   transform: "scale(1.03)",
                   boxShadow: "0 5px 25px gray",
                 }}
-              >
+              > 
+              
                 <VStack justify={"end"} align={"end"} h={"100%"} w={"100%"}>
                   <Box w={"100%"} h={"50px"} borderTop={"1.8px solid #B5B5B5"}>
                     <HStack
@@ -107,17 +105,16 @@ const PresetCardList = ({PresetItems, CompItems}) => {
                       h={"100%"}
                     >
                       <Text align={"center"} fontSize={"17px"}>
-                        {item.title}
+                        {title}
                       </Text>
                     </HStack>
                   </Box>
                 </VStack>
               </Box>
-            ))}
-          </HStack>
-          
-        </VStack>
-     
+            </Link>
+          ))}
+        </HStack>
+      </VStack>
     </>
   );
 };
