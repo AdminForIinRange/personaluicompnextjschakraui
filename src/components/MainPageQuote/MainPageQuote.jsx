@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import {
   HStack,
@@ -5,6 +7,7 @@ import {
   Box,
   Avatar,
   AvatarBadge,
+  useMediaQuery,
   AvatarGroup,
   VStack,
 } from "@chakra-ui/react";
@@ -13,6 +16,9 @@ import Quote from "../img/Quotes-Mark-Symbol-PNG-Image.png";
 import GithubProfilePic from "../img/GithubProfilePic.png";
 
 const MainPageQuote = () => {
+  
+  const [isTablet] = useMediaQuery("(max-width: 1024px)");
+   const [isMobile] = useMediaQuery("(max-width: 736px)");
   return (
     <Box position="relative" mt={"125px"}>
       {" "}
@@ -22,11 +28,11 @@ const MainPageQuote = () => {
           <VStack justify="center" w="100%" h="100%" align="center" mt={10}>
             <Text
               textDecoration={"Highlight"}
-              fontSize={["35px", "35px", "45px", "50px"]}
+              fontSize={["23px", "25px", "45px", "50px"]}
               color="gray.700"
               fontWeight="400"
-              textAlign="left"
-              w="70%"
+              textAlign={["center", "center", "left", "left"]}
+              w={["100%", "90%", "80%", "70%"]}
               style={{ fontStyle: "italic" }}
             >
               uhh... Cool Presets, i use it all the time for a quick MVP dev
@@ -56,7 +62,7 @@ const MainPageQuote = () => {
                 />
                 <VStack justify="center" align="left">
                   <Text
-                    fontSize={["20px", "25px", "25px", "25px"]}
+                    fontSize={["15px", "20px", "20px", "25px"]}
                     color="gray.700"
                     fontWeight="700"
                     textAlign="left"
@@ -65,7 +71,7 @@ const MainPageQuote = () => {
                   </Text>
                   <Text
                     mt={"-10px"}
-                    fontSize={["20px", "25px", "25px", "15px"]}
+                    fontSize={["12px", "16px", "16px", "18px"]}
                     color="gray.700"
                     fontWeight="400"
                     textAlign="left"
@@ -78,7 +84,19 @@ const MainPageQuote = () => {
           </VStack>
         </Box>
       </VStack>
-      <HStack position="absolute" top="-100" left="50">
+
+    {isTablet && <HStack position="absolute" top="-9" left="50">
+        {/* Image positioned absolutely */}
+        <Image
+          width={150}
+          style={{ rotate: "" }}
+          src={Quote}
+          alt="Quotation mark"
+        />
+      </HStack>}
+
+
+     { !isTablet && <HStack position="absolute" top="-100" left="50">
         {/* Image positioned absolutely */}
         <Image
           width={300}
@@ -86,7 +104,9 @@ const MainPageQuote = () => {
           src={Quote}
           alt="Quotation mark"
         />
-      </HStack>
+      </HStack> }
+
+    
     </Box>
   );
 };

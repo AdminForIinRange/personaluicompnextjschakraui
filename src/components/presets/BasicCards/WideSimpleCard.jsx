@@ -1,6 +1,7 @@
 import React from "react";
 import { HStack, Text, Box, VStack } from "@chakra-ui/react";
 import { HiArrowLongRight } from "react-icons/hi2";
+
 const WideSimpleCard = () => {
   return (
     <>

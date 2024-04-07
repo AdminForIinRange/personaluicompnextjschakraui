@@ -8,9 +8,9 @@ import Side from "@/components/SidePanel/SidePanel";
 const SlugPrams = ({ params }) => {
   if (params.slug === "cards") {
     return (
-      <div>
+    
         <Card />
-      </div>
+   
     );
   } else if (params.slug === "modal") {
     return (

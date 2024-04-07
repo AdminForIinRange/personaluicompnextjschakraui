@@ -55,7 +55,7 @@ const Card = () => {
           flexWrap={"wrap"}
           align={"left"}
         >
-          <SimpleCard />
+          <SimpleCard  />
           <WideSimpleCard />
           <ImageSimpleCard />
         </HStack>
