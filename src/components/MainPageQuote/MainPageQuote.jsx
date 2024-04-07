@@ -83,22 +83,21 @@ const MainPageQuote = () => {
           </VStack>
         </Box>
       </VStack>
-      {isTablet && (
-        <HStack position="absolute" top="-9" left="50">
+      {!isTablet ? (
+        <HStack position="absolute" top="-100" left="50">
           {/* Image positioned absolutely */}
           <Image
-            width={150}
+            width={300}
             style={{ rotate: "" }}
             src={Quote}
             alt="Quotation mark"
           />
         </HStack>
-      )}
-      {!isTablet && (
-        <HStack position="absolute" top="-100" left="50">
+      ) : (
+        <HStack position="absolute" top="-9" left="50">
           {/* Image positioned absolutely */}
           <Image
-            width={300}
+            width={150}
             style={{ rotate: "" }}
             src={Quote}
             alt="Quotation mark"
