@@ -1,6 +1,6 @@
 import NotFound from "@/app/not-found";
 import Card from "@/components/presets/Card";
-import LoginForm from "@/components/presets/LoginForm";
+import LoginForm from "@/components/presets/AuthForm";
 import React from "react";
 
 import {
