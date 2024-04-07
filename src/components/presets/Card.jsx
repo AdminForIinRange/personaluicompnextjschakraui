@@ -3,7 +3,6 @@ import {
   HStack,
   Button,
   Text,
-
   Modal,
   ModalOverlay,
   ModalContent,
@@ -12,7 +11,6 @@ import {
   useDisclosure,
   ModalBody,
   ModalCloseButton,
-
   Box,
   VStack,
 } from "@chakra-ui/react";
@@ -26,12 +24,10 @@ import CollageCard from "./BasicCards/collage/CollageCard";
 import HrzonCard from "./BasicCards/collage/HrzonCard";
 import TicketCard from "./ComplexCards/TicketCard";
 
-
 const Card = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <>
-    
       <VStack px={10}>
         <VStack justify={"left"} w={"100%"} h={"100%"} align={"left"}>
           <Text fontSize={"50"} fontWeight={"600"}>

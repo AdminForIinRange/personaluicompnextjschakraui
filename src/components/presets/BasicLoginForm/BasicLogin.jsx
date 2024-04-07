@@ -38,7 +38,12 @@ const BasicLogin = () => {
             as={"span"}
           >
             Dont Have an Account
-            <Text color={"blue.400"} cursor={"pointer"} as={"span"} fontWeight={"500"}>
+            <Text
+              color={"blue.400"}
+              cursor={"pointer"}
+              as={"span"}
+              fontWeight={"500"}
+            >
               {" "}
               Sign Up?{" "}
             </Text>
@@ -54,7 +59,6 @@ const BasicLogin = () => {
             boxShadow={"0 1px 5px gray"}
             align={"left"}
           >
-            
             <FormLabel htmlFor="email"> Email</FormLabel>
             <Input
               id="email"
@@ -95,7 +99,7 @@ const BasicLogin = () => {
             <HStack mt={"20px"}>
               <Divider />
               <Text whiteSpace="nowrap" color="fg.muted">
-  Or
+                Or
               </Text>
               <Divider />
             </HStack>

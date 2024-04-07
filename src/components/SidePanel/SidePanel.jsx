@@ -33,23 +33,21 @@ const SidePanel = () => {
         >
           {/* Mapping over PresetItems */}
           {PresetItems.map(({ title, path }) => (
-              <Link key={title} href={`${path}`}>
-
-          
-            <Text
-              key={title}
-              cursor={"pointer"}
-              transition="transform, 0.3s ease-in-out"
-              _hover={{
-                marginLeft: "15px",
-              }}
-              w={"100%"}
-              textAlign={"left"}
-              fontSize={"17px"}
-              fontWeight={"500"}
-            >
-              {title}
-            </Text>
+            <Link key={title} href={`${path}`}>
+              <Text
+                key={title}
+                cursor={"pointer"}
+                transition="transform, 0.3s ease-in-out"
+                _hover={{
+                  marginLeft: "15px",
+                }}
+                w={"100%"}
+                textAlign={"left"}
+                fontSize={"17px"}
+                fontWeight={"500"}
+              >
+                {title}
+              </Text>
             </Link>
           ))}
         </VStack>
@@ -78,25 +76,22 @@ const SidePanel = () => {
         >
           {/* Mapping over CompItems */}
           {CompItems.map(({ title, path }) => (
-             <Link key={title} href={`${path}`}>
-
-
-            
-            <Text
-              key={title}
-              cursor={"pointer"}
-              transition="transform, 0.3s ease-in-out"
-              _hover={{
-                marginLeft: "15px",
-              }}
-              w={"100%"}
-              textAlign={"left"}
-              fontSize={"17px"}
-              fontWeight={"500"}
-            >
-              {title}
-            </Text>
-             </Link>
+            <Link key={title} href={`${path}`}>
+              <Text
+                key={title}
+                cursor={"pointer"}
+                transition="transform, 0.3s ease-in-out"
+                _hover={{
+                  marginLeft: "15px",
+                }}
+                w={"100%"}
+                textAlign={"left"}
+                fontSize={"17px"}
+                fontWeight={"500"}
+              >
+                {title}
+              </Text>
+            </Link>
           ))}
         </VStack>
       </HStack>

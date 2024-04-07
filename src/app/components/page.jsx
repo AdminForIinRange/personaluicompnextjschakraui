@@ -1,10 +1,7 @@
 import PresetCardList from "@/components/PresetCardList/PresetCardList";
 
 import React from "react";
-import {
-  HStack,
-  
-} from "@chakra-ui/react";
+import { HStack } from "@chakra-ui/react";
 import SidePanel from "@/components/SidePanel/SidePanel";
 const ComponentsPage = () => {
   return (

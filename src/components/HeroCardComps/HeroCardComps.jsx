@@ -89,7 +89,6 @@ const HeroCardComps = () => {
                     fontSize={"32px"}
                     fontWeight={"700"}
                     textAlign={"left"}
-               
                   >
                     {icon}
                   </Text>

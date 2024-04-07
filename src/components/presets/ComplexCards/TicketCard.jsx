@@ -71,12 +71,17 @@ const TicketCard = () => {
           </VStack>
           <VStack justify={"end"} align={"end"} h={"100%"} w={"100%"}>
             <Box w={"100%"} h={"50px"} borderTop={"1.8px solid #B5B5B5"}>
-              <HStack justify={"left"} align={"center"} w={"100%"} h={"100%"} px={"4"} >
+              <HStack
+                justify={"left"}
+                align={"center"}
+                w={"100%"}
+                h={"100%"}
+                px={"4"}
+              >
                 <Text
                   align={"center"}
                   fontSize={"17px"}
                   fontWeight={"500"}
-                 
                   fontFamily={"sans-serif"}
                 >
                   ID: 123
@@ -85,7 +90,6 @@ const TicketCard = () => {
                   align={"center"}
                   fontSize={"17px"}
                   fontWeight={"500"}
-                 
                   fontFamily={"sans-serif"}
                 >
                   User: ABC

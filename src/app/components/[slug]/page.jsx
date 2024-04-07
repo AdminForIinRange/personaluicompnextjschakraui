@@ -3,10 +3,7 @@ import Card from "@/components/presets/Card";
 import LoginForm from "@/components/presets/AuthForm";
 import React from "react";
 
-import {
-  HStack,
-
-} from "@chakra-ui/react";
+import { HStack } from "@chakra-ui/react";
 import Side from "@/components/SidePanel/SidePanel";
 const SlugPrams = ({ params }) => {
   if (params.slug === "cards") {

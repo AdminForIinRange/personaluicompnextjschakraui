@@ -1,13 +1,6 @@
 import React from "react";
 
-import {
-  HStack,
-  VStack,
-
-  Text,
-
-  Box,
-} from "@chakra-ui/react";
+import { HStack, VStack, Text, Box } from "@chakra-ui/react";
 import Image from "next/image";
 import fruitImage from "../components/img/fruit3.png";
 const loading = () => {

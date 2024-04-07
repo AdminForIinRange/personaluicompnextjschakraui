@@ -40,14 +40,13 @@ const Hero = () => {
             Accelerate UI Development in React using Amazing presets.
           </Text>
         </HStack>
-         <Text
-            fontSize={["15px", "20px", "20px", "20px"]}
-    
-            textAlign={"center"}
-            fontFamily={"Raleway"}
-          >
-            Accelerate UI Development in React using Amazing presets.
-          </Text>
+        <Text
+          fontSize={["15px", "20px", "20px", "20px"]}
+          textAlign={"center"}
+          fontFamily={"Raleway"}
+        >
+          Accelerate UI Development in React using Amazing presets.
+        </Text>
 
         <HStack justify={"center"} align={"center"} mt={"50px"}>
           <HeroBtn />
