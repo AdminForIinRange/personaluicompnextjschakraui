@@ -27,7 +27,11 @@ export const Links = () => {
               src={fruitImage}
               alt="Fruit Image"
               width={20}
-              style={{ transform: "rotate(25deg)", marginRight: "5px" }}
+              style={{
+                transform: "rotate(25deg)",
+                marginRight: "5px",
+                filter: "brightness(0) invert(1)"
+              }}
             />
 
             <Text as={"span"} color={"white"}>
