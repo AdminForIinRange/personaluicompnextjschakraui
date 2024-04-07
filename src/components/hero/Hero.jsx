@@ -41,11 +41,11 @@ const Hero = () => {
           </Text>
         </HStack>
         <Text
-          fontSize={["15px", "20px", "20px", "20px"]}
+          fontSize={["15px", "24px", "24px", "24px"]}
           textAlign={"center"}
           fontFamily={"Raleway"}
         >
-          Accelerate UI Development in React using Amazing presets.
+          Streamlined React UI Development with Powerful Presets
         </Text>
 
         <HStack justify={"center"} align={"center"} mt={"50px"}>
