@@ -30,7 +30,7 @@ export const Links = () => {
               style={{
                 transform: "rotate(25deg)",
                 marginRight: "5px",
-                filter: "brightness(0) invert(1)"
+                filter: "brightness(0) invert(1)",
               }}
             />
 

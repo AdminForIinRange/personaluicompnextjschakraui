@@ -71,7 +71,7 @@ const BasicSignUp = () => {
               autoComplete="current-password"
               style={{ width: "100%" }}
             ></Input>
-       
+
             <FormLabel mt={"20px"} htmlFor="password">
               Retype password
             </FormLabel>
@@ -82,7 +82,6 @@ const BasicSignUp = () => {
               autoComplete="current-password"
               w={"100%"}
             />
-       
 
             <HStack mt={"15px"} justify="space-between">
               <Checkbox>Remember me</Checkbox>

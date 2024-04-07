@@ -16,9 +16,8 @@ import Quote from "../img/Quotes-Mark-Symbol-PNG-Image.png";
 import GithubProfilePic from "../img/GithubProfilePic.png";
 
 const MainPageQuote = () => {
-  
   const [isTablet] = useMediaQuery("(max-width: 1024px)");
-   const [isMobile] = useMediaQuery("(max-width: 736px)");
+  const [isMobile] = useMediaQuery("(max-width: 736px)");
   return (
     <Box position="relative" mt={"125px"}>
       {" "}
@@ -84,29 +83,28 @@ const MainPageQuote = () => {
           </VStack>
         </Box>
       </VStack>
-
-    {isTablet && <HStack position="absolute" top="-9" left="50">
-        {/* Image positioned absolutely */}
-        <Image
-          width={150}
-          style={{ rotate: "" }}
-          src={Quote}
-          alt="Quotation mark"
-        />
-      </HStack>}
-
-
-     { !isTablet && <HStack position="absolute" top="-100" left="50">
-        {/* Image positioned absolutely */}
-        <Image
-          width={300}
-          style={{ rotate: "" }}
-          src={Quote}
-          alt="Quotation mark"
-        />
-      </HStack> }
-
-    
+      {isTablet && (
+        <HStack position="absolute" top="-9" left="50">
+          {/* Image positioned absolutely */}
+          <Image
+            width={150}
+            style={{ rotate: "" }}
+            src={Quote}
+            alt="Quotation mark"
+          />
+        </HStack>
+      )}
+      {!isTablet && (
+        <HStack position="absolute" top="-100" left="50">
+          {/* Image positioned absolutely */}
+          <Image
+            width={300}
+            style={{ rotate: "" }}
+            src={Quote}
+            alt="Quotation mark"
+          />
+        </HStack>
+      )}
     </Box>
   );
 };

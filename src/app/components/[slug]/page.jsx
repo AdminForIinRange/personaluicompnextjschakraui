@@ -7,11 +7,7 @@ import { HStack } from "@chakra-ui/react";
 import Side from "@/components/SidePanel/SidePanel";
 const SlugPrams = ({ params }) => {
   if (params.slug === "cards") {
-    return (
-    
-        <Card />
-   
-    );
+    return <Card />;
   } else if (params.slug === "modal") {
     return (
       <div>
