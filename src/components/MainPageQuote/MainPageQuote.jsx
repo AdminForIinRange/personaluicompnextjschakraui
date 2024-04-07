@@ -23,7 +23,7 @@ const MainPageQuote = () => {
       {" "}
       {/* Container with relative positioning */}
       <VStack justify="center" w="100%" h="100%" align="center">
-        <Box w="80%" h={"100%"} bg="purple.200" rounded="xl" p={5}>
+        <Box w="70%" h={"100%"} bg="purple.200" rounded="xl" p={5}>
           <VStack justify="center" w="100%" h="100%" align="center" mt={10}>
             <Text
               textDecoration={"Highlight"}
@@ -84,7 +84,7 @@ const MainPageQuote = () => {
         </Box>
       </VStack>
       {!isTablet ? (
-        <HStack position="absolute" top="-100" left="50">
+        <HStack position="absolute" top="-100" left="60">
           {/* Image positioned absolutely */}
           <Image
             width={300}
