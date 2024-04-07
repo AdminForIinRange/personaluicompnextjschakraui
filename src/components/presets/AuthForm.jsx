@@ -16,6 +16,7 @@ import { ViewIcon, ViewOffIcon } from "@chakra-ui/icons";
 import { FaGoogle } from "react-icons/fa";
 import BasicLogin from "./BasicLoginForm/BasicLogin";
 import BasicSignUp from "./BasicLoginForm/BasicSignUp";
+import { FaGithub } from "react-icons/fa";
 const AuthForm = () => {
   const [showPassword, setShowPassword] = useState(false);
 
@@ -42,19 +43,17 @@ const AuthForm = () => {
         </VStack>
 
         <HStack
-         mt={"20px"}
+          mt={"20px"}
           justify={"left"}
           w={"100%"}
           h={"100%"}
           gap={"15px"}
           flexWrap={"wrap"}
-          align={"left"}
+          align={"start"}
         >
+          <BasicLogin />
 
-            <BasicLogin />
-            
-<BasicSignUp />
-         
+          <BasicSignUp />
         </HStack>
       </VStack>
     </>
