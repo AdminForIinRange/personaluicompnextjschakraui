@@ -1,5 +1,6 @@
 import NotFound from "@/app/not-found";
 import Card from "@/components/presets/Card";
+import LoginForm from "@/components/presets/LoginForm";
 import React from "react";
 
 import {
@@ -41,7 +42,7 @@ const SlugPrams = ({ params }) => {
   } else if (params.slug === "loginForm") {
     return (
       <div>
-        <hi>Login Form</hi>
+        <LoginForm />
       </div>
     );
   } else if (params.slug === "Hero") {

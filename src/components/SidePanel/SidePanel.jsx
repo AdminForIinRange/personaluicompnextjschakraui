@@ -63,7 +63,7 @@ const SidePanel = () => {
           fontWeight={"600"}
           textAlign={"left"}
         >
-          Components
+          Pre-Components
         </Text>
       </HStack>
       <HStack w={"200px"} align={"start"}>

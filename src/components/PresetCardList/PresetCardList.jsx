@@ -78,7 +78,7 @@ const PresetCardList = () => {
 
         <HStack justify={"left"} w={"100%"} h={"100%"} mt={"50px"}>
           <Text fontSize={"30"} fontWeight={"600"}>
-            Components
+          Pre-Components
           </Text>
         </HStack>
 
