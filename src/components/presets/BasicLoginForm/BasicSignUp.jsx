@@ -55,6 +55,27 @@ const BasicSignUp = () => {
               autoComplete="current-email"
               required
             />
+
+<Box
+            w={"100%"}
+            h={"30px"}
+            bg={"#FEEBC8"}
+            mt={"10px"}
+            border={" 2px dotted #F6AD55"}
+          >
+            <HStack justify={"center"} align={"center"} w={"100%"} h={"100%"}>
+              <Text fontWeight={450} color={"#DD6B20"} fontSize={"15px"}>
+                The Email you have entered is already Signed Up{" "}
+                <Button
+               
+                  colorScheme="yellow.100"
+                  variant="link"
+                >
+                  Login
+                </Button>
+              </Text>
+            </HStack>
+          </Box>
             <FormLabel mt={"20px"} htmlFor="password">
               password
             </FormLabel>
@@ -65,6 +86,19 @@ const BasicSignUp = () => {
               autoComplete="current-password"
               style={{ width: "100%" }}
             ></Input>
+             <Box
+            w={"100%"}
+            h={"30px"}
+            bg={"#FEEBC8"}
+            mt={"10px"}
+            border={" 2px dotted #F6AD55"}
+          >
+            <HStack justify={"center"} align={"center"} w={"100%"} h={"100%"}>
+              <Text fontWeight={450} color={"#DD6B20"}  fontSize={"15px"}>
+                Password should be at least 6 characters
+              </Text>
+            </HStack>
+          </Box>
             <FormLabel mt={"20px"} htmlFor="password">
               Retype password
             </FormLabel>
@@ -75,6 +109,19 @@ const BasicSignUp = () => {
               autoComplete="current-password"
               w={"100%"}
             />
+             <Box
+              w={"100%"}
+              h={"30px"}
+              bg={"#FEEBC8"}
+              mt={"10px"}
+              border={" 2px dotted #F6AD55"}
+            >
+              <HStack justify={"center"} align={"center"} w={"100%"} h={"100%"}>
+                <Text fontWeight={450} color={"#DD6B20"}  fontSize={"15px"}>
+                  The passwords do not match
+                </Text>
+              </HStack>
+            </Box>
 
             <HStack mt={"15px"} justify="space-between">
               <Checkbox>Remember me</Checkbox>
