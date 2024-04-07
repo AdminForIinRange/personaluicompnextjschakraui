@@ -40,7 +40,6 @@ const LoginForm = () => {
         </VStack>
 
         <HStack
-          mt={"20px"}
           justify={"left"}
           w={"100%"}
           h={"100%"}
@@ -53,16 +52,30 @@ const LoginForm = () => {
             h={"100%"}
             border={"1.8px solid #B5B5B5"}
             rounded={"xl"}
-            p={10}
+            px={20}
+            py={5}
           >
-            <VStack mt={"25px"}>
-              <Text fontSize={"60px"} fontWeight={"700"}>
+            <VStack justify={"center"} align={"center"} w={"100%"} h={"100%"}>
+              <Text fontSize={"36"} fontWeight={"700"} textAlign={"center"}>
                 Login to your account
               </Text>
-              <Text fontSize={"25px"} fontWeight={"300"} textAlign={"center"}> 
-                Dont Have an Account ?
+              <Text fontSize={"16"} fontWeight={"300"} textAlign={"center"}  as={"span"}>
+                Dont Have an Account 
+                <Text color={"green"} cursor={"pointer"}  as={"span"}> Sign Up? </Text>
               </Text>
 
+              <Box  px={6}
+          py={3}
+          mt={"25px"}
+          w={"120%"}
+          h={"100%"}
+          rounded={"xl"}
+          boxShadow={"0 1px 8px gray"}
+          align={"left"}>
+
+
+              </Box>
+          
             </VStack>
           </Box>
         </HStack>
