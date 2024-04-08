@@ -95,11 +95,13 @@ const PlayGround = () => {
   const [ HeadingFontWeight, setHeadingFontWeight] = useState("600");
 
 
-  const [ SubheadingFontColor,setSubheadingFontColor] = useState("300");
+  const [ SubheadingFontColor,setSubheadingFontColor] = useState("-1");
 
-  const [ HeadingFontColor, setHeadingFontColor] = useState("");
+  const [ HeadingFontColor, setHeadingFontColor] = useState("-1");
 
 
+
+  
 
 
   const handleClick = () => {
@@ -228,7 +230,7 @@ const PlayGround = () => {
                   ) : null}
 
                   <Text
-                          style={{ color: `hsl(${HeadingFontColor},70%,50%)` }}
+                          style={{ color: `hsl(${HeadingFontColor},70%,${HeadingFontColor === -1 ? "0%" : "50%"})` }}
                     transition="transform, 0.3s ease-in-out"
                     fontSize={HeadingFontSize}
                     fontWeight={HeadingFontWeight}
@@ -237,7 +239,7 @@ const PlayGround = () => {
                     {heading}
                   </Text>
                   <Text
-                         style={{ color: `hsl(${SubheadingFontColor},70%,50%)` }}
+                         style={{ color: `hsl(${SubheadingFontColor},70%,${SubheadingFontColor === -1 ? "0%" : "50%"})` }}
                     transition="transform, 0.3s ease-in-out"
                     fontSize={SubheadingFontSize}
                     fontWeight={SubheadingFontWeight}
@@ -534,7 +536,7 @@ const PlayGround = () => {
               Subheading Font Weight
                 <Slider
                   aria-label="slider-ex-1"
-                  defaultValue={300}
+                  defaultValue={-1}
                   min={1}
                   max={700}
                   step={1}
@@ -576,9 +578,9 @@ const PlayGround = () => {
                 HeadingFontColor
                 <Slider
                   aria-label="slider-ex-1"
-                  defaultValue={HeadingFontColor}
-                  min={0}
-                  max={360}
+                  defaultValue={-1}
+                  min={-1}
+                  max={361}
                   step={1}
                   onChange={(e) => setHeadingFontColor(e)}
                   borderRadius={"15px"}
@@ -588,17 +590,17 @@ const PlayGround = () => {
                     value={HeadingFontColor}
                     textAlign="center"
                     bg="white"
-                    HeadingFontColor={`hsl(${HeadingFontColor},50%,50%)`}
+                    color={`hsl(${HeadingFontColor},50%,${HeadingFontColor === -1 ? "0%" : "50%"})`}
                     fontFamily={"monospace"}
                     mt="2.5"
                     ml="-2"
                   >
                     {HeadingFontColor}
                   </SliderMark>
-                  <SliderTrack bg={`hsl(${HeadingFontColor},50%,50%)`}>
-                    <SliderFilledTrack bg={`hsl(${HeadingFontColor},50%,50%)`} />
+                  <SliderTrack bg={`hsl(${HeadingFontColor},50%,${HeadingFontColor === -1 ? "0%" : "50%"})`}>
+                    <SliderFilledTrack bg={`hsl(${HeadingFontColor},50%,${HeadingFontColor === -1 ? "0%" : "50%"})`} />
                   </SliderTrack>
-                  <SliderThumb HeadingFontColor={`hsl(${HeadingFontColor},50%,50%)`} />
+                  <SliderThumb HeadingFontColor={`hsl(${HeadingFontColor},50%,${HeadingFontColor === -1 ? "0%" : "50%"})`} />
                 </Slider>
               </FormLabel>
 
@@ -613,8 +615,8 @@ const PlayGround = () => {
                 <Slider
                   aria-label="slider-ex-1"
                   defaultValue={SubheadingFontColor}
-                  min={0}
-                  max={360}
+                  min={-1}
+                  max={361}
                   step={1}
                   onChange={(e) => setSubheadingFontColor(e)}
                   borderRadius={"15px"}
@@ -624,17 +626,17 @@ const PlayGround = () => {
                     value={SubheadingFontColor}
                     textAlign="center"
                     bg="white"
-                    SubheadingFontColor={`hsl(${SubheadingFontColor},50%,50%)`}
+                    color={`hsl(${SubheadingFontColor},50%,${HeadingFontColor === -1 ? "0%" : "50%"})`}
                     fontFamily={"monospace"}
                     mt="2.5"
                     ml="-2"
                   >
                     {SubheadingFontColor}
                   </SliderMark>
-                  <SliderTrack bg={`hsl(${SubheadingFontColor},50%,50%)`}>
-                    <SliderFilledTrack bg={`hsl(${SubheadingFontColor},50%,50%)`} />
+                  <SliderTrack bg={`hsl(${SubheadingFontColor},50%,${SubheadingFontColor === -1 ? "0%" : "50%"})`}>
+                    <SliderFilledTrack bg={`hsl(${SubheadingFontColor},50%,${SubheadingFontColor === -1 ? "0%" : "50%"})`} />
                   </SliderTrack>
-                  <SliderThumb SubheadingFontColor={`hsl(${SubheadingFontColor},50%,50%)`} />
+                  <SliderThumb SubheadingFontColor={`hsl(${SubheadingFontColor},50%,${SubheadingFontColor === -1 ? "0%" : "50%"})`} />
                 </Slider>
               </FormLabel>
 
