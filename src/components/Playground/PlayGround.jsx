@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import {
   HStack,
   Text,
@@ -11,24 +11,42 @@ import {
   AvatarGroup,
   VStack,
 } from "@chakra-ui/react";
-import Image from "next/image";
-import Quote from "../img/Quotes-Mark-Symbol-PNG-Image.png";
-import GithubProfilePic from "../img/GithubProfilePic.png";
 
 const PlayGround = () => {
   const [isTablet] = useMediaQuery("(max-width: 1024px)");
   const [isMobile] = useMediaQuery("(max-width: 736px)");
+
+  const [heading, setHeading] = useState(
+    "Accelerate UI Development   in React using Amazing presets."
+  );
+
+  const [Width, setWidth] = useState(
+    620
+  );
+
+
+  const [Height, setHeight] = useState(
+    300
+  );
+
+  
+  const [TextLayout, setTextLayout] = useState(
+    300
+  );
+
   return (
-    <Box position="relative" mt={"125px"}>
-      {" "}
-      {/* Container with relative positioning */}
+    <HStack p={10}>
       <VStack justify="center" w="100%" h="100%" align="center">
-        <Box w="70%" h={"100%"} bg="purple.200" rounded="xl" p={5}>
-          
+        <Box w="100%" h={"100%"} bg="purple.200" rounded="xl" p={10}>
+          <Box w="100%" h={"100%"} bg="purple.100" rounded="xl" p={4}></Box>
         </Box>
       </VStack>
- 
-    </Box>
+      <VStack justify="center" w="30%" h="100%" align="center">
+        <Box w="100%" h={"100%"} bg="purple.200" rounded="xl" p={5}>
+          {" "}
+        </Box>
+      </VStack>
+    </HStack>
   );
 };
 
