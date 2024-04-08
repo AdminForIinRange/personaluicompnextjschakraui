@@ -27,10 +27,10 @@ const SimpleCard = () => {
         rounded={"xl"}
         p={"3"}
       >
-        <VStack justify={"left"} align={"inherit"} w={"100%"} h={"100%"}>
-          <HStack w={"50%"}>
+        <VStack align={"left"}  w={"100%"} h={"100%"}>
+          <HStack>
             <Text
-              align={"center"}
+              w={"70%"}
               fontSize={"32px"}
               fontWeight={"700"}
               textAlign={"left"}
@@ -39,13 +39,8 @@ const SimpleCard = () => {
             </Text>
           </HStack>
 
-          <HStack w={"100%"}>
-            <Text
-              align={"center"}
-              fontSize={"16px"}
-              fontWeight={"500"}
-              textAlign={"left"}
-            >
+          <HStack>
+            <Text fontSize={"16px"} fontWeight={"500"} textAlign={"left"}>
               The Dolomites, also known as the Dolomite Mountains, Dolomite Alps
               or Dolomitic Alps, are a mountain range in northeastern Italy.
             </Text>
