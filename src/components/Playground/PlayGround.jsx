@@ -12,6 +12,11 @@ import {
   useMediaQuery,
   AvatarGroup,
   VStack,
+  Slider,
+  SliderTrack,
+  SliderFilledTrack,
+  SliderThumb,
+  SliderMark,
 } from "@chakra-ui/react";
 
 const PlayGround = () => {
@@ -25,12 +30,15 @@ const PlayGround = () => {
   const [SubHeading, setSubHeading] = useState(
     "Education is a human right, to exploit for monetary gain is immoral "
   );
-  const [Width, setWidth] = useState("620px");
+  const [Width, setWidth] = useState("620");
 
-  const [Height, setHeight] = useState("300px");
+  const [Height, setHeight] = useState("300");
 
-  const [Align, setAlign] = useState("start");
-  const [Justify, setJustify] = useState("left");
+  const [LayoutAlign, setLayoutAlign] = useState("center");
+  const [LayoutJustify, setLayoutJustify] = useState("center");
+
+  const [Align, setAlign] = useState("center");
+  const [Justify, setJustify] = useState("center");
 
   const [BackgroundColor, setBackgroundColor] = useState("#FFFFFF");
   const [BoxShadow, setBoxShadow] = useState("10px");
@@ -64,8 +72,8 @@ const PlayGround = () => {
           <VStack justify={"center"} w="100%" h={"100%"} align={"center"}>
             {" "}
             <Box
-              w={Width}
-              h={Height}
+              w={`${Width}px`}
+              h={`${Height}px`}
               bg={BackgroundColor}
               rounded={BorderRadius}
               boxShadow={` 0px 0px ${BoxShadow} gray`}
@@ -73,26 +81,32 @@ const PlayGround = () => {
               borderColor={BorderColor}
               transition="transform, 0.3s ease-in-out"
               p={5}
-              px={6}
             >
-              <Text
-                transition="transform, 0.3s ease-in-out"
-                fontSize={"30"}
-                fontWeight={"600"}
-                Align={Align}
-                justifyContent={Justify}
+              <VStack
+                justify={LayoutAlign}
+                w="100%"
+                h={"100%"}
+                align={LayoutAlign}
               >
-                {heading}
-              </Text>
-              <Text
-                transition="transform, 0.3s ease-in-out"
-                fontSize={"16"}
-                fontWeight={"300"}
-                Align={Align}
-                justifyContent={Justify}
-              >
-                {SubHeading}
-              </Text>
+                <Text
+                  transition="transform, 0.3s ease-in-out"
+                  fontSize={"30"}
+                  fontWeight={"600"}
+                  Align={Align}
+                  justifyContent={Justify}
+                >
+                  {heading}
+                </Text>
+                <Text
+                  transition="transform, 0.3s ease-in-out"
+                  fontSize={"16"}
+                  fontWeight={"300"}
+                  Align={Align}
+                  justifyContent={Justify}
+                >
+                  {SubHeading}
+                </Text>
+              </VStack>
             </Box>
           </VStack>
         </Box>
@@ -106,23 +120,83 @@ const PlayGround = () => {
           p={5}
           border={`1.8px solid #B9B9B9`}
         >
-          <FormLabel htmlFor="Heading"> Heading</FormLabel>
-          <Input
-            id="Heading"
-            type="text"
-            w={"100%"}
-            onChange={(e) => setHeading(e.target.value)}
-            value={heading}
-          />
+          <VStack gap={5} justify={"left"} w="100%" h={"100%"} align={"left"}>
+            <FormLabel htmlFor="Heading"> Heading
+            <Input
+              id="Heading"
+              type="text"
+              w={"100%"}
+              onChange={(e) => setHeading(e.target.value)}
+              value={heading}
+            />
+            </FormLabel>
+        
 
-          <FormLabel htmlFor="SubHeading">SubHeading</FormLabel>
-          <Input
-            id="SubHeading"
-            type="text"
-            w={"100%"}
-            onChange={(e) => setSubHeading(e.target.value)}
-            value={SubHeading}
-          />
+            <FormLabel htmlFor="SubHeading">SubHeading
+            
+            <Input
+              id="SubHeading"
+              type="text"
+              w={"100%"}
+              onChange={(e) => setSubHeading(e.target.value)}
+              value={SubHeading}
+            /></FormLabel>
+        
+
+            <FormLabel htmlFor="Width">Width
+            <Slider
+              aria-label="slider-ex-1"
+              defaultValue={630}
+              min={400}
+              max={800}
+              step={1}
+              onChange={(e) => setWidth(e)}
+            >
+                 <SliderMark
+            value={Width}
+            textAlign='center'
+            bg='white'
+            color='black'
+            fontFamily={"monospace"} 
+            mt='2.5'
+            ml='1'
+           
+          >
+            {Width}px
+          </SliderMark>
+              <SliderTrack>
+                <SliderFilledTrack />
+              </SliderTrack>
+              <SliderThumb />
+            </Slider></FormLabel>
+            <FormLabel htmlFor="Height">Height 
+            <Slider
+              aria-label="slider-ex-1"
+              defaultValue={300}
+              min={200}
+              max={500}
+              step={1}
+              onChange={(e) => setHeight(e)}
+            >       <SliderMark
+            value={Height}
+            textAlign='center'
+            bg='white'
+            color='black'
+            fontFamily={"monospace"} 
+            mt='2.5'
+            ml='1'
+           
+          >
+            {Height}px
+          </SliderMark>
+              
+              <SliderTrack>
+                <SliderFilledTrack />
+              </SliderTrack>
+              <SliderThumb />
+            </Slider></FormLabel>
+           
+          </VStack>
         </Box>
       </VStack>
     </HStack>
