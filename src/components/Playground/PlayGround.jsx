@@ -79,7 +79,28 @@ const PlayGround = () => {
 
   const [RandomImg, setRandomImg] = useState(null);
 
+
   const { isOpen, onOpen, onClose } = useDisclosure();
+
+  const [ refreshCount,setRefreshCount] = useState(0);
+
+
+  const [ HeadingFontSize,setHeadingFontSize] = useState("30");
+
+
+  const [ SubheadingFontSize,setSubheadingFontSize] = useState("16");
+
+  const [ SubheadingFontWeight,setSubheadingFontWeight] = useState("300");
+
+  const [ HeadingFontWeight, setHeadingFontWeight] = useState("600");
+
+
+  const [ SubheadingFontColor,setSubheadingFontColor] = useState("300");
+
+  const [ HeadingFontColor, setHeadingFontColor] = useState("600");
+
+
+
 
   const handleClick = () => {
     onOpen();
@@ -87,7 +108,7 @@ const PlayGround = () => {
 
   const [copied, setCopied] = useState(false);
 
-  const [img, setImg] = useState(null);
+  const [img, setImg] = useState(false);
 
   const handleImageUpload = (event) => {
     const file = event.target.files[0];
@@ -99,6 +120,7 @@ const PlayGround = () => {
       reader.readAsDataURL(file);
     }
   };
+
 
   const handleCopy = () => {
     <CodeCopy
@@ -119,6 +141,16 @@ const PlayGround = () => {
       .then(() => setCopied(true))
       .catch((error) => console.error("Failed to copy: ", error));
   };
+
+
+ 
+  useEffect(() => {
+    setRandomImg(`https://source.unsplash.com/random/${refreshCount}?`);
+    console.log(refreshCount);
+  }, [refreshCount]);
+  
+
+
 
   return (
     //  maybe applay a atab thigio from Cha ui
@@ -156,25 +188,7 @@ const PlayGround = () => {
             border={`${BorderSize} solid ${BorderColor}`}
           >
             <VStack justify={"center"} w="100%" h={"100%"} align={"center"}>
-              {ImgLayout === "top" ? (
-                <HStack
-                  w={"50%"}
-                  h={"100%"}
-                  display={img ? "block" : "none"}
-                  transition="transform, 0.3s ease-in-out"
-                >
-                  <Box
-                    w={"100%"}
-                    h={"100%"}
-                    bgColor={"black"}
-                    rounded={"xl"}
-                    bgImage={img  ? img : RandomImg} 
-
-                    bgSize={"cover"}
-                    bgPos={ImgPos} //img position
-                  ></Box>
-                </HStack>
-              ) : null}{" "}
+             
               <Box
                 w={`${Width}px`}
                 h={`${Height}px`}
@@ -195,6 +209,7 @@ const PlayGround = () => {
                 >
                   {ImgLayout === "top" ? (
                     <HStack
+                    mt={"10px"}
                       w={"100%"}
                       h={"100%"}
                       display={img ? "block" : "none"}
@@ -205,8 +220,7 @@ const PlayGround = () => {
                         h={"100%"}
                         bgColor={"black"}
                         rounded={"xl"}
-                        bgImage={img  ? img : RandomImg} 
-
+                        bgImage={img === "random" ? RandomImg : img}
                         bgSize={"cover"}
                         bgPos={ImgPos} //img position
                       ></Box>
@@ -215,16 +229,16 @@ const PlayGround = () => {
 
                   <Text
                     transition="transform, 0.3s ease-in-out"
-                    fontSize={"30"}
-                    fontWeight={"600"}
+                    fontSize={HeadingFontSize}
+                    fontWeight={HeadingFontWeight}
                     align={Align}
                   >
                     {heading}
                   </Text>
                   <Text
                     transition="transform, 0.3s ease-in-out"
-                    fontSize={"16"}
-                    fontWeight={"300"}
+                    fontSize={SubheadingFontSize}
+                    fontWeight={SubHeadingFontWeight}
                     align={"inherit"}
                   >
                     {SubHeading}
@@ -236,13 +250,14 @@ const PlayGround = () => {
                       h={"100%"}
                       display={img ? "block" : "none"}
                       transition="transform, 0.3s ease-in-out"
+                      mt={"10px"}
                     >
                       <Box
                         w={"100%"}
                         h={"100%"}
                         bgColor={"black"}
                         rounded={"xl"}
-                        bgImage={img}
+                        bgImage={img === "random" ? RandomImg : img}
                         bgSize={"cover"}
                         bgPos={ImgPos} //img position
                       ></Box>
@@ -271,7 +286,7 @@ const PlayGround = () => {
             <Tabs transition="transform, 0.3s ease-in-out">
               <TabList>
                 <Tab>Basic</Tab>
-                <Tab>Medium</Tab>
+                <Tab>Image</Tab>
                 <Tab>Advance</Tab>
               </TabList>
 
@@ -325,36 +340,44 @@ const PlayGround = () => {
                       align={"center"}
                       justify={"center"}
                       p={5}
+                      
+             
                     >
                       <Input
-                        bgColor={"white"}
+                      
+                       bgColor={"gray.200"}
                         p={5}
                         w={"100%"}
                         h={"100%"}
                         type="file"
+                        rounded={"xl"}
                         accept="image/*"
+                        color={"black"}
                         onChange={handleImageUpload}
                       />
                     </HStack>
 
-
-                    <Button
+                    <Button colorScheme={"whatsapp"}
                       onClick={() => {
-                        setImg(null);
-                      }}
-                      w={"100%"}
-                    >
-                      Remove Image
-                    </Button>
-                    <Button
-                      onClick={() => {
-                        setImg(true);
-                        setRandomImg("https://source.unsplash.com/random");
+                        setImg("random");
+                        setRefreshCount( prev => prev + 1);
+                     
                       }}
                       w={"100%"}
                     >
                       Random Image
                     </Button>
+
+                    <Button
+                      onClick={() => {
+                        setImg(null);
+                        setRandomImg(null);
+                      }}
+                      w={"100%"}
+                    >
+                      Remove Image
+                    </Button>
+                
 
                     <FormLabel htmlFor="Image Position">
                       Image Position
@@ -386,7 +409,326 @@ const PlayGround = () => {
                   </VStack>
                 </TabPanel>
                 <TabPanel>
-                  <p>three!</p>
+
+
+
+
+
+
+
+
+
+
+
+                  
+
+                <FormLabel htmlFor="Heading Fontsize">
+                Heading Fontsize
+                <Slider
+                  aria-label="slider-ex-1"
+                  defaultValue={30}
+                  min={10}
+                  max={40}
+                  step={1}
+                  onChange={(e) => setHeadingFontSize(e)}
+                >
+                  {" "}
+                  <SliderMark
+                    value={HeadingFontSize}
+                    textAlign="center"
+                    bg="white"
+                    color="black"
+                    fontFamily={"monospace"}
+                    mt="2.5"
+                    ml="1"
+                  >
+                    {HeadingFontSize}
+                  </SliderMark>
+                  <SliderTrack>
+                    <SliderFilledTrack />
+                  </SliderTrack>
+                  <SliderThumb />
+                </Slider>
+              </FormLabel>
+
+                  
+
+           
+
+
+
+          
+
+              <FormLabel htmlFor="Subheading Fontsize">
+              Subheading Fontsize
+                <Slider
+                  aria-label="slider-ex-1"
+                  defaultValue={16}
+                  min={5}
+                  max={25}
+                  step={1}
+                  onChange={(e) => setSubheadingFontSize(e)}
+                >
+                  {" "}
+                  <SliderMark
+                    value={SubheadingFontSize}
+                    textAlign="center"
+                    bg="white"
+                    color="black"
+                    fontFamily={"monospace"}
+                    mt="2.5"
+                    ml="1"
+                  >
+                    {SubheadingFontSize}
+                  </SliderMark>
+                  <SliderTrack>
+                    <SliderFilledTrack />
+                  </SliderTrack>
+                  <SliderThumb />
+                </Slider>
+              </FormLabel>
+
+
+
+
+
+
+
+
+
+              <FormLabel htmlFor=" Heading Font Weight">
+              Heading Font Weight
+                <Slider
+                  aria-label="slider-ex-1"
+                  defaultValue={600}
+                  min={1}
+                  max={700}
+                  step={1}
+                  onChange={(e) => setHeadingFontWeight(e)}
+                >
+                  {" "}
+                  <SliderMark
+                    value={ HeadingFontWeight}
+                    textAlign="center"
+                    bg="white"
+                    color="black"
+                    fontFamily={"monospace"}
+                    mt="2.5"
+                    ml="1"
+                  >
+                    { HeadingFontWeight}
+                  </SliderMark>
+                  <SliderTrack>
+                    <SliderFilledTrack />
+                  </SliderTrack>
+                  <SliderThumb />
+                </Slider>
+              </FormLabel>
+
+                  
+
+
+
+
+
+
+
+              <FormLabel htmlFor="HeadingFontColor">
+                HeadingFontColor
+                <Slider
+                  aria-label="slider-ex-1"
+                  defaultValue={HeadingFontColor}
+                  min={0}
+                  max={360}
+                  step={1}
+                  onChange={(e) => setHeadingFontColor(e)}
+                  borderRadius={"15px"}
+                >
+                    
+                  <SliderMark
+                    value={HeadingFontColor}
+                    textAlign="center"
+                    bg="white"
+                    HeadingFontColor={`hsl(${HeadingFontColor},50%,50%)`}
+                    fontFamily={"monospace"}
+                    mt="2.5"
+                    ml="-2"
+                  >
+                    {HeadingFontColor}
+                  </SliderMark>
+                  <SliderTrack bg={`hsl(${HeadingFontColor},50%,50%)`}>
+                    <SliderFilledTrack bg={`hsl(${HeadingFontColor},50%,50%)`} />
+                  </SliderTrack>
+                  <SliderThumb HeadingFontColor={`hsl(${HeadingFontColor},50%,50%)`} />
+                </Slider>
+              </FormLabel>
+
+
+
+
+
+
+
+
+              <FormLabel htmlFor="SubheadingFontColor">
+                SubheadingFontColor
+                <Slider
+                  aria-label="slider-ex-1"
+                  defaultValue={SubheadingFontColor}
+                  min={0}
+                  max={360}
+                  step={1}
+                  onChange={(e) => setSubheadingFontColor(e)}
+                  borderRadius={"15px"}
+                >
+                    
+                  <SliderMark
+                    value={SubheadingFontColor}
+                    textAlign="center"
+                    bg="white"
+                    SubheadingFontColor={`hsl(${SubheadingFontColor},50%,50%)`}
+                    fontFamily={"monospace"}
+                    mt="2.5"
+                    ml="-2"
+                  >
+                    {SubheadingFontColor}
+                  </SliderMark>
+                  <SliderTrack bg={`hsl(${SubheadingFontColor},50%,50%)`}>
+                    <SliderFilledTrack bg={`hsl(${SubheadingFontColor},50%,50%)`} />
+                  </SliderTrack>
+                  <SliderThumb SubheadingFontColor={`hsl(${SubheadingFontColor},50%,50%)`} />
+                </Slider>
+              </FormLabel>
+
+
+
+
+
+
+
+
+
+              <FormLabel htmlFor=" Heading Font Weight">
+              Heading Font Weight
+                <Slider
+                  aria-label="slider-ex-1"
+                  defaultValue={600}
+                  min={1}
+                  max={700}
+                  step={1}
+                  onChange={(e) => setSubheadingFontColor(e)}
+                >
+                  {" "}
+                  <SliderMark
+                    value={ SubheadingFontColor}
+                    textAlign="center"
+                    bg="white"
+                    color="black"
+                    fontFamily={"monospace"}
+                    mt="2.5"
+                    ml="1"
+                  >
+                    { SubheadingFontColor}
+                  </SliderMark>
+                  <SliderTrack>
+                    <SliderFilledTrack />
+                  </SliderTrack>
+                  <SliderThumb />
+                </Slider>
+              </FormLabel>
+
+                  
+
+
+
+
+                  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+              <FormLabel htmlFor="Subheading Font Weight">
+              Subheading Font Weight
+                <Slider
+                  aria-label="slider-ex-1"
+                  defaultValue={300}
+                  min={1}
+                  max={700}
+                  step={1}
+                  onChange={(e) => setSubheadingFontWeight(e)}
+                >
+                  {" "}
+                  <SliderMark
+                    value={SubheadingFontWeight}
+                    textAlign="center"
+                    bg="white"
+                    color="black"
+                    fontFamily={"monospace"}
+                    mt="2.5"
+                    ml="1"
+                  >
+                    {SubheadingFontWeight}
+                  </SliderMark>
+                  <SliderTrack>
+                    <SliderFilledTrack />
+                  </SliderTrack>
+                  <SliderThumb />
+                </Slider>
+              </FormLabel>
+
+                  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                 </TabPanel>
               </TabPanels>
             </Tabs>

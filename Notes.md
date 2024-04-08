@@ -10,3 +10,16 @@
           target="_blank"
 
 ```
+
+## Random Img tip
+```js
+
+ 
+  useEffect(() => {
+    setRandomImg(`https://source.unsplash.com/random/${refreshCount}?`);
+    console.log(refreshCount);
+  }, [refreshCount]);
+  
+
+
+```
