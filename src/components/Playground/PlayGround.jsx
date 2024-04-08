@@ -73,10 +73,8 @@ const PlayGround = () => {
 
   const [brightness, setBrightness] = useState("100");
 
-
   const [ImgPos, setImgPos] = useState("center");
 
-  
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   const handleClick = () => {
@@ -95,19 +93,22 @@ const PlayGround = () => {
     };
     if (file) {
       reader.readAsDataURL(file);
-    } 
+    }
   };
 
   const handleCopy = () => {
-   <CodeCopy 
-
-   color={color}
-     brightness={brightness} Width={Width} Height={Height} BorderSize={BorderSize}
-      BorderColor={BorderColor} BorderRadius={BorderRadius} BoxShadow={BoxShadow} 
-      LayoutAlign={LayoutAlign} Align={Align}
-
-   
-   />
+    <CodeCopy
+      color={color}
+      brightness={brightness}
+      Width={Width}
+      Height={Height}
+      BorderSize={BorderSize}
+      BorderColor={BorderColor}
+      BorderRadius={BorderRadius}
+      BoxShadow={BoxShadow}
+      LayoutAlign={LayoutAlign}
+      Align={Align}
+    />;
 
     navigator.clipboard
       .writeText(codeToCopy)
@@ -164,15 +165,17 @@ const PlayGround = () => {
                 p={5}
               >
                 <VStack justify={LayoutAlign} w="100%" h={"100%"} align={Align}>
-                  <HStack w={"100%"} h={"100%"} display={img ? 'block' : 'none' }>
+                  <HStack
+                    w={"100%"}
+                    h={"100%"}
+                    display={img ? "block" : "none"}
+                  >
                     <Box
                       w={"100%"}
                       h={"100%"}
                       bgColor={"black"}
                       rounded={"xl"}
-                      bgImage={
-                        img
-                      }
+                      bgImage={img}
                       bgSize={"cover"}
                       bgPos={ImgPos}
                     ></Box>
@@ -264,17 +267,47 @@ const PlayGround = () => {
                     align={"left"}
                     transition="transform, 0.3s ease-in-out"
                   >
-                    <HStack w={"100%"} h={"100%"} align={"center"} justify={"center"} p={5} >
-                       <Input bgColor={"white"}  p={5} w={"100%"} h={"100%"} type="file" accept="image/*" onChange={handleImageUpload} />
-
-
+                    <HStack
+                      w={"100%"}
+                      h={"100%"}
+                      align={"center"}
+                      justify={"center"}
+                      p={5}
+                    >
+                      <Input
+                        bgColor={"white"}
+                        p={5}
+                        w={"100%"}
+                        h={"100%"}
+                        type="file"
+                        accept="image/*"
+                        onChange={handleImageUpload}
+                      />
                     </HStack>
-                    <Button onClick={()=> {setImg(null)}} w={"100%"}>
+                    <Button
+                      onClick={() => {
+                        setImg(null);
+                      }}
+                      w={"100%"}
+                    >
                       Remove Image
                     </Button>
-                    
 
-                     
+                    <FormLabel htmlFor="Image Position">
+                      Image Position
+                      <RadioGroup
+                        defaultValue="center"
+                        onChange={(val) => setImg(val)}
+                      >
+                        <HStack>
+                          <Radio value="left">left</Radio>
+                          <Radio value="right">right</Radio>
+                          <Radio value="top">top</Radio>
+                          <Radio value="center">center</Radio>
+                          <Radio value="bottom">bottom</Radio>
+                        </HStack>
+                      </RadioGroup>
+                    </FormLabel>
                   </VStack>
                 </TabPanel>
                 <TabPanel>
@@ -314,10 +347,18 @@ const PlayGround = () => {
 
                 <pre>
                   <code className="language-html">
-                    <CodeCopy color={color}
-     brightness={brightness} Width={Width} Height={Height} BorderSize={BorderSize}
-      BorderColor={BorderColor} BorderRadius={BorderRadius} BoxShadow={BoxShadow} 
-      LayoutAlign={LayoutAlign} Align={Align} />
+                    <CodeCopy
+                      color={color}
+                      brightness={brightness}
+                      Width={Width}
+                      Height={Height}
+                      BorderSize={BorderSize}
+                      BorderColor={BorderColor}
+                      BorderRadius={BorderRadius}
+                      BoxShadow={BoxShadow}
+                      LayoutAlign={LayoutAlign}
+                      Align={Align}
+                    />
                   </code>
                 </pre>
               </Box>
