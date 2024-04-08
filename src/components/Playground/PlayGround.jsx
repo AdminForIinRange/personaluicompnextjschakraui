@@ -106,32 +106,7 @@ const PlayGround = () => {
 
 
 
-const conditionalColor = () => {
-  if (HeadingFontColor === "-1") {
-    return "0%";
-  } if (HeadingFontColor === "361") {
-    return "100%";
-  } else {
-    return "50%"
-    
-  }
-  
 
-
-}
-  
-
-const conditionalColorSub = () => {
-  if (SubheadingFontColor === "-1") {
-    return "0%";
-  } if (SubheadingFontColor === "361") {
-    return "100%";
-  } else {
-    return "50%"
-    
-  }
-  
-}
 
 
   const handleClick = () => {
@@ -260,7 +235,7 @@ const conditionalColorSub = () => {
                   ) : null}
 
                   <Text
-                          style={{ color: `hsl(${HeadingFontColor},70%,${conditionalColor})` }}
+                          style={{ color: `hsl(${HeadingFontColor},70%,${HeadingFontColor === -1 ? "0%" : "50%"})` }}
                     transition="transform, 0.3s ease-in-out"
                     fontSize={HeadingFontSize}
                     fontWeight={HeadingFontWeight}
@@ -269,7 +244,7 @@ const conditionalColorSub = () => {
                     {heading}
                   </Text>
                   <Text
-                         style={{ color: `hsl(${SubheadingFontColor},70%,${conditionalColorSub})` }}
+                         style={   {  color:  `hsl(${SubheadingFontColor},70%,${SubheadingFontColor === -1 ? "0%" : "50%"})` }}
                     transition="transform, 0.3s ease-in-out"
                     fontSize={SubheadingFontSize}
                     fontWeight={SubheadingFontWeight}
