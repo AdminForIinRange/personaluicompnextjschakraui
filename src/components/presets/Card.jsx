@@ -96,7 +96,7 @@ const Card = () => {
           align={"left"}
         >
           <Text fontSize={"30"} fontWeight={"400"}>
-            Complex
+            Work Place
           </Text>
         </HStack>
 
