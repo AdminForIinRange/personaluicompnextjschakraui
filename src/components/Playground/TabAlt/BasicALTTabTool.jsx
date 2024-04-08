@@ -147,28 +147,28 @@ const BasicALTTabTool = ({
               </FormLabel>
 
               <FormLabel htmlFor="Layout">
-                Layout
+                Layout 
                 <RadioGroup
                   defaultValue="end"
                   onChange={(val) => setLayoutAlign(val)}
                 >
                   <HStack>
-                    <Radio value="start">Start</Radio>
+                    <Radio value="start">Top</Radio>
                     <Radio value="center">Center</Radio>
-                    <Radio value="end">End</Radio>
+                    <Radio value="end">Bottom</Radio>
                   </HStack>
                 </RadioGroup>
               </FormLabel>
               <FormLabel htmlFor="Align">
-                Align
+                Align 
                 <RadioGroup
                   defaultValue="start"
                   onChange={(val) => setAlign(val)}
                 >
                   <HStack>
-                    <Radio value="start">Start</Radio>
+                    <Radio value="start">Left</Radio>
                     <Radio value="center">Center</Radio>
-                    <Radio value="end">End</Radio>
+                    <Radio value="end">Right</Radio>
                   </HStack>
                 </RadioGroup>
               </FormLabel>

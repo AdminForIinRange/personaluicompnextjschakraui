@@ -75,6 +75,10 @@ const PlayGround = () => {
 
   const [ImgPos, setImgPos] = useState("center");
 
+  const [ImgLayout, setImgLayout] = useState("top");
+
+  const [RandomImg, setRandomImg] = useState(null);
+
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   const handleClick = () => {
@@ -152,7 +156,25 @@ const PlayGround = () => {
             border={`${BorderSize} solid ${BorderColor}`}
           >
             <VStack justify={"center"} w="100%" h={"100%"} align={"center"}>
-              {" "}
+              {ImgLayout === "top" ? (
+                <HStack
+                  w={"50%"}
+                  h={"100%"}
+                  display={img ? "block" : "none"}
+                  transition="transform, 0.3s ease-in-out"
+                >
+                  <Box
+                    w={"100%"}
+                    h={"100%"}
+                    bgColor={"black"}
+                    rounded={"xl"}
+                    bgImage={img  ? img : RandomImg} 
+
+                    bgSize={"cover"}
+                    bgPos={ImgPos} //img position
+                  ></Box>
+                </HStack>
+              ) : null}{" "}
               <Box
                 w={`${Width}px`}
                 h={`${Height}px`}
@@ -164,22 +186,33 @@ const PlayGround = () => {
                 transition="transform, 0.3s ease-in-out"
                 p={5}
               >
-                <VStack justify={LayoutAlign} w="100%" h={"100%"} align={Align}>
-                  <HStack
-                    w={"100%"}
-                    h={"100%"}
-                    display={img ? "block" : "none"}
-                  >
-                    <Box
+                <VStack
+                  justify={LayoutAlign}
+                  w="100%"
+                  h={"100%"}
+                  align={Align}
+                  transition="transform, 0.3s ease-in-out"
+                >
+                  {ImgLayout === "top" ? (
+                    <HStack
                       w={"100%"}
                       h={"100%"}
-                      bgColor={"black"}
-                      rounded={"xl"}
-                      bgImage={img}
-                      bgSize={"cover"}
-                      bgPos={ImgPos}
-                    ></Box>
-                  </HStack>
+                      display={img ? "block" : "none"}
+                      transition="transform, 0.3s ease-in-out"
+                    >
+                      <Box
+                        w={"100%"}
+                        h={"100%"}
+                        bgColor={"black"}
+                        rounded={"xl"}
+                        bgImage={img  ? img : RandomImg} 
+
+                        bgSize={"cover"}
+                        bgPos={ImgPos} //img position
+                      ></Box>
+                    </HStack>
+                  ) : null}
+
                   <Text
                     transition="transform, 0.3s ease-in-out"
                     fontSize={"30"}
@@ -196,6 +229,25 @@ const PlayGround = () => {
                   >
                     {SubHeading}
                   </Text>
+
+                  {ImgLayout === "bottom" ? (
+                    <HStack
+                      w={"100%"}
+                      h={"100%"}
+                      display={img ? "block" : "none"}
+                      transition="transform, 0.3s ease-in-out"
+                    >
+                      <Box
+                        w={"100%"}
+                        h={"100%"}
+                        bgColor={"black"}
+                        rounded={"xl"}
+                        bgImage={img}
+                        bgSize={"cover"}
+                        bgPos={ImgPos} //img position
+                      ></Box>
+                    </HStack>
+                  ) : null}
                 </VStack>
               </Box>
             </VStack>
@@ -284,6 +336,8 @@ const PlayGround = () => {
                         onChange={handleImageUpload}
                       />
                     </HStack>
+
+
                     <Button
                       onClick={() => {
                         setImg(null);
@@ -292,18 +346,39 @@ const PlayGround = () => {
                     >
                       Remove Image
                     </Button>
+                    <Button
+                      onClick={() => {
+                        setImg(true);
+                        setRandomImg("https://source.unsplash.com/random");
+                      }}
+                      w={"100%"}
+                    >
+                      Random Image
+                    </Button>
 
                     <FormLabel htmlFor="Image Position">
                       Image Position
                       <RadioGroup
                         defaultValue="center"
-                        onChange={(val) => setImg(val)}
+                        onChange={(val) => setImgPos(val)}
                       >
                         <HStack>
-                          <Radio value="left">left</Radio>
-                          <Radio value="right">right</Radio>
                           <Radio value="top">top</Radio>
                           <Radio value="center">center</Radio>
+                          <Radio value="bottom">bottom</Radio>
+                        </HStack>
+                      </RadioGroup>
+                    </FormLabel>
+
+                    <FormLabel htmlFor="Image Layout">
+                      Image Layout
+                      <RadioGroup
+                        defaultValue="top"
+                        onChange={(val) => setImgLayout(val)}
+                      >
+                        <HStack>
+                          <Radio value="top">top</Radio>
+
                           <Radio value="bottom">bottom</Radio>
                         </HStack>
                       </RadioGroup>
