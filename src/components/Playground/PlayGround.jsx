@@ -31,7 +31,8 @@ import {
   ModalCloseButton,
   useDisclosure,
 } from "@chakra-ui/react";
-import {CopyIcon} from '@chakra-ui/icons'
+import { CopyIcon } from "@chakra-ui/icons";
+import { FaCog } from "react-icons/fa";
 const PlayGround = () => {
   const [isTablet] = useMediaQuery("(max-width: 1024px)");
   const [isMobile] = useMediaQuery("(max-width: 736px)");
@@ -47,9 +48,9 @@ const PlayGround = () => {
 
   const [Height, setHeight] = useState("300");
 
-  const [LayoutAlign, setLayoutAlign] = useState("center");
+  const [LayoutAlign, setLayoutAlign] = useState("end");
 
-  const [Align, setAlign] = useState("center");
+  const [Align, setAlign] = useState("start");
 
   const [BackgroundColor, setBackgroundColor] = useState("");
   const [BoxShadow, setBoxShadow] = useState("10px");
@@ -66,11 +67,9 @@ const PlayGround = () => {
   const [brightness, setBrightness] = useState("100");
 
   const { isOpen, onOpen, onClose } = useDisclosure();
-  
-  const handleClick = () => {
 
+  const handleClick = () => {
     onOpen();
-    
   };
 
   const [copied, setCopied] = useState(false);
@@ -123,18 +122,32 @@ const PlayGround = () => {
       </VStack>
     `;
 
-    navigator.clipboard.writeText(codeToCopy)
+    navigator.clipboard
+      .writeText(codeToCopy)
       .then(() => setCopied(true))
-      .catch((error) => console.error('Failed to copy: ', error));
+      .catch((error) => console.error("Failed to copy: ", error));
   };
 
   return (
     //  maybe applay a atab thigio from Cha ui
     <>
       <HStack
+        justify={"center"}
+        align={"center"}
+        w={"100%"}
+        h={"100%"}
+        fontSize={"48px"}
+        fontWeight={"600"}
+        fontFamily={"Raleway"}
+        mt={isMobile ? "20px" : "80px"}
+      >
+        <Text>Mini UI development PlayGround</Text>
+      </HStack>
+
+      <HStack
         flexWrap={["wrap", "wrap", "wrap", "wrap", "nowrap"]}
         transition="transform, 0.3s ease-in-out"
-        mt={isMobile ? "20px" : "80px"}
+        mt={isMobile ? "10px" : "40px"}
         align={"start"}
         w="100%"
         h={"100%"}
@@ -164,6 +177,20 @@ const PlayGround = () => {
                 p={5}
               >
                 <VStack justify={LayoutAlign} w="100%" h={"100%"} align={Align}>
+                <HStack w={"100%"} h={"100%"}           display={'none'}>
+            <Box
+          
+              w={"100%"}
+              h={"100%"}
+              bgColor={"black"}
+              rounded={"xl"}
+              bgImage={
+                "https://source.unsplash.com/brown-wooden-house-on-green-grass-field-near-snow-covered-mountain-during-daytime-ZI9zYWhLyy0"
+              }
+              bgSize={"cover"}
+              bgPos={["top right", " top right", "top", "top", "top"]}
+            ></Box>
+          </HStack>
                   <Text
                     transition="transform, 0.3s ease-in-out"
                     fontSize={"30"}
@@ -277,7 +304,7 @@ const PlayGround = () => {
               <FormLabel htmlFor="Layout">
                 Layout
                 <RadioGroup
-                  defaultValue="center"
+                  defaultValue="end"
                   onChange={(val) => setLayoutAlign(val)}
                 >
                   <HStack>
@@ -290,7 +317,7 @@ const PlayGround = () => {
               <FormLabel htmlFor="Align">
                 Align
                 <RadioGroup
-                  defaultValue="center"
+                  defaultValue="start"
                   onChange={(val) => setAlign(val)}
                 >
                   <HStack>
@@ -310,6 +337,7 @@ const PlayGround = () => {
                   max={360}
                   step={1}
                   onChange={(e) => setColor(e)}
+                  borderRadius={"15px"}
                 >
                   <SliderMark
                     value={color}
@@ -322,10 +350,10 @@ const PlayGround = () => {
                   >
                     {color}
                   </SliderMark>
-                  <SliderTrack>
-                    <SliderFilledTrack />
+                  <SliderTrack bg={`hsl(${color},50%,50%)`}>
+                    <SliderFilledTrack bg={`hsl(${color},50%,50%)`} />
                   </SliderTrack>
-                  <SliderThumb />
+                  <SliderThumb color={`hsl(${color},50%,50%)`} />
                 </Slider>
               </FormLabel>
 
@@ -343,22 +371,23 @@ const PlayGround = () => {
                     value={brightness}
                     textAlign="center"
                     bg="white"
-                    color={`hsl(0,50%,${brightness}%)`}
+                    color={"black"}
                     fontFamily={"monospace"}
                     mt="2.5"
                     ml="1"
                   >
                     {brightness}
                   </SliderMark>
-                  <SliderTrack>
+                  <SliderTrack bg={`hsl(${color},50%,${brightness}%)`}>
                     <SliderFilledTrack />
                   </SliderTrack>
                   <SliderThumb />
                 </Slider>
               </FormLabel>
 
-              <Button onClick={handleClick} type="submit">
-                Generate
+              <Button onClick={handleClick} type="submit" rightIcon={<FaCog />}>
+                Generate Code
+
               </Button>
             </VStack>
           </Box>
@@ -367,16 +396,24 @@ const PlayGround = () => {
 
       <Modal isOpen={isOpen} onClose={onClose} size={"4xl"}>
         <ModalOverlay />
-        <ModalContent>
-          <ModalHeader>  <Button leftIcon={<CopyIcon />} onClick={handleCopy}>{copied ? 'Copied!' : 'Copy Code'}</Button> </ModalHeader>
-          <ModalCloseButton />
+        <ModalContent bgColor={"#011627"}>
           <ModalBody>
+            <>
+              <Box p={5} rounded={"lg"} color={"white"} w={"100%"} h={"100%"}>
+                <HStack justify={"right"} w="100%" h="100%" align="center">
+                  {" "}
+                  <Button
+                    colorScheme={copied ? "" : ""}
+                    leftIcon={<CopyIcon />}
+                    onClick={handleCopy}
+                  >
+                    {copied ? "Copied!" : "Copy Code"}
+                  </Button>
+                </HStack>
 
-          <>
-        
-      <pre>
-        <code>
-          {` <VStack justify="center" w="100%" h="100%" align="center">
+                <pre>
+                  <code className="language-html">
+                    {` <VStack justify="center" w="100%" h="100%" align="center">
         <Box
           transition="transform, 0.3s ease-in-out"
           w={"100%"}
@@ -420,15 +457,13 @@ const PlayGround = () => {
           </VStack>
         </Box>
       </VStack>`}
-        </code>
-      </pre>
-      
-    </>
+                  </code>
+                </pre>
+              </Box>
+            </>
           </ModalBody>
 
-          <ModalFooter>
          
-          </ModalFooter>
         </ModalContent>
       </Modal>
     </>
