@@ -48,7 +48,7 @@ const PlayGround = () => {
     "Higher Education Should be free like in Europe"
   );
 
-  const [SubHeading, setSubHeading] = useState(
+  const [Subheading, setSubheading] = useState(
     "Education is a human right, to exploit for monetary gain is immoral "
   );
   const [Width, setWidth] = useState("620");
@@ -97,7 +97,7 @@ const PlayGround = () => {
 
   const [ SubheadingFontColor,setSubheadingFontColor] = useState("300");
 
-  const [ HeadingFontColor, setHeadingFontColor] = useState("600");
+  const [ HeadingFontColor, setHeadingFontColor] = useState("");
 
 
 
@@ -228,6 +228,7 @@ const PlayGround = () => {
                   ) : null}
 
                   <Text
+                          style={{ color: `hsl(${HeadingFontColor},70%,50%)` }}
                     transition="transform, 0.3s ease-in-out"
                     fontSize={HeadingFontSize}
                     fontWeight={HeadingFontWeight}
@@ -236,12 +237,13 @@ const PlayGround = () => {
                     {heading}
                   </Text>
                   <Text
+                         style={{ color: `hsl(${SubheadingFontColor},70%,50%)` }}
                     transition="transform, 0.3s ease-in-out"
                     fontSize={SubheadingFontSize}
-                    fontWeight={SubHeadingFontWeight}
+                    fontWeight={SubheadingFontWeight}
                     align={"inherit"}
                   >
-                    {SubHeading}
+                    {Subheading}
                   </Text>
 
                   {ImgLayout === "bottom" ? (
@@ -295,8 +297,8 @@ const PlayGround = () => {
                   <BasicALTTabTool
                     heading={heading}
                     setHeading={setHeading}
-                    SubHeading={SubHeading}
-                    setSubHeading={setSubHeading}
+                    Subheading={Subheading}
+                    setSubheading={setSubheading}
                     Width={Width}
                     setWidth={setWidth}
                     Height={Height}
@@ -528,6 +530,43 @@ const PlayGround = () => {
                   
 
 
+              <FormLabel htmlFor="Subheading Font Weight">
+              Subheading Font Weight
+                <Slider
+                  aria-label="slider-ex-1"
+                  defaultValue={300}
+                  min={1}
+                  max={700}
+                  step={1}
+                  onChange={(e) => setSubheadingFontWeight(e)}
+                >
+                  {" "}
+                  <SliderMark
+                    value={SubheadingFontWeight}
+                    textAlign="center"
+                    bg="white"
+                    color="black"
+                    fontFamily={"monospace"}
+                    mt="2.5"
+                    ml="1"
+                  >
+                    {SubheadingFontWeight}
+                  </SliderMark>
+                  <SliderTrack>
+                    <SliderFilledTrack />
+                  </SliderTrack>
+                  <SliderThumb />
+                </Slider>
+              </FormLabel>
+
+                  
+
+
+
+
+
+
+
 
 
 
@@ -562,7 +601,6 @@ const PlayGround = () => {
                   <SliderThumb HeadingFontColor={`hsl(${HeadingFontColor},50%,50%)`} />
                 </Slider>
               </FormLabel>
-
 
 
 
@@ -605,43 +643,6 @@ const PlayGround = () => {
 
 
 
-
-
-
-              <FormLabel htmlFor=" Heading Font Weight">
-              Heading Font Weight
-                <Slider
-                  aria-label="slider-ex-1"
-                  defaultValue={600}
-                  min={1}
-                  max={700}
-                  step={1}
-                  onChange={(e) => setSubheadingFontColor(e)}
-                >
-                  {" "}
-                  <SliderMark
-                    value={ SubheadingFontColor}
-                    textAlign="center"
-                    bg="white"
-                    color="black"
-                    fontFamily={"monospace"}
-                    mt="2.5"
-                    ml="1"
-                  >
-                    { SubheadingFontColor}
-                  </SliderMark>
-                  <SliderTrack>
-                    <SliderFilledTrack />
-                  </SliderTrack>
-                  <SliderThumb />
-                </Slider>
-              </FormLabel>
-
-                  
-
-
-
-
                   
 
 
@@ -656,41 +657,6 @@ const PlayGround = () => {
 
 
 
-
-
-
-
-
-              <FormLabel htmlFor="Subheading Font Weight">
-              Subheading Font Weight
-                <Slider
-                  aria-label="slider-ex-1"
-                  defaultValue={300}
-                  min={1}
-                  max={700}
-                  step={1}
-                  onChange={(e) => setSubheadingFontWeight(e)}
-                >
-                  {" "}
-                  <SliderMark
-                    value={SubheadingFontWeight}
-                    textAlign="center"
-                    bg="white"
-                    color="black"
-                    fontFamily={"monospace"}
-                    mt="2.5"
-                    ml="1"
-                  >
-                    {SubheadingFontWeight}
-                  </SliderMark>
-                  <SliderTrack>
-                    <SliderFilledTrack />
-                  </SliderTrack>
-                  <SliderThumb />
-                </Slider>
-              </FormLabel>
-
-                  
 
 
 
