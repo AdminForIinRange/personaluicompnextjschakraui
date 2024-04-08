@@ -30,9 +30,16 @@ import {
   ModalBody,
   ModalCloseButton,
   useDisclosure,
+  Tabs,
+  TabList,
+  TabPanels,
+  Tab,
+  TabPanel,
 } from "@chakra-ui/react";
 import { CopyIcon } from "@chakra-ui/icons";
 import { FaCog } from "react-icons/fa";
+import BasicALTTabTool from "./TabAlt/BasicALTTabTool";
+import CodeCopy from "./CodeCopy/CodeCopy";
 const PlayGround = () => {
   const [isTablet] = useMediaQuery("(max-width: 1024px)");
   const [isMobile] = useMediaQuery("(max-width: 736px)");
@@ -66,6 +73,10 @@ const PlayGround = () => {
 
   const [brightness, setBrightness] = useState("100");
 
+
+  const [ImgPos, setImgPos] = useState("center");
+
+  
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   const handleClick = () => {
@@ -74,53 +85,29 @@ const PlayGround = () => {
 
   const [copied, setCopied] = useState(false);
 
+  const [img, setImg] = useState(null);
+
+  const handleImageUpload = (event) => {
+    const file = event.target.files[0];
+    const reader = new FileReader();
+    reader.onloadend = () => {
+      setImg(reader.result);
+    };
+    if (file) {
+      reader.readAsDataURL(file);
+    } 
+  };
+
   const handleCopy = () => {
-    const codeToCopy = `
-      <VStack justify="center" w="100%" h="100%" align="center">
-        <Box
-          transition="transform, 0.3s ease-in-out"
-          w={"100%"}
-          h={"100%"}
-          bg="white"
-          rounded="xl"
-          py={12}
-          border="${BorderSize}px solid ${BorderColor}"
-        >
-          <VStack justify="center" w="100%" h="100%" align="center">
-            <Box
-              w="${Width}px"
-              h="${Height}px"
-              style={{ backgroundColor: hsl(${color},70%,${brightness}%)}}
-              rounded="${BorderRadius}"
-              boxShadow={0px 0px ${BoxShadow}px gray}
-              border={1.8px solid ${BorderColor}}
-              borderColor="${BorderColor}"
-              transition="transform, 0.3s ease-in-out"
-              p={5}
-            >
-              <VStack justify="${LayoutAlign}" w="100%" h="100%" align="${Align}">
-                <Text
-                  transition="transform, 0.3s ease-in-out"
-                  fontSize="30"
-                  fontWeight="600"
-                  align="${Align}"
-                >
-                  ${heading}
-                </Text>
-                <Text
-                  transition="transform, 0.3s ease-in-out"
-                  fontSize="16"
-                  fontWeight="300"
-                  align="inherit"
-                >
-                  ${SubHeading}
-                </Text>
-              </VStack>
-            </Box>
-          </VStack>
-        </Box>
-      </VStack>
-    `;
+   <CodeCopy 
+
+   color={color}
+     brightness={brightness} Width={Width} Height={Height} BorderSize={BorderSize}
+      BorderColor={BorderColor} BorderRadius={BorderRadius} BoxShadow={BoxShadow} 
+      LayoutAlign={LayoutAlign} Align={Align}
+
+   
+   />
 
     navigator.clipboard
       .writeText(codeToCopy)
@@ -177,20 +164,19 @@ const PlayGround = () => {
                 p={5}
               >
                 <VStack justify={LayoutAlign} w="100%" h={"100%"} align={Align}>
-                <HStack w={"100%"} h={"100%"}           display={'none'}>
-            <Box
-          
-              w={"100%"}
-              h={"100%"}
-              bgColor={"black"}
-              rounded={"xl"}
-              bgImage={
-                "https://source.unsplash.com/brown-wooden-house-on-green-grass-field-near-snow-covered-mountain-during-daytime-ZI9zYWhLyy0"
-              }
-              bgSize={"cover"}
-              bgPos={["top right", " top right", "top", "top", "top"]}
-            ></Box>
-          </HStack>
+                  <HStack w={"100%"} h={"100%"} display={img ? 'block' : 'none' }>
+                    <Box
+                      w={"100%"}
+                      h={"100%"}
+                      bgColor={"black"}
+                      rounded={"xl"}
+                      bgImage={
+                        img
+                      }
+                      bgSize={"cover"}
+                      bgPos={ImgPos}
+                    ></Box>
+                  </HStack>
                   <Text
                     transition="transform, 0.3s ease-in-out"
                     fontSize={"30"}
@@ -212,7 +198,13 @@ const PlayGround = () => {
             </VStack>
           </Box>
         </VStack>
-        <VStack justify="center" w="40%" h="100%" align="center">
+        <VStack
+          justify="center"
+          w="40%"
+          h="100%"
+          align="center"
+          transition="transform, 0.3s ease-in-out"
+        >
           <Box
             w="100%"
             h={"100%"}
@@ -221,175 +213,84 @@ const PlayGround = () => {
             p={5}
             border={`1.8px solid #B9B9B9`}
           >
-            <VStack gap={5} justify={"left"} w="100%" h={"100%"} align={"left"}>
-              <FormLabel htmlFor="Heading">
-                {" "}
-                Heading
-                <Input
-                  id="Heading"
-                  type="text"
-                  w={"100%"}
-                  onChange={(e) => setHeading(e.target.value)}
-                  value={heading}
-                />
-              </FormLabel>
+            <Tabs transition="transform, 0.3s ease-in-out">
+              <TabList>
+                <Tab>Basic</Tab>
+                <Tab>Medium</Tab>
+                <Tab>Advance</Tab>
+              </TabList>
 
-              <FormLabel htmlFor="SubHeading">
-                SubHeading
-                <Input
-                  id="SubHeading"
-                  type="text"
-                  w={"100%"}
-                  onChange={(e) => setSubHeading(e.target.value)}
-                  value={SubHeading}
-                />
-              </FormLabel>
-
-              <FormLabel htmlFor="Width">
-                Width
-                <Slider
-                  aria-label="slider-ex-1"
-                  defaultValue={630}
-                  min={400}
-                  max={800}
-                  step={1}
-                  onChange={(e) => setWidth(e)}
-                >
-                  <SliderMark
-                    value={Width}
-                    textAlign="center"
-                    bg="white"
-                    color="black"
-                    fontFamily={"monospace"}
-                    mt="2.5"
-                    ml="1"
+              <TabPanels>
+                <TabPanel>
+                  <BasicALTTabTool
+                    heading={heading}
+                    setHeading={setHeading}
+                    SubHeading={SubHeading}
+                    setSubHeading={setSubHeading}
+                    Width={Width}
+                    setWidth={setWidth}
+                    Height={Height}
+                    setHeight={setHeight}
+                    LayoutAlign={LayoutAlign}
+                    setLayoutAlign={setLayoutAlign}
+                    Align={Align}
+                    setAlign={setAlign}
+                    BackgroundColor={BackgroundColor}
+                    setBackgroundColor={setBackgroundColor}
+                    BoxShadow={BoxShadow}
+                    setBoxShadow={setBoxShadow}
+                    BorderColor={BorderColor}
+                    setBorderColor={setBorderColor}
+                    BorderRadius={BorderRadius}
+                    setBorderRadius={setBorderRadius}
+                    BorderSize={BorderSize}
+                    setBorderSize={setBorderSize}
+                    TextColor={TextColor}
+                    setTextColor={setTextColor}
+                    Animation={Animation}
+                    setAnimation={setAnimation}
+                    color={color}
+                    setColor={setColor}
+                    brightness={brightness}
+                    setBrightness={setBrightness}
+                  />
+                </TabPanel>
+                <TabPanel>
+                  <VStack
+                    gap={5}
+                    justify={"left"}
+                    w="100%"
+                    h={"100%"}
+                    align={"left"}
+                    transition="transform, 0.3s ease-in-out"
                   >
-                    {Width}px
-                  </SliderMark>
-                  <SliderTrack>
-                    <SliderFilledTrack />
-                  </SliderTrack>
-                  <SliderThumb />
-                </Slider>
-              </FormLabel>
-              <FormLabel htmlFor="Height">
-                Height
-                <Slider
-                  aria-label="slider-ex-1"
-                  defaultValue={300}
-                  min={200}
-                  max={500}
-                  step={1}
-                  onChange={(e) => setHeight(e)}
-                >
-                  {" "}
-                  <SliderMark
-                    value={Height}
-                    textAlign="center"
-                    bg="white"
-                    color="black"
-                    fontFamily={"monospace"}
-                    mt="2.5"
-                    ml="1"
-                  >
-                    {Height}px
-                  </SliderMark>
-                  <SliderTrack>
-                    <SliderFilledTrack />
-                  </SliderTrack>
-                  <SliderThumb />
-                </Slider>
-              </FormLabel>
+                    <HStack w={"100%"} h={"100%"} align={"center"} justify={"center"} p={5} >
+                       <Input bgColor={"white"}  p={5} w={"100%"} h={"100%"} type="file" accept="image/*" onChange={handleImageUpload} />
 
-              <FormLabel htmlFor="Layout">
-                Layout
-                <RadioGroup
-                  defaultValue="end"
-                  onChange={(val) => setLayoutAlign(val)}
-                >
-                  <HStack>
-                    <Radio value="start">Start</Radio>
-                    <Radio value="center">Center</Radio>
-                    <Radio value="end">End</Radio>
-                  </HStack>
-                </RadioGroup>
-              </FormLabel>
-              <FormLabel htmlFor="Align">
-                Align
-                <RadioGroup
-                  defaultValue="start"
-                  onChange={(val) => setAlign(val)}
-                >
-                  <HStack>
-                    <Radio value="start">Start</Radio>
-                    <Radio value="center">Center</Radio>
-                    <Radio value="end">End</Radio>
-                  </HStack>
-                </RadioGroup>
-              </FormLabel>
 
-              <FormLabel htmlFor="Color">
-                Color
-                <Slider
-                  aria-label="slider-ex-1"
-                  defaultValue={color}
-                  min={0}
-                  max={360}
-                  step={1}
-                  onChange={(e) => setColor(e)}
-                  borderRadius={"15px"}
-                >
-                  <SliderMark
-                    value={color}
-                    textAlign="center"
-                    bg="white"
-                    color={`hsl(${color},50%,50%)`}
-                    fontFamily={"monospace"}
-                    mt="2.5"
-                    ml="1"
-                  >
-                    {color}
-                  </SliderMark>
-                  <SliderTrack bg={`hsl(${color},50%,50%)`}>
-                    <SliderFilledTrack bg={`hsl(${color},50%,50%)`} />
-                  </SliderTrack>
-                  <SliderThumb color={`hsl(${color},50%,50%)`} />
-                </Slider>
-              </FormLabel>
+                    </HStack>
+                    <Button onClick={()=> {setImg(null)}} w={"100%"}>
+                      Remove Image
+                    </Button>
+                    
 
-              <FormLabel htmlFor="Brightness">
-                Brightness
-                <Slider
-                  aria-label="slider-ex-1"
-                  defaultValue={brightness}
-                  min={0}
-                  max={100}
-                  step={1}
-                  onChange={(e) => setBrightness(e)}
-                >
-                  <SliderMark
-                    value={brightness}
-                    textAlign="center"
-                    bg="white"
-                    color={"black"}
-                    fontFamily={"monospace"}
-                    mt="2.5"
-                    ml="1"
-                  >
-                    {brightness}
-                  </SliderMark>
-                  <SliderTrack bg={`hsl(${color},50%,${brightness}%)`}>
-                    <SliderFilledTrack />
-                  </SliderTrack>
-                  <SliderThumb />
-                </Slider>
-              </FormLabel>
+                     
+                  </VStack>
+                </TabPanel>
+                <TabPanel>
+                  <p>three!</p>
+                </TabPanel>
+              </TabPanels>
+            </Tabs>
 
-              <Button onClick={handleClick} type="submit" rightIcon={<FaCog />}>
-                Generate Code
-
-              </Button>
-            </VStack>
+            <Button
+              w={"100%"}
+              onClick={handleClick}
+              type="submit"
+              rightIcon={<FaCog />}
+            >
+              Generate Code
+            </Button>
           </Box>
         </VStack>
       </HStack>
@@ -413,57 +314,15 @@ const PlayGround = () => {
 
                 <pre>
                   <code className="language-html">
-                    {` <VStack justify="center" w="100%" h="100%" align="center">
-        <Box
-          transition="transform, 0.3s ease-in-out"
-          w={"100%"}
-          h={"100%"}
-          bg="white"
-          rounded="xl"
-          py={12}
-          border="${BorderSize}px solid ${BorderColor}"
-        >
-          <VStack justify="center" w="100%" h="100%" align="center">
-            <Box
-              w="${Width}px"
-              h="${Height}px"
-              style={{ backgroundColor: hsl(${color},70%,${brightness}%)}}
-              rounded="${BorderRadius}"
-              boxShadow={0px 0px ${BoxShadow}px gray}
-              border={1.8px solid ${BorderColor}}
-              borderColor="${BorderColor}"
-              transition="transform, 0.3s ease-in-out"
-              p={5}
-            >
-              <VStack justify="${LayoutAlign}" w="100%" h="100%" align="${Align}">
-                <Text
-                  transition="transform, 0.3s ease-in-out"
-                  fontSize="30"
-                  fontWeight="600"
-                  align="${Align}"
-                >
-                  ${heading}
-                </Text>
-                <Text
-                  transition="transform, 0.3s ease-in-out"
-                  fontSize="16"
-                  fontWeight="300"
-                  align="inherit"
-                >
-                  ${SubHeading}
-                </Text>
-              </VStack>
-            </Box>
-          </VStack>
-        </Box>
-      </VStack>`}
+                    <CodeCopy color={color}
+     brightness={brightness} Width={Width} Height={Height} BorderSize={BorderSize}
+      BorderColor={BorderColor} BorderRadius={BorderRadius} BoxShadow={BoxShadow} 
+      LayoutAlign={LayoutAlign} Align={Align} />
                   </code>
                 </pre>
               </Box>
             </>
           </ModalBody>
-
-         
         </ModalContent>
       </Modal>
     </>
