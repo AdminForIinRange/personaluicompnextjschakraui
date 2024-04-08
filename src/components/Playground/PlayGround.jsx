@@ -95,14 +95,10 @@ const PlayGround = () => {
   const [ HeadingFontWeight, setHeadingFontWeight] = useState("600");
 
 
-  const [ SubheadingFontColor,setSubheadingFontColor] = useState("-1");
+  const [ SubheadingFontColor,setSubheadingFontColor] = useState(-1);
 
-  const [ HeadingFontColor, setHeadingFontColor] = useState("-1");
+  const [ HeadingFontColor, setHeadingFontColor] = useState(-1);
 
-  const [ HeadingFontColorBright, setHeadingFontColorBright] = useState("-1");
-
-
-  const [ SubheadingFontColorBright, setSubheadingFontColorBright] = useState("-1");
 
 
 
@@ -235,7 +231,7 @@ const PlayGround = () => {
                   ) : null}
 
                   <Text
-                          style={{ color: `hsl(${HeadingFontColor},70%,${HeadingFontColor === -1 ? "0%" : "50%"})` }}
+                         style={{ color: `hsl(${HeadingFontColor},70%,${HeadingFontColor === -1 ? "0%" : "50%"})` }}
                     transition="transform, 0.3s ease-in-out"
                     fontSize={HeadingFontSize}
                     fontWeight={HeadingFontWeight}
@@ -619,7 +615,7 @@ const PlayGround = () => {
                 SubheadingFontColor
                 <Slider
                   aria-label="slider-ex-1"
-                  defaultValue={SubheadingFontColor}
+                  defaultValue={-1}
                   min={-1}
                   max={361}
                   step={1}
@@ -631,7 +627,7 @@ const PlayGround = () => {
                     value={SubheadingFontColor}
                     textAlign="center"
                     bg="white"
-                    color={`hsl(${SubheadingFontColor},50%,${HeadingFontColor === -1 ? "0%" : "50%"})`}
+                    color={`hsl(${SubheadingFontColor},50%,${SubheadingFontColor === -1 ? "0%" : "50%"})`}
                     fontFamily={"monospace"}
                     mt="2.5"
                     ml="-2"
