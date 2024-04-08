@@ -3,7 +3,7 @@
 ## Utilizing the as={""} attribute
 
 ```jsx
-//Utilizing the as={""} attribute to allow the button to be an anchor 
+//Utilizing the as={""} attribute to allow the button to be an anchor
        <Button
                 as={"a"}
           href="https://github.com/AdminForIinRange"
@@ -12,14 +12,10 @@
 ```
 
 ## Random Img tip
+
 ```js
-
- 
-  useEffect(() => {
-    setRandomImg(`https://source.unsplash.com/random/${refreshCount}?`);
-    console.log(refreshCount);
-  }, [refreshCount]);
-  
-
-
+useEffect(() => {
+  setRandomImg(`https://source.unsplash.com/random/${refreshCount}?`);
+  console.log(refreshCount);
+}, [refreshCount]);
 ```

@@ -27,7 +27,7 @@ const SimpleCard = () => {
         rounded={"xl"}
         p={"3"}
       >
-        <VStack align={"left"}  w={"100%"} h={"100%"}>
+        <VStack align={"left"} w={"100%"} h={"100%"}>
           <HStack>
             <Text
               w={"70%"}

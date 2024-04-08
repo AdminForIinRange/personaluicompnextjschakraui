@@ -1,19 +1,26 @@
-import React from 'react'
+import React from "react";
 
-const CodeCopy = ({ 
-    color, brightness, 
-    Width, Height, BorderSize,
-     BorderColor, BorderRadius, BoxShadow, LayoutAlign, Align,  heading, SubHeading, }) => {
-
- 
-        ///------------------------------------------------------------------------
-// IF THERE IS AN IMG TEHN SOW A DIFF CODE AND IF IMG IS 
-//BOTTOM OR TOP THE HARD SHOW A DIFF SET OF CODE, NOT HAD TO DO A SIMPLE BOOLEAN CHECK
-//------------------------------------------------------------------------
-//DONT OVER OVER COMPLAITCE TEH PAYGROUND TOO 
- ///------------------------------------------------------------------------ 
-  return (
-    ` <VStack justify="center" w="100%" h="100%" align="center">
+const CodeCopy = ({
+  color,
+  brightness,
+  Width,
+  Height,
+  BorderSize,
+  BorderColor,
+  BorderRadius,
+  BoxShadow,
+  LayoutAlign,
+  Align,
+  heading,
+  SubHeading,
+}) => {
+  ///------------------------------------------------------------------------
+  // IF THERE IS AN IMG TEHN SOW A DIFF CODE AND IF IMG IS
+  //BOTTOM OR TOP THE HARD SHOW A DIFF SET OF CODE, NOT HAD TO DO A SIMPLE BOOLEAN CHECK
+  //------------------------------------------------------------------------
+  //DONT OVER OVER COMPLAITCE TEH PAYGROUND TOO
+  ///------------------------------------------------------------------------
+  return ` <VStack justify="center" w="100%" h="100%" align="center">
     <Box
       transition="transform, 0.3s ease-in-out"
       w={"100%"}
@@ -56,9 +63,7 @@ const CodeCopy = ({
         </Box>
       </VStack>
     </Box>
-  </VStack>`
-  )
-  
-}
+  </VStack>`;
+};
 
-export default CodeCopy
+export default CodeCopy;

@@ -41,7 +41,7 @@ export const Links = () => {
           </Button>
         </Link>{" "}
         <Button
-        as={"a"}
+          as={"a"}
           target="_blank"
           href="https://www.linkedin.com/in/anjesh-bhattarai/"
           leftIcon={<FaLinkedin color="white" size={"20px"} />}
@@ -60,7 +60,7 @@ export const Links = () => {
           </Text>
         </Button>{" "}
         <Button
-                as={"a"}
+          as={"a"}
           href="https://github.com/AdminForIinRange"
           target="_blank"
           leftIcon={<FaGithub color="WHITE" size={"20px"} />}
