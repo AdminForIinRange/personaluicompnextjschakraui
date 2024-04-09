@@ -185,10 +185,10 @@ const PresetCardList = () => {
 
   return (
     <>
-    <HStack h={"100%"} w={"100%"} justify={"center"} align={"center"}>
+    <HStack h={"100%"} w={"100%"} justify={["center", "center", "left", "left", "left"]} align={"center"}>
 
 
-      <Accordion defaultIndex={[0]} allowMultiple w={"90%"} h={"100%"}    >
+      <Accordion defaultIndex={[0]} allowMultiple w={"90%"} h={"100%"}     >
         <AccordionItem>
           <h2>
             <AccordionButton>
@@ -202,19 +202,21 @@ const PresetCardList = () => {
           </h2>
           <AccordionPanel pb={4}>
             <HStack
+            ml={["0px", "0px", "20px", "20px", "20px"]}
+            mb={["0px", "0px", "20px", "20px", "20px"]}
               flexWrap={"wrap"}
               mt={"20px"}
-              align={"left"}
-              justify={"left"}
+              align={["center", "center", "left", "left", "left"]}
+              justify={["center", "center", "left", "left", "left"]}
               h={"100%"}
               w={"100%"}
-              gap={"10px"}
+              gap={["10px", "10px", "20px", "20px", "30px"]}
             >
               {PresetItems.map(({ title, path, sectionImg }) => (
                 <Link key={title} href={`${path}`}>
                   <Box
-                    w={"290px"}
-                    h={"310px"}
+                    w={["200px", "200px", "250px", "250px", "250px"]}
+                    h={["290px", "290px", "300px", "300px", "300px"]}
                     border={"1.8px solid #B5B5B5"}
                     rounded={"xl"}
                     transition="transform, 0.3s ease-in-out"
@@ -266,19 +268,21 @@ const PresetCardList = () => {
           </h2>
           <AccordionPanel pb={4}>
             <HStack
+             ml={"20px"}
+             mb={"20px"}
               flexWrap={"wrap"}
               mt={"20px"}
-              align={"left"}
-              justify={"left"}
+              align={["center", "center", "left", "left", "left"]}
+              justify={["center", "center", "left", "left", "left"]}
               h={"100%"}
               w={"100%"}
-              gap={"10px"}
+              gap={["10px", "10px", "20px", "20px", "30px"]}
             >
               {CompItems.map(({ title, path, sectionImg }) => (
                 <Link key={title} href={`${path}`}>
                   <Box
-                    w={"290px"}
-                    h={"310px"}
+                    w={"250px"}
+                    h={"300px"}
                     border={"1.8px solid #B5B5B5"}
                     rounded={"xl"}
                     transition="transform, 0.3s ease-in-out"
