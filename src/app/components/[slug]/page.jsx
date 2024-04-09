@@ -1,11 +1,14 @@
+"use client";
 import NotFound from "@/app/not-found";
 import Card from "@/components/presets/Card";
 import LoginForm from "@/components/presets/AuthForm";
 import React from "react";
 
-import { HStack } from "@chakra-ui/react";
-import Side from "@/components/SidePanel/SidePanel";
+import { HStack, useMediaQuery } from "@chakra-ui/react";
+import SidePanel from "@/components/SidePanel/SidePanel";
+
 const SlugPrams = ({ params }) => {
+  
   if (params.slug === "cards") {
     return <Card />;
   } else if (params.slug === "modal") {
@@ -50,10 +53,11 @@ const SlugPrams = ({ params }) => {
 };
 
 const Single = ({ params }) => {
+  const [isTablet] = useMediaQuery("(max-width: 768px)");
   return (
     <div>
-      <HStack align={"start"} gap={"100px"}>
-        <Side />
+     <HStack align={"start"} gap={["15px", "15px", "25px", "25px", "25px"]} mt={"15px"}>
+      { !isTablet   ?  <SidePanel /> : null} 
         <SlugPrams params={params} />
       </HStack>
     </div>

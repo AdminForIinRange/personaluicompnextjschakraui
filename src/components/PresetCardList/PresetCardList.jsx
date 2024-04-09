@@ -68,7 +68,7 @@ const PresetCardList = () => {
           <Box
             bgColor={"gray.100"}
             w={"100%"}
-            h={"100%"}
+            h={"80%"}
             rounded={"xl"}
             p={"4"}
           >
@@ -90,18 +90,8 @@ const PresetCardList = () => {
                     h={"20px"}
                   ></Box>
 
-                  <Box
-                    rounded={"md"}
-                    bgColor={"gray.300"}
-                    w={"100%"}
-                    h={"20px"}
-                  ></Box>
-                  <Box
-                    rounded={"md"}
-                    bgColor={"gray.400"}
-                    w={"50%"}
-                    h={"20px"}
-                  ></Box>
+              
+                 
                 </VStack>
               </Box>
             </VStack>

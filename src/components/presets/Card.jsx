@@ -28,7 +28,7 @@ const Card = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <>
-      <VStack px={10}>
+      <VStack px={10} mt={"50px"}>
         <VStack justify={"left"} w={"100%"} h={"100%"} align={"left"}>
           <Text fontSize={"50"} fontWeight={"600"}>
             Card
@@ -54,6 +54,7 @@ const Card = () => {
           gap={"15px"}
           flexWrap={"wrap"}
           align={"left"}
+  
         >
           <SimpleCard />
           <WideSimpleCard />
