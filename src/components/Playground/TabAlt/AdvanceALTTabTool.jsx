@@ -93,7 +93,7 @@ const AdvanceALTTabTool = ({
         </FormLabel>
 
         <FormLabel htmlFor="subheading fontsize">
-          Subheading Fontsize
+          SubHeading Fontsize
           <Slider
             aria-label="slider-ex-1"
             defaultValue={16}
@@ -151,8 +151,8 @@ const AdvanceALTTabTool = ({
           </Slider>
         </FormLabel>
 
-        <FormLabel htmlFor="subheading font weight">
-          Subheading Font Weight
+        <FormLabel htmlFor="subheading weight">
+          SubHeading Font Weight
           <Slider
             aria-label="slider-ex-1"
             defaultValue={300}
@@ -182,7 +182,7 @@ const AdvanceALTTabTool = ({
         </FormLabel>
 
         <FormLabel htmlFor="heading font color">
-          Heading Font Color
+          Heading Color
           <Slider
             aria-label="slider-ex-1"
             defaultValue={-1}
@@ -220,8 +220,8 @@ const AdvanceALTTabTool = ({
           </Slider>
         </FormLabel>
 
-        <FormLabel htmlFor="subheading font color">
-          Subheading Font Color
+        <FormLabel htmlFor="subheading color">
+          Subheading Color
           <Slider
             aria-label="slider-ex-1"
             defaultValue={-1}

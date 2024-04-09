@@ -20,7 +20,25 @@ const CodeCopy = ({
   //------------------------------------------------------------------------
   //DONT OVER OVER COMPLAITCE TEH PAYGROUND TOO
   ///------------------------------------------------------------------------
-  return ` <VStack justify="center" w="100%" h="100%" align="center">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  return(
+
+   ` <VStack justify="center" w="100%" h="100%" align="center">
     <Box
       transition="transform, 0.3s ease-in-out"
       w={"100%"}
@@ -63,7 +81,8 @@ const CodeCopy = ({
         </Box>
       </VStack>
     </Box>
-  </VStack>`;
+  </VStack>`)
+  
 };
 
 export default CodeCopy;
