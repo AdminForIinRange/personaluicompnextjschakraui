@@ -83,10 +83,7 @@ const BasicLogin = () => {
               <Button
                 variant="link"
                 size="sm"
-                onClick={() => {
-                  dispatch(resetPassword({ email }));
-                  dispatch(setForgotPassword(true));
-                }}
+             
               >
                 Forgot password?
               </Button>

@@ -17,16 +17,20 @@ import {
 } from "@chakra-ui/react";
 
 import Link from "next/link";
-
+import Image from "next/image";
+import LoginFormImg from "../img/newloginfrom.png";
+import HeroCardImg from "../img/heroCardImg.png";
 const PresetCardList = () => {
   const PresetItems = [
     {
       title: "🪵 Login Form",
       path: "/components/loginForm",
+      sectionImg: LoginFormImg
     },
     {
       title: "🦸 Hero",
       path: "/components/Hero",
+      sectionImg: HeroCardImg
     },
   ];
 
@@ -53,22 +57,36 @@ const PresetCardList = () => {
           w={"100%"}
           gap={"50px"}
         >
-          {PresetItems.map(({ title, path }) => (
+          {PresetItems.map(({ title, path, sectionImg }) => (
             <Link key={title} href={`${path}`}>
+              
               <Box
+              
                 w={"290px"}
                 h={"310px"}
                 border={"1.8px solid #B5B5B5"}
                 rounded={"xl"}
+
                 transition="transform, 0.3s ease-in-out"
                 _hover={{
                   transform: "scale(1.03)",
                   boxShadow: "0 5px 25px gray",
                 }}
               >
-                <VStack justify={"end"} align={"end"} h={"100%"} w={"100%"}>
-                  <Box w={"100%"} h={"50px"} borderTop={"1.8px solid #B5B5B5"}>
+              
+
+
+
+
+                <VStack justify={"end"} align={"end"} h={"100%"} w={"100%"}  >
+                  <VStack justify={"center"} align={"center"}   w={"100%"} h={"100%"}>
+                    <Image src={sectionImg} alt="Section Image"  width={200} />
+                  </VStack>
+  
+                  <Box w={"100%"} h={"50px"} borderTop={"1.8px solid #B5B5B5"} >
                     <HStack
+                   
+                   
                       justify={"center"}
                       align={"center"}
                       w={"100%"}
