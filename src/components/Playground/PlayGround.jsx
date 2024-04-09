@@ -41,6 +41,7 @@ import { FaCog } from "react-icons/fa";
 import BasicALTTabTool from "./TabAlt/BasicALTTabTool";
 import CodeCopy from "./CodeCopy/CodeCopy";
 import ImageALTTabTool from "./TabAlt/ImageALTTabTool";
+import AdvanceALTTabTool from "./TabAlt/AdvanceALTTabTool";
 const PlayGround = () => {
   const [isTablet] = useMediaQuery("(max-width: 1024px)");
   const [isMobile] = useMediaQuery("(max-width: 736px)");
@@ -95,8 +96,6 @@ const PlayGround = () => {
   const [SubheadingFontColor, setSubheadingFontColor] = useState(-1);
 
   const [HeadingFontColor, setHeadingFontColor] = useState(-1);
-
-
 
   const handleClick = () => {
     onOpen();
@@ -176,17 +175,14 @@ const PlayGround = () => {
             rounded="xl"
             py={12}
             border={`${BorderSize} solid ${BorderColor}`}
-          
-           
           >
             <VStack justify={"center"} w="100%" h={"100%"} align={"center"}>
               <Box
-               _hover={{
-                transform: `${Animation === "scale(1.05)" ? "scale(1.05)" : "scale(1)"}`,
-                opacity: `${Animation === "0" ? "0" : "1"}`,
-                width: `${Animation === "70%" ? "70%" : null}`,
-             
-              }}
+                _hover={{
+                  transform: `${Animation === "scale(1.05)" ? "scale(1.05)" : "scale(1)"}`,
+                  opacity: `${Animation === "0" ? "0" : "1"}`,
+                  width: `${Animation === "70%" ? "70%" : null}`,
+                }}
                 w={`${Width}px`}
                 h={`${Height}px`}
                 style={{ backgroundColor: `hsl(${color},70%,${brightness}%)` }}
@@ -286,7 +282,13 @@ const PlayGround = () => {
             p={2}
             border={`1.8px solid #B9B9B9`}
           >
-            <Tabs transition="transform, 0.3s ease-in-out" variant="soft-rounded"  bg={"#F7FAFC"} p={3} rounded={"xl"}>
+            <Tabs
+              transition="transform, 0.3s ease-in-out"
+              variant="soft-rounded"
+              bg={"#F7FAFC"}
+              p={3}
+              rounded={"xl"}
+            >
               <TabList>
                 <Tab>Basic</Tab>
                 <Tab>Image</Tab>
@@ -296,311 +298,84 @@ const PlayGround = () => {
 
               <TabPanels>
                 <TabPanel>
-                  <BasicALTTabTool
-                    heading={heading}
-                    setHeading={setHeading}
-                    Subheading={Subheading}
-                    setSubheading={setSubheading}
-                    Width={Width}
-                    setWidth={setWidth}
-                    Height={Height}
-                    setHeight={setHeight}
-                    LayoutAlign={LayoutAlign}
-                    setLayoutAlign={setLayoutAlign}
-                    Align={Align}
-                    setAlign={setAlign}
-                    BackgroundColor={BackgroundColor}
-                    setBackgroundColor={setBackgroundColor}
-                    BoxShadow={BoxShadow}
-                    setBoxShadow={setBoxShadow}
-                    BorderColor={BorderColor}
-                    setBorderColor={setBorderColor}
-                    BorderRadius={BorderRadius}
-                    setBorderRadius={setBorderRadius}
-                    BorderSize={BorderSize}
-                    setBorderSize={setBorderSize}
-                    TextColor={TextColor}
-                    setTextColor={setTextColor}
-                    Animation={Animation}
-                    setAnimation={setAnimation}
-                    color={color}
-                    setColor={setColor}
-                    brightness={brightness}
-                    setBrightness={setBrightness}
+                <BasicALTTabTool
+  heading={heading}
+  setHeading={setHeading}
+  Subheading={Subheading}
+  setSubheading={setSubheading}
+  Width={Width}
+  setWidth={setWidth}
+  Height={Height}
+  setHeight={setHeight}
+  setLayoutAlign={setLayoutAlign}
+  setAlign={setAlign}
+  color={color}
+  setColor={setColor}
+  brightness={brightness}
+  setBrightness={setBrightness}
+/>
+
+                </TabPanel>
+                <TabPanel>
+                  <ImageALTTabTool
+                    ImgPos={ImgPos}
+                    ImgLayout={ImgLayout}
+                    setImgPos={setImgPos}
+                    setImgLayout={setImgLayout}
+                    setImg={setImg}
+                    setRefreshCount={setRefreshCount}
+                    setRandomImg={setRandomImg}
+                    handleImageUpload={handleImageUpload}
                   />
                 </TabPanel>
                 <TabPanel>
-                 <ImageALTTabTool ImgPos={ImgPos} ImgLayout={ImgLayout} setImgPos={setImgPos}
-                  setImgLayout={setImgLayout} setImg={setImg} setRefreshCount={setRefreshCount} setRandomImg={setRandomImg}
-                  handleImageUpload={handleImageUpload}      />
+                  <AdvanceALTTabTool
+                    setHeadingFontSize={setHeadingFontSize}
+                    HeadingFontSize={HeadingFontSize}
+                    setSubheadingFontSize={setSubheadingFontSize}
+                    SubheadingFontSize={SubheadingFontSize}
+                    setSubheadingFontWeight={setSubheadingFontWeight}
+                    SubheadingFontWeight={SubheadingFontWeight}
+                    setHeadingFontWeight={setHeadingFontWeight}
+                    HeadingFontWeight={HeadingFontWeight}
+                    setHeadingFontColor={setHeadingFontColor}
+                    HeadingFontColor={HeadingFontColor}
+                    setSubheadingFontColor={setSubheadingFontColor}
+                    SubheadingFontColor={SubheadingFontColor}
+                    BoxShadow={BoxShadow}
+                    setBoxShadow={setBoxShadow}
+                  />
                 </TabPanel>
+
                 <TabPanel>
-                <VStack
-                    gap={7}
+                  <VStack
+                    gap={5}
                     justify={"left"}
                     w="100%"
                     h={"100%"}
                     align={"left"}
                     transition="transform, 0.3s ease-in-out"
                   >
-                  <FormLabel htmlFor="heading fontsize">
-                    Heading Fontsize
-                    <Slider
-                      aria-label="slider-ex-1"
-                      defaultValue={30}
-                      min={10}
-                      max={40}
-                      step={1}
-                      onChange={(e) => setHeadingFontSize(e)}
-                    >
-                      {" "}
-                      <SliderMark
-                        value={HeadingFontSize}
-                        textAlign="center"
-                        bg="white"
-                        color="black"
-                        fontFamily={"monospace"}
-                        mt="2.5"
-                        ml="1"
+                    <FormLabel htmlFor="Animation">
+                      Animation
+                      <RadioGroup
+                        defaultValue="scale(1.05)"
+                        onChange={(val) => setAnimation(val)}
                       >
-                        {HeadingFontSize}
-                      </SliderMark>
-                      <SliderTrack>
-                        <SliderFilledTrack />
-                      </SliderTrack>
-                      <SliderThumb />
-                    </Slider>
-                  </FormLabel>
-
-                  <FormLabel htmlFor="subheading fontsize">
-                    Subheading Fontsize
-                    <Slider
-                      aria-label="slider-ex-1"
-                      defaultValue={16}
-                      min={5}
-                      max={25}
-                      step={1}
-                      onChange={(e) => setSubheadingFontSize(e)}
-                    >
-                      {" "}
-                      <SliderMark
-                        value={SubheadingFontSize}
-                        textAlign="center"
-                        bg="white"
-                        color="black"
-                        fontFamily={"monospace"}
-                        mt="2.5"
-                        ml="1"
-                      >
-                        {SubheadingFontSize}
-                      </SliderMark>
-                      <SliderTrack>
-                        <SliderFilledTrack />
-                      </SliderTrack>
-                      <SliderThumb />
-                    </Slider>
-                  </FormLabel>
-
-                  <FormLabel htmlFor=" heading font weight">
-                    Heading Font Weight
-                    <Slider
-                       
-                      aria-label="slider-ex-1"
-                      defaultValue={600}
-                      min={1}
-                      max={700}
-                      step={1}
-                      onChange={(e) => setHeadingFontWeight(e)}
-                    >
-                      {" "}
-                      <SliderMark
-                       fontWeight={HeadingFontWeight}
-                        value={HeadingFontWeight}
-                        textAlign="center"
-                        bg="white"
-                        color="black"
-                        fontFamily={"monospace"}
-                        mt="2.5"
-                        ml="1"
-                      >
-                        {HeadingFontWeight}
-                      </SliderMark>
-                      <SliderTrack>
-                        <SliderFilledTrack />
-                      </SliderTrack>
-                      <SliderThumb />
-                    </Slider>
-                  </FormLabel>
-
-                  <FormLabel htmlFor="subheading font weight">
-                    Subheading Font Weight
-                    <Slider
-                      aria-label="slider-ex-1"
-                      defaultValue={300}
-                      min={1}
-                      max={700}
-                      step={1}
-                      onChange={(e) => setSubheadingFontWeight(e)}
-                    >
-                      {" "}
-                      <SliderMark
-                        value={SubheadingFontWeight}
-                        textAlign="center"
-                        bg="white"
-                        color="black"
-                        fontWeight={SubheadingFontWeight}
-                        fontFamily={"monospace"}
-                        mt="2.5"
-                        ml="1"
-                      >
-                        {SubheadingFontWeight}
-                      </SliderMark>
-                      <SliderTrack>
-                        <SliderFilledTrack />
-                      </SliderTrack>
-                      <SliderThumb />
-                    </Slider>
-                  </FormLabel>
-
-                  <FormLabel htmlFor="heading font color">
-                    Heading Font Color
-                    <Slider
-                      aria-label="slider-ex-1"
-                      defaultValue={-1}
-                      min={-1}
-                      max={361}
-                      step={1}
-                      onChange={(e) => setHeadingFontColor(e)}
-                      borderRadius={"15px"}
-                    >
-                      <SliderMark
-                        value={HeadingFontColor}
-                        textAlign="center"
-                        bg="white"
-                        color={`hsl(${HeadingFontColor}, 50%, ${HeadingFontColor === -1 ? "0%" : HeadingFontColor === 361 ? "0%" : "50%"})`}
-                        fontFamily={"monospace"}
-                        mt="2.5"
-                        ml="-2"
-                      >
-                     { HeadingFontColor === -1 ? "Black" : HeadingFontColor === 361 ? "White" :  HeadingFontColor}
-                      </SliderMark>
-                      <SliderTrack
-                        bg={`hsl(${HeadingFontColor}, 50%, ${HeadingFontColor === -1 ? "0%" : HeadingFontColor === 361 ? "100%" : "50%"})`}
-                      >
-                        <SliderFilledTrack
-                          bg={`hsl(${HeadingFontColor}, 50%, ${HeadingFontColor === -1 ? "0%" : HeadingFontColor === 361 ? "100%" : "50%"})`}
-                        />
-                      </SliderTrack>
-                      <SliderThumb
-                     
-                        HeadingFontColor={`hsl(${HeadingFontColor}, 50%, ${HeadingFontColor === -1 ? "0%" : HeadingFontColor === 361 ? "100%" : "50%"})`}
-                      />
-                    </Slider>
-                  </FormLabel>
-
-                  <FormLabel htmlFor="subheading font color">
-                    Subheading Font Color
-                    <Slider
-                      aria-label="slider-ex-1"
-                      defaultValue={-1}
-                      min={-1}
-                      max={361}
-                      step={1}
-                      onChange={(e) => setSubheadingFontColor(e)}
-                      borderRadius={"15px"}
-                    >
-                    
-                   
-                      <SliderMark
-                        value={SubheadingFontColor}
-                        textAlign="center"
-                        bg="white"
-                        color={`hsl(${SubheadingFontColor}, 50%, ${SubheadingFontColor === -1 ? "0%" : SubheadingFontColor === 361 ? "0%" : "50%"})`}
-                        fontFamily={"monospace"}
-                        mt="2.5"
-                        ml="-2"
-                      >
-                { SubheadingFontColor === -1 ? "Black" : SubheadingFontColor === 361 ? "White" :  SubheadingFontColor}
-                      </SliderMark>
-                      <SliderTrack
-                        bg={`hsl(${SubheadingFontColor}, 50%, ${SubheadingFontColor === -1 ? "0%" : SubheadingFontColor === 361 ? "100%" : "50%"})`}
-                      >
-                        <SliderFilledTrack
-                          bg={`hsl(${SubheadingFontColor}, 50%, ${SubheadingFontColor === -1 ? "0%" : SubheadingFontColor === 361 ? "100%" : "50%"})`}
-                        />
-                      </SliderTrack>
-                      <SliderThumb
-                        SubheadingFontColor={`hsl(${SubheadingFontColor}, 50%, ${SubheadingFontColor === -1 ? "0%" : SubheadingFontColor === 361 ? "100%" : "50%"})`}
-                      />
-                    </Slider>
-                  </FormLabel>
-
-
-
-                  <FormLabel htmlFor=" box shadow" >
-                  Box Shadow
-                    <Slider
-                       
-                      aria-label="slider-ex-1"
-                      defaultValue={10}
-                      min={1}
-                      max={100}
-                      step={1}
-                      onChange={(e) => setBoxShadow(e)}
-                    >
-                      {" "}
-                      <SliderMark       
-                       boxShadow={` 0px 0px ${BoxShadow}px gray`}
-                      value={BoxShadow}
-                        textAlign="center"
-                        bg="white"
-                        color="black"
-                        fontFamily={"monospace"}
-                        mt="2.5"
-                        ml="1"
-                      >
-                        {BoxShadow}
-                      </SliderMark >
-                      <SliderTrack  boxShadow={` 0px 0px ${BoxShadow}px gray`}>
-                        <SliderFilledTrack   boxShadow={` 0px 0px ${BoxShadow}px gray`}/>
-                      </SliderTrack>
-                      <SliderThumb   boxShadow={` 0px 0px ${BoxShadow}px gray`}/>
-                    </Slider>
-                  </FormLabel>
+                        <HStack>
+                          <Radio value={`scale(1.05)`}>Expand</Radio>
+                          <Radio value="70%">Expand Width </Radio>
+                          <Radio value={`0`}>fade in/out</Radio>
+                        </HStack>
+                      </RadioGroup>
+                    </FormLabel>
                   </VStack>
-
                 </TabPanel>
-
-                <TabPanel>
-            <VStack    gap={5}
-                    justify={"left"}
-                    w="100%"
-                    h={"100%"}
-                    align={"left"}
-                    transition="transform, 0.3s ease-in-out" >
-
-<FormLabel htmlFor="Animation">
-Animation
-          <RadioGroup
-            defaultValue="scale(1.05)"
-            onChange={(val) => setAnimation(val)}
-          >
-            <HStack>
-              <Radio value={`scale(1.05)`} >Expand</Radio>
-              <Radio value="70%">Expand Width </Radio>
-              <Radio value={`0`}>fade in/out</Radio>
-            </HStack>
-          </RadioGroup>
-        </FormLabel>
-
-            </VStack>
-                </TabPanel>
-
               </TabPanels>
             </Tabs>
 
             <Button
-            mt={"15px"}
+              mt={"15px"}
               w={"100%"}
               onClick={handleClick}
               type="submit"
