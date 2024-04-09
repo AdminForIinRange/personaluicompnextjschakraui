@@ -60,7 +60,7 @@ const PlayGround = () => {
   const [Align, setAlign] = useState("start");
 
   const [BackgroundColor, setBackgroundColor] = useState("");
-  const [BoxShadow, setBoxShadow] = useState("10px");
+  const [BoxShadow, setBoxShadow] = useState("10");
 
   const [BorderColor, setBorderColor] = useState("#B9B9B9");
   const [BorderRadius, setBorderRadius] = useState("10px");
@@ -181,7 +181,10 @@ const PlayGround = () => {
             <VStack justify={"center"} w="100%" h={"100%"} align={"center"}>
               <Box
                _hover={{
-                transform: `${Animation}`
+                transform: `${Animation === "scale(1.05)" ? "scale(1.05)" : "scale(1)"}`,
+                opacity: `${Animation === "0" ? "0" : "1"}`,
+                width: `${Animation === "70%" ? "70%" : null}`,
+             
               }}
                 w={`${Width}px`}
                 h={`${Height}px`}
@@ -652,13 +655,13 @@ const PlayGround = () => {
 <FormLabel htmlFor="Animation">
 Animation
           <RadioGroup
-            defaultValue="end"
+            defaultValue="scale(1.05)"
             onChange={(val) => setAnimation(val)}
           >
             <HStack>
               <Radio value={`scale(1.05)`} >Expand</Radio>
-              <Radio value=" ">Center</Radio>
-              <Radio value="end">Bottom</Radio>
+              <Radio value="70%">Expand Width </Radio>
+              <Radio value={`0`}>fade in/out</Radio>
             </HStack>
           </RadioGroup>
         </FormLabel>
