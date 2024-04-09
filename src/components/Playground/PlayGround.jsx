@@ -68,7 +68,6 @@ const PlayGround = () => {
   const [BorderColor, setBorderColor] = useState("#B9B9B9");
   const [BorderRadius, setBorderRadius] = useState("10px");
   const [BorderSize, setBorderSize] = useState("1.8px");
-  const [TextColor, setTextColor] = useState("black");
 
   const [Animation, setAnimation] = useState("scale(1.05)");
 
@@ -118,18 +117,60 @@ const PlayGround = () => {
   };
 
   const handleCopy = () => {
-    <CodeCopy
-      color={color}
-      brightness={brightness}
-      Width={Width}
-      Height={Height}
-      BorderSize={BorderSize}
-      BorderColor={BorderColor}
-      BorderRadius={BorderRadius}
-      BoxShadow={BoxShadow}
-      LayoutAlign={LayoutAlign}
-      Align={Align}
-    />;
+<CodeCopy
+img={img}
+  heading={heading}
+  setHeading={setHeading}
+  Subheading={Subheading}
+  setSubheading={setSubheading}
+  Width={Width}
+  setWidth={setWidth}
+  Height={Height}
+  setHeight={setHeight}
+  LayoutAlign={LayoutAlign}
+  setLayoutAlign={setLayoutAlign}
+  Align={Align}
+  setAlign={setAlign}
+  BackgroundColor={BackgroundColor}
+  setBackgroundColor={setBackgroundColor}
+  BoxShadow={BoxShadow}
+  setBoxShadow={setBoxShadow}
+  BorderColor={BorderColor}
+  setBorderColor={setBorderColor}
+  BorderRadius={BorderRadius}
+  setBorderRadius={setBorderRadius}
+  BorderSize={BorderSize}
+  setBorderSize={setBorderSize}
+  Animation={Animation}
+  setAnimation={setAnimation}
+  color={color}
+  setColor={setColor}
+  brightness={brightness}
+  setBrightness={setBrightness}
+  ImgPos={ImgPos}
+  setImgPos={setImgPos}
+  ImgLayout={ImgLayout}
+  setImgLayout={setImgLayout}
+  RandomImg={RandomImg}
+  setRandomImg={setRandomImg}
+  isOpen={isOpen}
+  onOpen={onOpen}
+  onClose={onClose}
+  refreshCount={refreshCount}
+  setRefreshCount={setRefreshCount}
+  HeadingFontSize={HeadingFontSize}
+  setHeadingFontSize={setHeadingFontSize}
+  SubheadingFontSize={SubheadingFontSize}
+  setSubheadingFontSize={setSubheadingFontSize}
+  SubheadingFontWeight={SubheadingFontWeight}
+  setSubheadingFontWeight={setSubheadingFontWeight}
+  HeadingFontWeight={HeadingFontWeight}
+  setHeadingFontWeight={setHeadingFontWeight}
+  SubheadingFontColor={SubheadingFontColor}
+  setSubheadingFontColor={setSubheadingFontColor}
+  HeadingFontColor={HeadingFontColor}
+  setHeadingFontColor={setHeadingFontColor}
+/>;
 
     navigator.clipboard
       .writeText(codeToCopy)
@@ -387,16 +428,58 @@ const PlayGround = () => {
                 <pre>
                   <code className="language-html">
                     <CodeCopy
-                      color={color}
-                      brightness={brightness}
-                      Width={Width}
-                      Height={Height}
-                      BorderSize={BorderSize}
-                      BorderColor={BorderColor}
-                      BorderRadius={BorderRadius}
-                      BoxShadow={BoxShadow}
-                      LayoutAlign={LayoutAlign}
-                      Align={Align}
+               img={img}
+               heading={heading}
+               setHeading={setHeading}
+               Subheading={Subheading}
+               setSubheading={setSubheading}
+               Width={Width}
+               setWidth={setWidth}
+               Height={Height}
+               setHeight={setHeight}
+               LayoutAlign={LayoutAlign}
+               setLayoutAlign={setLayoutAlign}
+               Align={Align}
+               setAlign={setAlign}
+               BackgroundColor={BackgroundColor}
+               setBackgroundColor={setBackgroundColor}
+               BoxShadow={BoxShadow}
+               setBoxShadow={setBoxShadow}
+               BorderColor={BorderColor}
+               setBorderColor={setBorderColor}
+               BorderRadius={BorderRadius}
+               setBorderRadius={setBorderRadius}
+               BorderSize={BorderSize}
+               setBorderSize={setBorderSize}
+               Animation={Animation}
+               setAnimation={setAnimation}
+               color={color}
+               setColor={setColor}
+               brightness={brightness}
+               setBrightness={setBrightness}
+               ImgPos={ImgPos}
+               setImgPos={setImgPos}
+               ImgLayout={ImgLayout}
+               setImgLayout={setImgLayout}
+               RandomImg={RandomImg}
+               setRandomImg={setRandomImg}
+               isOpen={isOpen}
+               onOpen={onOpen}
+               onClose={onClose}
+               refreshCount={refreshCount}
+               setRefreshCount={setRefreshCount}
+               HeadingFontSize={HeadingFontSize}
+               setHeadingFontSize={setHeadingFontSize}
+               SubheadingFontSize={SubheadingFontSize}
+               setSubheadingFontSize={setSubheadingFontSize}
+               SubheadingFontWeight={SubheadingFontWeight}
+               setSubheadingFontWeight={setSubheadingFontWeight}
+               HeadingFontWeight={HeadingFontWeight}
+               setHeadingFontWeight={setHeadingFontWeight}
+               SubheadingFontColor={SubheadingFontColor}
+               setSubheadingFontColor={setSubheadingFontColor}
+               HeadingFontColor={HeadingFontColor}
+               setHeadingFontColor={setHeadingFontColor}
                     />
                   </code>
                 </pre>
