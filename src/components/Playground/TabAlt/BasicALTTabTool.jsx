@@ -38,8 +38,8 @@ import {
 const BasicALTTabTool = ({
   heading,
   setHeading,
-  SubHeading,
-  setSubHeading,
+  Subheading,
+  setSubheading,
   Width,
   setWidth,
   Height,
@@ -68,7 +68,7 @@ const BasicALTTabTool = ({
           {" "}
           Heading
           <Input
-          bgColor={"white"}
+            bgColor={"white"}
             id="Heading"
             type="text"
             w={"100%"}
@@ -78,15 +78,14 @@ const BasicALTTabTool = ({
         </FormLabel>
 
         <FormLabel htmlFor="SubHeading">
-       
           SubHeading
           <Input
-           bgColor={"white"}
+            bgColor={"white"}
             id="SubHeading"
             type="text"
             w={"100%"}
-            onChange={(e) => setSubHeading(e.target.value)}
-            value={SubHeading}
+            onChange={(e) => setSubheading(e.target.value)}
+            value={Subheading}
           />
         </FormLabel>
 
@@ -224,7 +223,7 @@ const BasicALTTabTool = ({
               {brightness}
             </SliderMark>
             <SliderTrack bg={`hsl(${color},50%,${brightness}%)`}>
-              <SliderFilledTrack  bg={`hsl(${color},50%,${brightness}%)`}/>
+              <SliderFilledTrack bg={`hsl(${color},50%,${brightness}%)`} />
             </SliderTrack>
             <SliderThumb />
           </Slider>
