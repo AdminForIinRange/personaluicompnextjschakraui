@@ -40,6 +40,7 @@ import { CopyIcon } from "@chakra-ui/icons";
 import { FaCog } from "react-icons/fa";
 import BasicALTTabTool from "./TabAlt/BasicALTTabTool";
 import CodeCopy from "./CodeCopy/CodeCopy";
+import ImageALTTabTool from "./TabAlt/ImageALTTabTool";
 const PlayGround = () => {
   const [isTablet] = useMediaQuery("(max-width: 1024px)");
   const [isMobile] = useMediaQuery("(max-width: 736px)");
@@ -329,83 +330,9 @@ const PlayGround = () => {
                   />
                 </TabPanel>
                 <TabPanel>
-                  <VStack
-                    gap={5}
-                    justify={"left"}
-                    w="100%"
-                    h={"100%"}
-                    align={"left"}
-                    transition="transform, 0.3s ease-in-out"
-                  >
-                    <HStack
-                      w={"100%"}
-                      h={"100%"}
-                      align={"center"}
-                      justify={"center"}
-                      p={5}
-                    >
-                      <Input
-                        bgColor={"gray.200"}
-                        p={5}
-                        w={"100%"}
-                        h={"100%"}
-                        type="file"
-                        rounded={"xl"}
-                        accept="image/*"
-                        color={"black"}
-                        onChange={handleImageUpload}
-                      />
-                    </HStack>
-
-                    <Button
-                      colorScheme={"whatsapp"}
-                      onClick={() => {
-                        setImg("random");
-                        setRefreshCount((prev) => prev + 1);
-                      }}
-                      w={"100%"}
-                    >
-                      Random Image
-                    </Button>
-
-                    <Button
-                      onClick={() => {
-                        setImg(null);
-                        setRandomImg(null);
-                      }}
-                      w={"100%"}
-                    >
-                      Remove Image
-                    </Button>
-
-                    <FormLabel htmlFor="Image Position">
-                      Image Position
-                      <RadioGroup
-                        defaultValue="center"
-                        onChange={(val) => setImgPos(val)}
-                      >
-                        <HStack>
-                          <Radio value="top">top</Radio>
-                          <Radio value="center">center</Radio>
-                          <Radio value="bottom">bottom</Radio>
-                        </HStack>
-                      </RadioGroup>
-                    </FormLabel>
-
-                    <FormLabel htmlFor="Image Layout">
-                      Image Layout
-                      <RadioGroup
-                        defaultValue="top"
-                        onChange={(val) => setImgLayout(val)}
-                      >
-                        <HStack>
-                          <Radio value="top">top</Radio>
-
-                          <Radio value="bottom">bottom</Radio>
-                        </HStack>
-                      </RadioGroup>
-                    </FormLabel>
-                  </VStack>
+                 <ImageALTTabTool ImgPos={ImgPos} ImgLayout={ImgLayout} setImgPos={setImgPos}
+                  setImgLayout={setImgLayout} setImg={setImg} setRefreshCount={setRefreshCount} setRandomImg={setRandomImg}
+                  handleImageUpload={handleImageUpload}      />
                 </TabPanel>
                 <TabPanel>
                 <VStack
@@ -673,7 +600,7 @@ Animation
             </Tabs>
 
             <Button
-            mt={"20px"}
+            mt={"15px"}
               w={"100%"}
               onClick={handleClick}
               type="submit"

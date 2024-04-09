@@ -237,7 +237,7 @@ const BasicALTTabTool = ({
               {brightness}
             </SliderMark>
             <SliderTrack bg={`hsl(${color},50%,${brightness}%)`}>
-              <SliderFilledTrack />
+              <SliderFilledTrack  bg={`hsl(${color},50%,${brightness}%)`}/>
             </SliderTrack>
             <SliderThumb />
           </Slider>
