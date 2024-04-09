@@ -2,49 +2,27 @@ import React from "react";
 
 const CodeCopy = ({
   heading,
-
   Subheading,
-
   Width,
-
   Height,
-
   LayoutAlign,
-
   Align,
-
   BoxShadow,
-
   BorderColor,
-
   BorderRadius,
-
   BorderSize,
-
   Animation,
-
   color,
-
   brightness,
-
   ImgPos,
-
   ImgLayout,
-
   RandomImg,
-
   HeadingFontSize,
-
   SubheadingFontSize,
-
   SubheadingFontWeight,
-
   HeadingFontWeight,
-
   SubheadingFontColor,
-
   HeadingFontColor,
-
   img,
 }) => {
   const imgtop = ` <HStack
