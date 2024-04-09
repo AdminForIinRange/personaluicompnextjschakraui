@@ -42,6 +42,7 @@ import BasicALTTabTool from "./TabAlt/BasicALTTabTool";
 import CodeCopy from "./CodeCopy/CodeCopy";
 import ImageALTTabTool from "./TabAlt/ImageALTTabTool";
 import AdvanceALTTabTool from "./TabAlt/AdvanceALTTabTool";
+import AnimationALTTabTool from "./TabAlt/AnimationALTTabTool";
 const PlayGround = () => {
   const [isTablet] = useMediaQuery("(max-width: 1024px)");
   const [isMobile] = useMediaQuery("(max-width: 736px)");
@@ -69,7 +70,7 @@ const PlayGround = () => {
   const [BorderSize, setBorderSize] = useState("1.8px");
   const [TextColor, setTextColor] = useState("black");
 
-  const [Animation, setAnimation] = useState("");
+  const [Animation, setAnimation] = useState("scale(1.05)");
 
   const [color, setColor] = useState("0");
 
@@ -348,28 +349,7 @@ const PlayGround = () => {
                 </TabPanel>
 
                 <TabPanel>
-                  <VStack
-                    gap={5}
-                    justify={"left"}
-                    w="100%"
-                    h={"100%"}
-                    align={"left"}
-                    transition="transform, 0.3s ease-in-out"
-                  >
-                    <FormLabel htmlFor="Animation">
-                      Animation
-                      <RadioGroup
-                        defaultValue="scale(1.05)"
-                        onChange={(val) => setAnimation(val)}
-                      >
-                        <HStack>
-                          <Radio value={`scale(1.05)`}>Expand</Radio>
-                          <Radio value="70%">Expand Width </Radio>
-                          <Radio value={`0`}>fade in/out</Radio>
-                        </HStack>
-                      </RadioGroup>
-                    </FormLabel>
-                  </VStack>
+                 <AnimationALTTabTool setAnimation={setAnimation}   />
                 </TabPanel>
               </TabPanels>
             </Tabs>
