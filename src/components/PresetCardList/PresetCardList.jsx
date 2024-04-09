@@ -58,6 +58,7 @@ const PresetCardList = () => {
     if (card.title === "🪵 Login Form")
       return (
         <VStack
+    
           justify={"center"}
           align={"center"}
           w={"100%"}
@@ -178,9 +179,16 @@ const PresetCardList = () => {
       );
   };
 
+
+  // transform={["scale(0.2)","scale(0.4)","scale(0.5)","scale(1)"]}
+
+
   return (
     <>
-      <Accordion defaultIndex={[0]} allowMultiple w={"70%"} h={"100%"}>
+    <HStack h={"100%"} w={"100%"} justify={"center"} align={"center"}>
+
+
+      <Accordion defaultIndex={[0]} allowMultiple w={"90%"} h={"100%"}    >
         <AccordionItem>
           <h2>
             <AccordionButton>
@@ -200,7 +208,7 @@ const PresetCardList = () => {
               justify={"left"}
               h={"100%"}
               w={"100%"}
-              gap={"50px"}
+              gap={"10px"}
             >
               {PresetItems.map(({ title, path, sectionImg }) => (
                 <Link key={title} href={`${path}`}>
@@ -264,7 +272,7 @@ const PresetCardList = () => {
               justify={"left"}
               h={"100%"}
               w={"100%"}
-              gap={"50px"}
+              gap={"10px"}
             >
               {CompItems.map(({ title, path, sectionImg }) => (
                 <Link key={title} href={`${path}`}>
@@ -309,6 +317,7 @@ const PresetCardList = () => {
           </AccordionPanel>
         </AccordionItem>
       </Accordion>
+      </HStack>
     </>
   );
 };
