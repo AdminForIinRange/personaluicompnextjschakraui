@@ -19,3 +19,13 @@ useEffect(() => {
   console.log(refreshCount);
 }, [refreshCount]);
 ```
+
+
+## Adding double ternaiy;s 
+
+```js
+
+   color: `hsl(${HeadingFontColor}, 50%, ${HeadingFontColor === -1 ? "0%" : (HeadingFontColor === 361 ? "100%" : "50%") })`,
+
+
+```

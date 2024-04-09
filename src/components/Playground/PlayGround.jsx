@@ -215,7 +215,7 @@ const PlayGround = () => {
 
                   <Text
                     style={{
-                      color: `hsl(${HeadingFontColor},70%,${HeadingFontColor === -1 ? "0%" : "50%"})`,
+                      color: `hsl(${HeadingFontColor}, 50%, ${HeadingFontColor === -1 ? "0%" : (HeadingFontColor === 361 ? "100%" : "50%") })`,
                     }}
                     transition="transform, 0.3s ease-in-out"
                     fontSize={HeadingFontSize}
@@ -226,7 +226,7 @@ const PlayGround = () => {
                   </Text>
                   <Text
                     style={{
-                      color: `hsl(${SubheadingFontColor},70%,${SubheadingFontColor === -1 ? "0%" : "50%"})`,
+                      color: `hsl(${SubheadingFontColor}, 50%, ${SubheadingFontColor === -1 ? "0%" : (SubheadingFontColor === 361 ? "100%" : "50%") })`,
                     }}
                     transition="transform, 0.3s ease-in-out"
                     fontSize={SubheadingFontSize}
