@@ -1,8 +1,8 @@
 import React from "react";
 import { HStack, Text, Box, VStack } from "@chakra-ui/react";
 
-import Comp from "@/data/CompItems.json";
-import Preset from "@/data/PresetItems.json";
+import Comp from "../../data/CompItems.json";
+import Preset from "../../data/PresetItems.json";
 import Link from "next/link";
 const SidePanel = () => {
   const { CompItems } = Comp;

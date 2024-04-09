@@ -15,10 +15,10 @@ import {
   Box,
   VStack,
 } from "@chakra-ui/react";
-import Side from "../SidePanel/SidePanel";
+
 import Link from "next/link";
-import Comp from "@/data/CompItems.json";
-import Preset from "@/data/PresetItems.json";
+import Comp from "../../data/CompItems.json";
+import Preset from "../../data/PresetItems.json";
 const PresetCardList = () => {
   const { CompItems } = Comp;
   const { PresetItems } = Preset;
