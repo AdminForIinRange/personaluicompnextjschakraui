@@ -2,64 +2,51 @@ import React from "react";
 
 const CodeCopy = ({
   heading,
-  setHeading,
+
   Subheading,
-  setSubheading,
+
   Width,
-  setWidth,
+
   Height,
-  setHeight,
+
   LayoutAlign,
-  setLayoutAlign,
+
   Align,
-  setAlign,
-  BackgroundColor,
-  setBackgroundColor,
+
   BoxShadow,
-  setBoxShadow,
+
   BorderColor,
-  setBorderColor,
+
   BorderRadius,
-  setBorderRadius,
+
   BorderSize,
-  setBorderSize,
+
   Animation,
-  setAnimation,
+
   color,
-  setColor,
+
   brightness,
-  setBrightness,
+
   ImgPos,
-  setImgPos,
+
   ImgLayout,
-  setImgLayout,
+
   RandomImg,
-  setRandomImg,
-  isOpen,
-  onOpen,
-  onClose,
-  refreshCount,
-  setRefreshCount,
+  
   HeadingFontSize,
-  setHeadingFontSize,
+
   SubheadingFontSize,
-  setSubheadingFontSize,
+
   SubheadingFontWeight,
-  setSubheadingFontWeight,
+ 
   HeadingFontWeight,
-  setHeadingFontWeight,
+
   SubheadingFontColor,
-  setSubheadingFontColor,
+ 
   HeadingFontColor,
-  setHeadingFontColor,
+
   img,
 }) => {
-  ///------------------------------------------------------------------------
-  // IF THERE IS AN IMG TEHN SOW A DIFF CODE AND IF IMG IS
-  //BOTTOM OR TOP THE HARD SHOW A DIFF SET OF CODE, NOT HAD TO DO A SIMPLE BOOLEAN CHECK
-  //------------------------------------------------------------------------
-  //DONT OVER OVER COMPLAITCE TEH PAYGROUND TOO
-  ///------------------------------------------------------------------------
 
   const imgtop = ` <HStack
 mt={"10px"}

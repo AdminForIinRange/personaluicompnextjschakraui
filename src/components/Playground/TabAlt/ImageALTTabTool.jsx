@@ -1,38 +1,15 @@
 import React from 'react'
 import {
     HStack,
-    Text,
+
     FormLabel,
     Input,
-    Box,
-    Avatar,
-    AvatarBadge,
-    useMediaQuery,
-    AvatarGroup,
+
     VStack,
     Button,
     Radio,
     RadioGroup,
-    Slider,
-    SliderTrack,
-    SliderFilledTrack,
-    SliderThumb,
-    SliderMark,
-    Checkbox,
-    CheckboxGroup,
-    Modal,
-    ModalOverlay,
-    ModalContent,
-    ModalHeader,
-    ModalFooter,
-    ModalBody,
-    ModalCloseButton,
-    useDisclosure,
-    Tabs,
-    TabList,
-    TabPanels,
-    Tab,
-    TabPanel,
+
   } from "@chakra-ui/react";
 const ImageALTTabTool = ({handleImageUpload, ImgPos, ImgLayout, setImgPos, 
     setImgLayout, setImg, setRefreshCount, setRandomImg}) => {
