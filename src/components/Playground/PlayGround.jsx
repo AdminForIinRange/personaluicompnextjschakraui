@@ -242,7 +242,7 @@ img={img}
                   align={Align}
                   transition="transform, 0.3s ease-in-out"
                 >
-                  {ImgLayout === "top" ? (
+                  {ImgLayout === "top"  && img ? (
                     <HStack
                       mt={"10px"}
                       w={"100%"}
@@ -285,11 +285,11 @@ img={img}
                     {Subheading}
                   </Text>
 
-                  {ImgLayout === "bottom" ? (
+                  {ImgLayout === "bottom"  && img ? (
                     <HStack
                       w={"100%"}
                       h={"100%"}
-                      display={img ? "block" : "none"}
+                     
                       transition="transform, 0.3s ease-in-out"
                       mt={"10px"}
                     >

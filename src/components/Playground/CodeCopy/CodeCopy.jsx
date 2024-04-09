@@ -1,7 +1,6 @@
 import React from "react";
 
-const CodeCopy   = ({
-  
+const CodeCopy = ({
   heading,
   setHeading,
   Subheading,
@@ -62,16 +61,11 @@ const CodeCopy   = ({
   //DONT OVER OVER COMPLAITCE TEH PAYGROUND TOO
   ///------------------------------------------------------------------------
 
-
-
-
-
-
-const imgtop = ` <HStack
+  const imgtop = ` <HStack
 mt={"10px"}
 w={"100%"}
 h={"100%"}
-display=${img ? "block" : "none"}
+
 transition="transform, 0.3s ease-in-out"
 >
 <Box
@@ -85,12 +79,10 @@ transition="transform, 0.3s ease-in-out"
 ></Box>
 </HStack>`;
 
-
-
-const imgBottom = `  <HStack
+  const imgBottom = `  <HStack
 w={"100%"}
 h={"100%"}
-display=${img ? "block" : "none"}
+
 transition="transform, 0.3s ease-in-out"
 mt={"10px"}
 >
@@ -105,16 +97,7 @@ mt={"10px"}
 ></Box>
 </HStack>`;
 
-
-
-
-
-
-
-
-  return(
-
-   ` <VStack justify="center" w="100%" h="100%" align="center">
+  return ` <VStack justify="center" w="100%" h="100%" align="center">
     <Box
       transition="transform, 0.3s ease-in-out"
       w={"100%"}
@@ -143,32 +126,37 @@ mt={"10px"}
         >
           <VStack justify="${LayoutAlign}" w="100%" h="100%" align="${Align}">
           
-          ${ImgLayout === "top" ? imgtop :"" }
+          ${ImgLayout === "top" && img ? imgtop : ""}
           
             <Text
+            style=${{
+              color: `hsl(${HeadingFontColor}, 50%, ${HeadingFontColor === -1 ? "0%" : HeadingFontColor === 361 ? "100%" : "50%"})`,
+            }}
               transition="transform, 0.3s ease-in-out"
-              fontSize="30"
-              fontWeight="600"
+              fontSize=${HeadingFontSize}
+              fontWeight=${HeadingFontWeight}
               align="${Align}"
             >
               ${heading}
             </Text>
             <Text
+            style=${{
+              color: `hsl(${SubheadingFontColor}, 50%, ${SubheadingFontColor === -1 ? "0%" : SubheadingFontColor === 361 ? "100%" : "50%"})`,
+            }}
               transition="transform, 0.3s ease-in-out"
-              fontSize="16"
-              fontWeight="300"
+              fontSize=${SubheadingFontSize}
+              fontWeight=${SubheadingFontWeight}
               align="inherit"
             >
               ${Subheading}
             </Text>
-            ${ImgLayout === "bottom" ? imgBottom :"" }
+            ${ImgLayout === "bottom" && img ? imgBottom : ""}
           
           </VStack>
         </Box>
       </VStack>
     </Box>
-  </VStack>`)
-  
+  </VStack>`;
 };
 
 export default CodeCopy;
