@@ -32,22 +32,21 @@ const CodeCopy = ({
   ImgLayout,
 
   RandomImg,
-  
+
   HeadingFontSize,
 
   SubheadingFontSize,
 
   SubheadingFontWeight,
- 
+
   HeadingFontWeight,
 
   SubheadingFontColor,
- 
+
   HeadingFontColor,
 
   img,
 }) => {
-
   const imgtop = ` <HStack
 mt={"10px"}
 w={"100%"}

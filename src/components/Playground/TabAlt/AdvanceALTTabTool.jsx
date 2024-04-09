@@ -48,9 +48,6 @@ const AdvanceALTTabTool = ({
   SubheadingFontColor,
   setBoxShadow,
   BoxShadow,
-
-  
-
 }) => {
   return (
     <>

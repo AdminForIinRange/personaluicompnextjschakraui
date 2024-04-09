@@ -3,7 +3,6 @@ import { HStack, Text, Box, VStack } from "@chakra-ui/react";
 
 import Link from "next/link";
 const SidePanel = () => {
-
   const PresetItems = [
     {
       title: "🪵 Login Form",

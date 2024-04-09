@@ -48,11 +48,11 @@ const PlayGround = () => {
   const [isMobile] = useMediaQuery("(max-width: 736px)");
 
   const [heading, setHeading] = useState(
-    "Higher Education Should be free like in Europe"
+    "Higher Education Should be free like in Europe",
   );
 
   const [Subheading, setSubheading] = useState(
-    "Education is a human right, to exploit for monetary gain is immoral "
+    "Education is a human right, to exploit for monetary gain is immoral ",
   );
   const [Width, setWidth] = useState("620");
 
@@ -117,60 +117,60 @@ const PlayGround = () => {
   };
 
   const handleCopy = () => {
-<CodeCopy
-img={img}
-  heading={heading}
-  setHeading={setHeading}
-  Subheading={Subheading}
-  setSubheading={setSubheading}
-  Width={Width}
-  setWidth={setWidth}
-  Height={Height}
-  setHeight={setHeight}
-  LayoutAlign={LayoutAlign}
-  setLayoutAlign={setLayoutAlign}
-  Align={Align}
-  setAlign={setAlign}
-  BackgroundColor={BackgroundColor}
-  setBackgroundColor={setBackgroundColor}
-  BoxShadow={BoxShadow}
-  setBoxShadow={setBoxShadow}
-  BorderColor={BorderColor}
-  setBorderColor={setBorderColor}
-  BorderRadius={BorderRadius}
-  setBorderRadius={setBorderRadius}
-  BorderSize={BorderSize}
-  setBorderSize={setBorderSize}
-  Animation={Animation}
-  setAnimation={setAnimation}
-  color={color}
-  setColor={setColor}
-  brightness={brightness}
-  setBrightness={setBrightness}
-  ImgPos={ImgPos}
-  setImgPos={setImgPos}
-  ImgLayout={ImgLayout}
-  setImgLayout={setImgLayout}
-  RandomImg={RandomImg}
-  setRandomImg={setRandomImg}
-  isOpen={isOpen}
-  onOpen={onOpen}
-  onClose={onClose}
-  refreshCount={refreshCount}
-  setRefreshCount={setRefreshCount}
-  HeadingFontSize={HeadingFontSize}
-  setHeadingFontSize={setHeadingFontSize}
-  SubheadingFontSize={SubheadingFontSize}
-  setSubheadingFontSize={setSubheadingFontSize}
-  SubheadingFontWeight={SubheadingFontWeight}
-  setSubheadingFontWeight={setSubheadingFontWeight}
-  HeadingFontWeight={HeadingFontWeight}
-  setHeadingFontWeight={setHeadingFontWeight}
-  SubheadingFontColor={SubheadingFontColor}
-  setSubheadingFontColor={setSubheadingFontColor}
-  HeadingFontColor={HeadingFontColor}
-  setHeadingFontColor={setHeadingFontColor}
-/>;
+    <CodeCopy
+      img={img}
+      heading={heading}
+      setHeading={setHeading}
+      Subheading={Subheading}
+      setSubheading={setSubheading}
+      Width={Width}
+      setWidth={setWidth}
+      Height={Height}
+      setHeight={setHeight}
+      LayoutAlign={LayoutAlign}
+      setLayoutAlign={setLayoutAlign}
+      Align={Align}
+      setAlign={setAlign}
+      BackgroundColor={BackgroundColor}
+      setBackgroundColor={setBackgroundColor}
+      BoxShadow={BoxShadow}
+      setBoxShadow={setBoxShadow}
+      BorderColor={BorderColor}
+      setBorderColor={setBorderColor}
+      BorderRadius={BorderRadius}
+      setBorderRadius={setBorderRadius}
+      BorderSize={BorderSize}
+      setBorderSize={setBorderSize}
+      Animation={Animation}
+      setAnimation={setAnimation}
+      color={color}
+      setColor={setColor}
+      brightness={brightness}
+      setBrightness={setBrightness}
+      ImgPos={ImgPos}
+      setImgPos={setImgPos}
+      ImgLayout={ImgLayout}
+      setImgLayout={setImgLayout}
+      RandomImg={RandomImg}
+      setRandomImg={setRandomImg}
+      isOpen={isOpen}
+      onOpen={onOpen}
+      onClose={onClose}
+      refreshCount={refreshCount}
+      setRefreshCount={setRefreshCount}
+      HeadingFontSize={HeadingFontSize}
+      setHeadingFontSize={setHeadingFontSize}
+      SubheadingFontSize={SubheadingFontSize}
+      setSubheadingFontSize={setSubheadingFontSize}
+      SubheadingFontWeight={SubheadingFontWeight}
+      setSubheadingFontWeight={setSubheadingFontWeight}
+      HeadingFontWeight={HeadingFontWeight}
+      setHeadingFontWeight={setHeadingFontWeight}
+      SubheadingFontColor={SubheadingFontColor}
+      setSubheadingFontColor={setSubheadingFontColor}
+      HeadingFontColor={HeadingFontColor}
+      setHeadingFontColor={setHeadingFontColor}
+    />;
 
     navigator.clipboard
       .writeText(codeToCopy)
@@ -242,7 +242,7 @@ img={img}
                   align={Align}
                   transition="transform, 0.3s ease-in-out"
                 >
-                  {ImgLayout === "top"  && img ? (
+                  {ImgLayout === "top" && img ? (
                     <HStack
                       mt={"10px"}
                       w={"100%"}
@@ -285,11 +285,10 @@ img={img}
                     {Subheading}
                   </Text>
 
-                  {ImgLayout === "bottom"  && img ? (
+                  {ImgLayout === "bottom" && img ? (
                     <HStack
                       w={"100%"}
                       h={"100%"}
-                     
                       transition="transform, 0.3s ease-in-out"
                       mt={"10px"}
                     >
@@ -340,23 +339,22 @@ img={img}
 
               <TabPanels>
                 <TabPanel>
-                <BasicALTTabTool
-  heading={heading}
-  setHeading={setHeading}
-  Subheading={Subheading}
-  setSubheading={setSubheading}
-  Width={Width}
-  setWidth={setWidth}
-  Height={Height}
-  setHeight={setHeight}
-  setLayoutAlign={setLayoutAlign}
-  setAlign={setAlign}
-  color={color}
-  setColor={setColor}
-  brightness={brightness}
-  setBrightness={setBrightness}
-/>
-
+                  <BasicALTTabTool
+                    heading={heading}
+                    setHeading={setHeading}
+                    Subheading={Subheading}
+                    setSubheading={setSubheading}
+                    Width={Width}
+                    setWidth={setWidth}
+                    Height={Height}
+                    setHeight={setHeight}
+                    setLayoutAlign={setLayoutAlign}
+                    setAlign={setAlign}
+                    color={color}
+                    setColor={setColor}
+                    brightness={brightness}
+                    setBrightness={setBrightness}
+                  />
                 </TabPanel>
                 <TabPanel>
                   <ImageALTTabTool
@@ -390,7 +388,7 @@ img={img}
                 </TabPanel>
 
                 <TabPanel>
-                 <AnimationALTTabTool setAnimation={setAnimation}   />
+                  <AnimationALTTabTool setAnimation={setAnimation} />
                 </TabPanel>
               </TabPanels>
             </Tabs>
@@ -428,58 +426,58 @@ img={img}
                 <pre>
                   <code className="language-html">
                     <CodeCopy
-               img={img}
-               heading={heading}
-               setHeading={setHeading}
-               Subheading={Subheading}
-               setSubheading={setSubheading}
-               Width={Width}
-               setWidth={setWidth}
-               Height={Height}
-               setHeight={setHeight}
-               LayoutAlign={LayoutAlign}
-               setLayoutAlign={setLayoutAlign}
-               Align={Align}
-               setAlign={setAlign}
-               BackgroundColor={BackgroundColor}
-               setBackgroundColor={setBackgroundColor}
-               BoxShadow={BoxShadow}
-               setBoxShadow={setBoxShadow}
-               BorderColor={BorderColor}
-               setBorderColor={setBorderColor}
-               BorderRadius={BorderRadius}
-               setBorderRadius={setBorderRadius}
-               BorderSize={BorderSize}
-               setBorderSize={setBorderSize}
-               Animation={Animation}
-               setAnimation={setAnimation}
-               color={color}
-               setColor={setColor}
-               brightness={brightness}
-               setBrightness={setBrightness}
-               ImgPos={ImgPos}
-               setImgPos={setImgPos}
-               ImgLayout={ImgLayout}
-               setImgLayout={setImgLayout}
-               RandomImg={RandomImg}
-               setRandomImg={setRandomImg}
-               isOpen={isOpen}
-               onOpen={onOpen}
-               onClose={onClose}
-               refreshCount={refreshCount}
-               setRefreshCount={setRefreshCount}
-               HeadingFontSize={HeadingFontSize}
-               setHeadingFontSize={setHeadingFontSize}
-               SubheadingFontSize={SubheadingFontSize}
-               setSubheadingFontSize={setSubheadingFontSize}
-               SubheadingFontWeight={SubheadingFontWeight}
-               setSubheadingFontWeight={setSubheadingFontWeight}
-               HeadingFontWeight={HeadingFontWeight}
-               setHeadingFontWeight={setHeadingFontWeight}
-               SubheadingFontColor={SubheadingFontColor}
-               setSubheadingFontColor={setSubheadingFontColor}
-               HeadingFontColor={HeadingFontColor}
-               setHeadingFontColor={setHeadingFontColor}
+                      img={img}
+                      heading={heading}
+                      setHeading={setHeading}
+                      Subheading={Subheading}
+                      setSubheading={setSubheading}
+                      Width={Width}
+                      setWidth={setWidth}
+                      Height={Height}
+                      setHeight={setHeight}
+                      LayoutAlign={LayoutAlign}
+                      setLayoutAlign={setLayoutAlign}
+                      Align={Align}
+                      setAlign={setAlign}
+                      BackgroundColor={BackgroundColor}
+                      setBackgroundColor={setBackgroundColor}
+                      BoxShadow={BoxShadow}
+                      setBoxShadow={setBoxShadow}
+                      BorderColor={BorderColor}
+                      setBorderColor={setBorderColor}
+                      BorderRadius={BorderRadius}
+                      setBorderRadius={setBorderRadius}
+                      BorderSize={BorderSize}
+                      setBorderSize={setBorderSize}
+                      Animation={Animation}
+                      setAnimation={setAnimation}
+                      color={color}
+                      setColor={setColor}
+                      brightness={brightness}
+                      setBrightness={setBrightness}
+                      ImgPos={ImgPos}
+                      setImgPos={setImgPos}
+                      ImgLayout={ImgLayout}
+                      setImgLayout={setImgLayout}
+                      RandomImg={RandomImg}
+                      setRandomImg={setRandomImg}
+                      isOpen={isOpen}
+                      onOpen={onOpen}
+                      onClose={onClose}
+                      refreshCount={refreshCount}
+                      setRefreshCount={setRefreshCount}
+                      HeadingFontSize={HeadingFontSize}
+                      setHeadingFontSize={setHeadingFontSize}
+                      SubheadingFontSize={SubheadingFontSize}
+                      setSubheadingFontSize={setSubheadingFontSize}
+                      SubheadingFontWeight={SubheadingFontWeight}
+                      setSubheadingFontWeight={setSubheadingFontWeight}
+                      HeadingFontWeight={HeadingFontWeight}
+                      setHeadingFontWeight={setHeadingFontWeight}
+                      SubheadingFontColor={SubheadingFontColor}
+                      setSubheadingFontColor={setSubheadingFontColor}
+                      HeadingFontColor={HeadingFontColor}
+                      setHeadingFontColor={setHeadingFontColor}
                     />
                   </code>
                 </pre>

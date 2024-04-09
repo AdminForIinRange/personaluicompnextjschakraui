@@ -20,8 +20,7 @@ useEffect(() => {
 }, [refreshCount]);
 ```
 
-
-## Adding double ternaiy;s 
+## Adding double ternaiy;s
 
 ```js
 
