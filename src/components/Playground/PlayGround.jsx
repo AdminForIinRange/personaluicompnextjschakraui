@@ -45,11 +45,11 @@ const PlayGround = () => {
   const [isMobile] = useMediaQuery("(max-width: 736px)");
 
   const [heading, setHeading] = useState(
-    "Higher Education Should be free like in Europe",
+    "Higher Education Should be free like in Europe"
   );
 
   const [Subheading, setSubheading] = useState(
-    "Education is a human right, to exploit for monetary gain is immoral ",
+    "Education is a human right, to exploit for monetary gain is immoral "
   );
   const [Width, setWidth] = useState("620");
 
@@ -94,6 +94,8 @@ const PlayGround = () => {
   const [SubheadingFontColor, setSubheadingFontColor] = useState(-1);
 
   const [HeadingFontColor, setHeadingFontColor] = useState(-1);
+
+
 
   const handleClick = () => {
     onOpen();
@@ -173,14 +175,19 @@ const PlayGround = () => {
             rounded="xl"
             py={12}
             border={`${BorderSize} solid ${BorderColor}`}
+          
+           
           >
             <VStack justify={"center"} w="100%" h={"100%"} align={"center"}>
               <Box
+               _hover={{
+                transform: `${Animation}`
+              }}
                 w={`${Width}px`}
                 h={`${Height}px`}
                 style={{ backgroundColor: `hsl(${color},70%,${brightness}%)` }}
                 rounded={BorderRadius}
-                boxShadow={` 0px 0px ${BoxShadow} gray`}
+                boxShadow={` 0px 0px ${BoxShadow}px gray`}
                 border={`1.8px solid ${BorderColor}`}
                 borderColor={BorderColor}
                 transition="transform, 0.3s ease-in-out"
@@ -215,7 +222,7 @@ const PlayGround = () => {
 
                   <Text
                     style={{
-                      color: `hsl(${HeadingFontColor}, 50%, ${HeadingFontColor === -1 ? "0%" : (HeadingFontColor === 361 ? "100%" : "50%") })`,
+                      color: `hsl(${HeadingFontColor}, 50%, ${HeadingFontColor === -1 ? "0%" : HeadingFontColor === 361 ? "100%" : "50%"})`,
                     }}
                     transition="transform, 0.3s ease-in-out"
                     fontSize={HeadingFontSize}
@@ -226,7 +233,7 @@ const PlayGround = () => {
                   </Text>
                   <Text
                     style={{
-                      color: `hsl(${SubheadingFontColor}, 50%, ${SubheadingFontColor === -1 ? "0%" : (SubheadingFontColor === 361 ? "100%" : "50%") })`,
+                      color: `hsl(${SubheadingFontColor}, 50%, ${SubheadingFontColor === -1 ? "0%" : SubheadingFontColor === 361 ? "100%" : "50%"})`,
                     }}
                     transition="transform, 0.3s ease-in-out"
                     fontSize={SubheadingFontSize}
@@ -272,14 +279,15 @@ const PlayGround = () => {
             h={"100%"}
             bg="white"
             rounded="xl"
-            p={5}
+            p={2}
             border={`1.8px solid #B9B9B9`}
           >
-            <Tabs transition="transform, 0.3s ease-in-out">
+            <Tabs transition="transform, 0.3s ease-in-out" variant="soft-rounded"  bg={"#F7FAFC"} p={3} rounded={"xl"}>
               <TabList>
                 <Tab>Basic</Tab>
                 <Tab>Image</Tab>
                 <Tab>Advance</Tab>
+                <Tab>Animation</Tab>
               </TabList>
 
               <TabPanels>
@@ -397,7 +405,15 @@ const PlayGround = () => {
                   </VStack>
                 </TabPanel>
                 <TabPanel>
-                  <FormLabel htmlFor="Heading Fontsize">
+                <VStack
+                    gap={7}
+                    justify={"left"}
+                    w="100%"
+                    h={"100%"}
+                    align={"left"}
+                    transition="transform, 0.3s ease-in-out"
+                  >
+                  <FormLabel htmlFor="heading fontsize">
                     Heading Fontsize
                     <Slider
                       aria-label="slider-ex-1"
@@ -426,7 +442,7 @@ const PlayGround = () => {
                     </Slider>
                   </FormLabel>
 
-                  <FormLabel htmlFor="Subheading Fontsize">
+                  <FormLabel htmlFor="subheading fontsize">
                     Subheading Fontsize
                     <Slider
                       aria-label="slider-ex-1"
@@ -455,9 +471,10 @@ const PlayGround = () => {
                     </Slider>
                   </FormLabel>
 
-                  <FormLabel htmlFor=" Heading Font Weight">
+                  <FormLabel htmlFor=" heading font weight">
                     Heading Font Weight
                     <Slider
+                       
                       aria-label="slider-ex-1"
                       defaultValue={600}
                       min={1}
@@ -467,6 +484,7 @@ const PlayGround = () => {
                     >
                       {" "}
                       <SliderMark
+                       fontWeight={HeadingFontWeight}
                         value={HeadingFontWeight}
                         textAlign="center"
                         bg="white"
@@ -484,11 +502,11 @@ const PlayGround = () => {
                     </Slider>
                   </FormLabel>
 
-                  <FormLabel htmlFor="Subheading Font Weight">
+                  <FormLabel htmlFor="subheading font weight">
                     Subheading Font Weight
                     <Slider
                       aria-label="slider-ex-1"
-                      defaultValue={-1}
+                      defaultValue={300}
                       min={1}
                       max={700}
                       step={1}
@@ -500,6 +518,7 @@ const PlayGround = () => {
                         textAlign="center"
                         bg="white"
                         color="black"
+                        fontWeight={SubheadingFontWeight}
                         fontFamily={"monospace"}
                         mt="2.5"
                         ml="1"
@@ -513,8 +532,8 @@ const PlayGround = () => {
                     </Slider>
                   </FormLabel>
 
-                  <FormLabel htmlFor="HeadingFontColor">
-                    HeadingFontColor
+                  <FormLabel htmlFor="heading font color">
+                    Heading Font Color
                     <Slider
                       aria-label="slider-ex-1"
                       defaultValue={-1}
@@ -528,28 +547,29 @@ const PlayGround = () => {
                         value={HeadingFontColor}
                         textAlign="center"
                         bg="white"
-                        color={`hsl(${HeadingFontColor},50%,${HeadingFontColor === -1 ? "0%" : "50%"})`}
+                        color={`hsl(${HeadingFontColor}, 50%, ${HeadingFontColor === -1 ? "0%" : HeadingFontColor === 361 ? "0%" : "50%"})`}
                         fontFamily={"monospace"}
                         mt="2.5"
                         ml="-2"
                       >
-                        {HeadingFontColor}
+                     { HeadingFontColor === -1 ? "Black" : HeadingFontColor === 361 ? "White" :  HeadingFontColor}
                       </SliderMark>
                       <SliderTrack
-                        bg={`hsl(${HeadingFontColor},50%,${HeadingFontColor === -1 ? "0%" : "50%"})`}
+                        bg={`hsl(${HeadingFontColor}, 50%, ${HeadingFontColor === -1 ? "0%" : HeadingFontColor === 361 ? "100%" : "50%"})`}
                       >
                         <SliderFilledTrack
-                          bg={`hsl(${HeadingFontColor},50%,${HeadingFontColor === -1 ? "0%" : "50%"})`}
+                          bg={`hsl(${HeadingFontColor}, 50%, ${HeadingFontColor === -1 ? "0%" : HeadingFontColor === 361 ? "100%" : "50%"})`}
                         />
                       </SliderTrack>
                       <SliderThumb
-                        HeadingFontColor={`hsl(${HeadingFontColor},50%,${HeadingFontColor === -1 ? "0%" : "50%"})`}
+                     
+                        HeadingFontColor={`hsl(${HeadingFontColor}, 50%, ${HeadingFontColor === -1 ? "0%" : HeadingFontColor === 361 ? "100%" : "50%"})`}
                       />
                     </Slider>
                   </FormLabel>
 
-                  <FormLabel htmlFor="SubheadingFontColor">
-                    SubheadingFontColor
+                  <FormLabel htmlFor="subheading font color">
+                    Subheading Font Color
                     <Slider
                       aria-label="slider-ex-1"
                       defaultValue={-1}
@@ -559,34 +579,98 @@ const PlayGround = () => {
                       onChange={(e) => setSubheadingFontColor(e)}
                       borderRadius={"15px"}
                     >
+                    
+                   
                       <SliderMark
                         value={SubheadingFontColor}
                         textAlign="center"
                         bg="white"
-                        color={`hsl(${SubheadingFontColor},50%,${SubheadingFontColor === -1 ? "0%" : "50%"})`}
+                        color={`hsl(${SubheadingFontColor}, 50%, ${SubheadingFontColor === -1 ? "0%" : SubheadingFontColor === 361 ? "0%" : "50%"})`}
                         fontFamily={"monospace"}
                         mt="2.5"
                         ml="-2"
                       >
-                        {SubheadingFontColor}
+                { SubheadingFontColor === -1 ? "Black" : SubheadingFontColor === 361 ? "White" :  SubheadingFontColor}
                       </SliderMark>
                       <SliderTrack
-                        bg={`hsl(${SubheadingFontColor},50%,${SubheadingFontColor === -1 ? "0%" : "50%"})`}
+                        bg={`hsl(${SubheadingFontColor}, 50%, ${SubheadingFontColor === -1 ? "0%" : SubheadingFontColor === 361 ? "100%" : "50%"})`}
                       >
                         <SliderFilledTrack
-                          bg={`hsl(${SubheadingFontColor},50%,${SubheadingFontColor === -1 ? "0%" : "50%"})`}
+                          bg={`hsl(${SubheadingFontColor}, 50%, ${SubheadingFontColor === -1 ? "0%" : SubheadingFontColor === 361 ? "100%" : "50%"})`}
                         />
                       </SliderTrack>
                       <SliderThumb
-                        SubheadingFontColor={`hsl(${SubheadingFontColor},50%,${SubheadingFontColor === -1 ? "0%" : "50%"})`}
+                        SubheadingFontColor={`hsl(${SubheadingFontColor}, 50%, ${SubheadingFontColor === -1 ? "0%" : SubheadingFontColor === 361 ? "100%" : "50%"})`}
                       />
                     </Slider>
                   </FormLabel>
+
+
+
+                  <FormLabel htmlFor=" box shadow" >
+                  Box Shadow
+                    <Slider
+                       
+                      aria-label="slider-ex-1"
+                      defaultValue={10}
+                      min={1}
+                      max={100}
+                      step={1}
+                      onChange={(e) => setBoxShadow(e)}
+                    >
+                      {" "}
+                      <SliderMark       
+                       boxShadow={` 0px 0px ${BoxShadow}px gray`}
+                      value={BoxShadow}
+                        textAlign="center"
+                        bg="white"
+                        color="black"
+                        fontFamily={"monospace"}
+                        mt="2.5"
+                        ml="1"
+                      >
+                        {BoxShadow}
+                      </SliderMark >
+                      <SliderTrack  boxShadow={` 0px 0px ${BoxShadow}px gray`}>
+                        <SliderFilledTrack   boxShadow={` 0px 0px ${BoxShadow}px gray`}/>
+                      </SliderTrack>
+                      <SliderThumb   boxShadow={` 0px 0px ${BoxShadow}px gray`}/>
+                    </Slider>
+                  </FormLabel>
+                  </VStack>
+
                 </TabPanel>
+
+                <TabPanel>
+            <VStack    gap={5}
+                    justify={"left"}
+                    w="100%"
+                    h={"100%"}
+                    align={"left"}
+                    transition="transform, 0.3s ease-in-out" >
+
+<FormLabel htmlFor="Animation">
+Animation
+          <RadioGroup
+            defaultValue="end"
+            onChange={(val) => setAnimation(val)}
+          >
+            <HStack>
+              <Radio value={`scale(1.05)`} >Expand</Radio>
+              <Radio value=" ">Center</Radio>
+              <Radio value="end">Bottom</Radio>
+            </HStack>
+          </RadioGroup>
+        </FormLabel>
+
+            </VStack>
+                </TabPanel>
+
               </TabPanels>
             </Tabs>
 
             <Button
+            mt={"20px"}
               w={"100%"}
               onClick={handleClick}
               type="submit"

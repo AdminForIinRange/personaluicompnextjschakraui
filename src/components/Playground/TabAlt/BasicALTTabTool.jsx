@@ -81,6 +81,7 @@ const BasicALTTabTool = ({
           {" "}
           Heading
           <Input
+          bgColor={"white"}
             id="Heading"
             type="text"
             w={"100%"}
@@ -90,8 +91,10 @@ const BasicALTTabTool = ({
         </FormLabel>
 
         <FormLabel htmlFor="SubHeading">
+       
           SubHeading
           <Input
+           bgColor={"white"}
             id="SubHeading"
             type="text"
             w={"100%"}
