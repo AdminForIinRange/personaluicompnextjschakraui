@@ -58,20 +58,20 @@ const HeroCardComps = () => {
 
   return (
     <div>
-      <VStack justify={"center"} align={"center"} p={"20px"}>
+      <VStack justify={"center"} align={"center"} p={"10px"}>
         <HStack
           flexWrap={"wrap"}
           justify={"center"}
           align={"center"}
-          w={["90%", "90%", "80%", "60%"]}
+          w={["100%", "100%", "90%", "65%"]}
           mt={"100px"}
-          gap={"50px"}
+          gap={["10px", "10px", "20px", "20px", "20px"]}
         >
           {HeroBoxes.map(({ title, desc, icon, hoverColor }) => (
             <Box
               key={title}
-              w={"300px"}
-              h={"250px"}
+              w={["170px", "200px", "300px", "300px", "300px"]}
+              h={["200px", "200px", "250px", "250px", "250px"]}
               border={"1.8px solid #B5B5B5"}
               rounded={"xl"}
               p={"3"}
@@ -86,7 +86,7 @@ const HeroCardComps = () => {
                 <HStack w={"50%"}>
                   <Text
                     align={"center"}
-                    fontSize={"32px"}
+                    fontSize={["22px", "22px", "32px", "32px", "32px"]}
                     fontWeight={"700"}
                     textAlign={"left"}
                   >
@@ -95,7 +95,7 @@ const HeroCardComps = () => {
                 </HStack>
                 <Text
                   align={"center"}
-                  fontSize={"22px"}
+                  fontSize={["16px", "16px", "22px", "22px", "22px"]}
                   fontWeight={"700"}
                   textAlign={"left"}
                   w={"90%"}
@@ -106,7 +106,7 @@ const HeroCardComps = () => {
                 <HStack w={"100%"}>
                   <Text
                     align={"center"}
-                    fontSize={"14px"}
+                    fontSize={["12px", "12px", "14px", "14px", "14px"]}
                     fontWeight={"500"}
                     textAlign={"left"}
                   >

@@ -191,27 +191,32 @@ const PlayGround = () => {
         align={"center"}
         w={"100%"}
         h={"100%"}
-        fontSize={"48px"}
+        fontSize={["30px", "30px", "48px", "48px"]}
         fontWeight={"600"}
         fontFamily={"Raleway"}
         mt={isMobile ? "20px" : "80px"}
       >
-        <Text>Mini UI development PlayGround</Text>
+        <Text textAlign={"center"}>Mini UI development PlayGround</Text>
       </HStack>
 
       <HStack
+    
         flexWrap={["wrap", "wrap", "wrap", "wrap", "nowrap"]}
         transition="transform, 0.3s ease-in-out"
         mt={isMobile ? "10px" : "40px"}
         align={"start"}
+        justify={"center"}
+        
         w="100%"
         h={"100%"}
         px={isMobile ? "10px" : "100px"}
       >
         <VStack justify="center" w="100%" h="100%" align="center">
+          
           <Box
+          
             transition="transform, 0.3s ease-in-out"
-            w={"100%"}
+            w={["100%", "100%", "100%", "100%"]}
             h={"100%"}
             bg="white"
             rounded="xl"
@@ -220,6 +225,7 @@ const PlayGround = () => {
           >
             <VStack justify={"center"} w="100%" h={"100%"} align={"center"}>
               <Box
+                transform={isTablet ? "scale(0.7)" : "scale(1)"}
                 _hover={{
                   transform: `${Animation === "scale(1.05)" ? "scale(1.05)" : "scale(1)"}`,
                   opacity: `${Animation === "0" ? "0" : "1"}`,
@@ -310,17 +316,18 @@ const PlayGround = () => {
         </VStack>
         <VStack
           justify="center"
-          w="40%"
+          w={["100%", "100%", "100%", "100%", "40%"]}
           h="100%"
           align="center"
           transition="transform, 0.3s ease-in-out"
+         
         >
           <Box
             w="100%"
             h={"100%"}
             bg="white"
             rounded="xl"
-            p={2}
+            p={3}
             border={`1.8px solid #B9B9B9`}
           >
             <Tabs
@@ -330,12 +337,17 @@ const PlayGround = () => {
               p={3}
               rounded={"xl"}
             >
-              <TabList>
+             { isTablet ? <TabList>
+                <Tab>Basic</Tab>
+            
+                
+              </TabList> : <TabList>
                 <Tab>Basic</Tab>
                 <Tab>Image</Tab>
                 <Tab>Advance</Tab>
-                <Tab>Animation</Tab>
-              </TabList>
+                <Tab>Animation</Tab> 
+                
+              </TabList>}
 
               <TabPanels>
                 <TabPanel>
