@@ -1,9 +1,0 @@
-{
-  "CompItems": [
-    { "title": "🃏 Cards", "path": "/components/cards" },
-
-    { "title": "🏃‍♂️ Animations", "path": "/components/animations" }
-  ]
-}
-
-

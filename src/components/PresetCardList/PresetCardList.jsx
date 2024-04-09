@@ -17,11 +17,26 @@ import {
 } from "@chakra-ui/react";
 
 import Link from "next/link";
-import Comp from "../../data/CompItems.json";
-import Preset from "../../data/PresetItems.json";
+
 const PresetCardList = () => {
-  const { CompItems } = Comp;
-  const { PresetItems } = Preset;
+
+
+  const PresetItems = [
+    {
+      title: "🪵 Login Form",
+      path: "/components/loginForm",
+    },
+    {
+      title: "🦸 Hero",
+      path: "/components/Hero",
+    },
+  ];
+
+  const CompItems = [
+    { title: "🃏 Cards", path: "/components/cards" },
+
+    { title: "🏃‍♂️ Animations", path: "/components/animations" },
+  ];
 
   return (
     <>
