@@ -9,6 +9,11 @@ import {
   MenuList,
   MenuItem,
   Spacer,
+  Accordion,
+  AccordionItem,
+  AccordionButton,
+  AccordionPanel,
+  AccordionIcon,
   Skeleton,
   SkeletonCircle,
   SkeletonText,
@@ -133,14 +138,14 @@ const PresetCardList = () => {
           p={"5"}
         >
           <Box
-            bgColor={"gray.200"}
+           
             w={"100%"}
             h={"70%"}
             rounded={"xl"}
             p={"4"}
             border={"2px solid #A0AEC0"}
           >
-            <Box bgColor={"gray.100"} w={"100%"} h={"40%"} rounded={"md"}></Box>
+            <Box bgColor={"gray.400"} w={"100%"} h={"40%"} rounded={"md"}></Box>
           </Box>
         </VStack>
       );
@@ -153,47 +158,169 @@ const PresetCardList = () => {
           w={"100%"}
           h={"100%"}
           p={"5"}
+          rotate={"45deg"}
         >
-          <HStack justify={"left"} align={"start"} w={"100%"} h={"100%"}>
-
-          <Box
-            bgColor={"gray.200"}
-            w={"30%"}
-            h={"30%"}
-            rounded={"xl"}
-            p={"4"}
-     
+          <HStack
+            justify={"center"}
+            align={"start"}
+            w={"100%"}
+            h={"100%"}
+            
           >
-
-           
-          </Box>
+            <Box
+            
+              bgColor={"gray.200"}
+              w={"30%"}
+              h={"30%"}
+             
           
-
-          </HStack>
-          <HStack justify={"left"} align={"start"} w={"100%"} h={"100%"}>
-
-<Box
-  bgColor={"gray.200"}
-  w={"30%"}
-  h={"30%"}
-  rounded={"xl"}
-  p={"4"}
-
->
-
- 
-</Box>
-
-
-</HStack>
+            ></Box>
+            <Box
+              bgColor={"gray.200"}
+              w={"30%"}
+              h={"50%"}
        
+              rounded={"10px"}
+  
+            ></Box>
+            <Box
+              bgColor={"gray.200"}
+              w={"30%"}
+              h={"70%"}
+              
+              rounded={"100px"}
+
           
+              
+            ></Box>
+          </HStack>
         </VStack>
       );
   };
 
   return (
     <>
+    <Accordion defaultIndex={[0]} allowMultiple>
+  <AccordionItem>
+    <h2>
+      <AccordionButton>
+        <Box as="span" flex='1' textAlign='left'>
+        <Text fontSize={"30"} fontWeight={"600"}>
+            Presets
+          </Text>
+        </Box>
+        <AccordionIcon />
+      </AccordionButton>
+    </h2>
+    <AccordionPanel pb={4}>
+    <HStack
+          flexWrap={"wrap"}
+          mt={"20px"}
+          align={"left"}
+          justify={"left"}
+          h={"100%"}
+          w={"100%"}
+          gap={"50px"}
+        >
+          {PresetItems.map(({ title, path, sectionImg }) => (
+            <Link key={title} href={`${path}`}>
+              <Box
+                w={"290px"}
+                h={"310px"}
+                border={"1.8px solid #B5B5B5"}
+                rounded={"xl"}
+                transition="transform, 0.3s ease-in-out"
+                _hover={{
+                  transform: "scale(1.03)",
+                  boxShadow: "0 5px 25px gray",
+                }}
+              >
+                <VStack justify={"end"} align={"end"} h={"100%"} w={"100%"}>
+                  {renderCard({ title })}
+                  <Box w={"100%"} h={"50px"} borderTop={"1.8px solid #B5B5B5"}>
+                    <HStack
+                      justify={"center"}
+                      align={"center"}
+                      w={"100%"}
+                      h={"100%"}
+                    >
+                      <Text
+                        align={"center"}
+                        fontSize={"17px"}
+                        fontWeight={"500"}
+                      >
+                        {title}
+                      </Text>
+                    </HStack>
+                  </Box>
+                </VStack>
+              </Box>
+            </Link>
+          ))}
+        </HStack>
+    </AccordionPanel>
+  </AccordionItem>
+
+  <AccordionItem>
+    <h2>
+      <AccordionButton>
+        <Box as="span" flex='1' textAlign='left'>
+        <Text fontSize={"30"} fontWeight={"600"}>
+            Pre-Components
+          </Text>
+        </Box>
+        <AccordionIcon />
+      </AccordionButton>
+    </h2>
+    <AccordionPanel pb={4}>
+    <HStack
+          flexWrap={"wrap"}
+          mt={"20px"}
+          align={"left"}
+          justify={"left"}
+          h={"100%"}
+          w={"100%"}
+          gap={"50px"}
+        >
+          {CompItems.map(({ title, path, sectionImg }) => (
+            <Link key={title} href={`${path}`}>
+              <Box
+                w={"290px"}
+                h={"310px"}
+                border={"1.8px solid #B5B5B5"}
+                rounded={"xl"}
+                transition="transform, 0.3s ease-in-out"
+                _hover={{
+                  transform: "scale(1.03)",
+                  boxShadow: "0 5px 25px gray",
+                }}
+              >
+                <VStack justify={"end"} align={"end"} h={"100%"} w={"100%"}>
+                  {renderCard({ title })}
+                  <Box w={"100%"} h={"50px"} borderTop={"1.8px solid #B5B5B5"}>
+                    <HStack
+                      justify={"center"}
+                      align={"center"}
+                      w={"100%"}
+                      h={"100%"}
+                    >
+                      <Text
+                        align={"center"}
+                        fontSize={"17px"}
+                        fontWeight={"500"}
+                      >
+                        {title}
+                      </Text>
+                    </HStack>
+                  </Box>
+                </VStack>
+              </Box>
+            </Link>
+          ))}
+        </HStack>
+    </AccordionPanel>
+  </AccordionItem>
+</Accordion>
       <VStack px={10}>
         <HStack justify={"left"} w={"100%"} h={"100%"}>
           <Text fontSize={"30"} fontWeight={"600"}>
