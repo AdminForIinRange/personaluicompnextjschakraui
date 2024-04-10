@@ -8,13 +8,14 @@ const ComponentsPage = () => {
   const [isTablet] = useMediaQuery("(max-width: 768px)");
   return (
     <div>
-      <HStack align={"start"} gap={["15px", "15px", "25px", "25px", "25px"]} mt={"15px"}>
-    { !isTablet   ?  <SidePanel /> : null} 
+      <HStack
+        align={"start"}
+        gap={["15px", "15px", "25px", "25px", "25px"]}
+        mt={"15px"}
+      >
+        {!isTablet ? <SidePanel /> : null}
 
-<PresetCardList />
-
-
-      
+        <PresetCardList />
       </HStack>
     </div>
   );

@@ -80,11 +80,7 @@ const BasicLogin = () => {
 
             <HStack mt={"15px"} justify="space-between">
               <Checkbox>Remember me</Checkbox>
-              <Button
-                variant="link"
-                size="sm"
-             
-              >
+              <Button variant="link" size="sm">
                 Forgot password?
               </Button>
             </HStack>

@@ -54,7 +54,6 @@ const Card = () => {
           gap={"15px"}
           flexWrap={"wrap"}
           align={"left"}
-  
         >
           <SimpleCard />
           <WideSimpleCard />

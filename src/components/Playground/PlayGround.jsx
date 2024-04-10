@@ -200,21 +200,17 @@ const PlayGround = () => {
       </HStack>
 
       <HStack
-    
         flexWrap={["wrap", "wrap", "wrap", "wrap", "nowrap"]}
         transition="transform, 0.3s ease-in-out"
         mt={isMobile ? "10px" : "40px"}
         align={"start"}
         justify={"center"}
-        
         w="100%"
         h={"100%"}
         px={isMobile ? "10px" : "100px"}
       >
         <VStack justify="center" w="100%" h="100%" align="center">
-          
           <Box
-          
             transition="transform, 0.3s ease-in-out"
             w={["100%", "100%", "100%", "100%"]}
             h={"100%"}
@@ -320,7 +316,6 @@ const PlayGround = () => {
           h="100%"
           align="center"
           transition="transform, 0.3s ease-in-out"
-         
         >
           <Box
             w="100%"
@@ -337,17 +332,18 @@ const PlayGround = () => {
               p={3}
               rounded={"xl"}
             >
-             { isTablet ? <TabList>
-                <Tab>Basic</Tab>
-            
-                
-              </TabList> : <TabList>
-                <Tab>Basic</Tab>
-                <Tab>Image</Tab>
-                <Tab>Advance</Tab>
-                <Tab>Animation</Tab> 
-                
-              </TabList>}
+              {isTablet ? (
+                <TabList>
+                  <Tab>Basic</Tab>
+                </TabList>
+              ) : (
+                <TabList>
+                  <Tab>Basic</Tab>
+                  <Tab>Image</Tab>
+                  <Tab>Advance</Tab>
+                  <Tab>Animation</Tab>
+                </TabList>
+              )}
 
               <TabPanels>
                 <TabPanel>
