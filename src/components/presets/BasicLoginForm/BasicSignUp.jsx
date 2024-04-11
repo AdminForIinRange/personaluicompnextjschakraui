@@ -52,7 +52,7 @@ const BasicSignUp = () => {
             px={5}
             py={5}
             mt={"25px"}
-            w={["350px", "400px", "400px", "500px", "500px"]}
+            w={["330px", "400px", "400px", "500px", "500px"]}
             h={"100%"}
             rounded={"xl"}
             boxShadow={"0 1px 5px gray"}
