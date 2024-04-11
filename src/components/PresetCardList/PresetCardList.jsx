@@ -254,8 +254,8 @@ const PresetCardList = () => {
             </h2>
             <AccordionPanel pb={4}>
               <HStack
-                ml={"20px"}
-                mb={"20px"}
+                ml={["0px", "0px", "20px", "20px", "20px"]}
+                mb={["0px", "0px", "20px", "20px", "20px"]}
                 flexWrap={"wrap"}
                 mt={"20px"}
                 align={["center", "center", "left", "left", "left"]}
@@ -267,8 +267,8 @@ const PresetCardList = () => {
                 {CompItems.map(({ title, path, sectionImg }) => (
                   <Link key={title} href={`${path}`}>
                     <Box
-                      w={"250px"}
-                      h={"300px"}
+                        w={["200px", "200px", "250px", "250px", "250px"]}
+                        h={["290px", "290px", "300px", "300px", "300px"]}
                       border={"1.8px solid #B5B5B5"}
                       rounded={"xl"}
                       transition="transform, 0.3s ease-in-out"
