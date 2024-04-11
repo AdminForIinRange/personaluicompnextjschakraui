@@ -10,7 +10,7 @@ import NotMobileCompatible from "@/components/DevlopmentNotice/NotMobileCompatib
 
 const SlugPrams = ({ params }) => {
   if (params.slug === "cards") {
-    return <Card />;
+    return  <Card /> 
   } else if (params.slug === "modal") {
     return (
       <div>
@@ -37,9 +37,9 @@ const SlugPrams = ({ params }) => {
     );
   } else if (params.slug === "loginForm") {
     return (
-      <div>
+    
         <LoginForm />
-      </div>
+  
     );
   } else if (params.slug === "Hero") {
     return (

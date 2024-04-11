@@ -17,12 +17,8 @@ import {
   Text,
   Box,
 } from "@chakra-ui/react";
-import { ViewIcon, ViewOffIcon } from "@chakra-ui/icons";
-import { FaGoogle } from "react-icons/fa";
-import BasicLogin from "./BasicLoginForm/BasicLogin";
-import BasicSignUp from "./BasicLoginForm/BasicSignUp";
-import { FaGithub } from "react-icons/fa";
-const AuthForm = () => {
+
+const Hero = () => {
   return (
     // the other one was ez because it was ezz beacuse
     //i alredy had doen it itn figma, do teh same for this
@@ -35,7 +31,7 @@ const AuthForm = () => {
       >
         <Accordion defaultIndex={[0]} allowMultiple w={"95%"} h={"100%"}>
           <Text fontSize={"50"} fontWeight={"600"}>
-            Card
+            Hero
           </Text>
 
           <AccordionItem>
@@ -61,8 +57,7 @@ const AuthForm = () => {
                 w={"100%"}
                 gap={["10px", "10px", "20px", "20px", "30px"]}
               >
-                <BasicLogin />
-                <BasicSignUp />
+   
               </HStack>
             </AccordionPanel>
           </AccordionItem>
@@ -72,4 +67,4 @@ const AuthForm = () => {
   );
 };
 
-export default AuthForm;
+export default Hero;
