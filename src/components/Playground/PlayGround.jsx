@@ -221,7 +221,7 @@ const PlayGround = () => {
           >
             <VStack justify={"center"} w="100%" h={"100%"} align={"center"}>
               <Box
-                transform={isTablet ? "scale(0.7)" : "scale(1)"}
+                transform={isTablet ? "scale(0.45)" : "scale(1)"}
                 _hover={{
                   transform: `${Animation === "scale(1.05)" ? "scale(1.05)" : "scale(1)"}`,
                   opacity: `${Animation === "0" ? "0" : "1"}`,

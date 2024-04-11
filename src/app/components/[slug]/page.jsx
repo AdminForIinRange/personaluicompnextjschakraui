@@ -6,6 +6,7 @@ import React from "react";
 
 import { HStack, useMediaQuery } from "@chakra-ui/react";
 import SidePanel from "@/components/SidePanel/SidePanel";
+import NotMobileCompatible from "@/components/DevlopmentNotice/NotMobileCompatible";
 
 const SlugPrams = ({ params }) => {
   if (params.slug === "cards") {
@@ -53,6 +54,7 @@ const SlugPrams = ({ params }) => {
 
 const Single = ({ params }) => {
   const [isTablet] = useMediaQuery("(max-width: 768px)");
+  const [isMobile] = useMediaQuery("(max-width: 425px)");
   return (
     <div>
       <HStack
@@ -61,7 +63,8 @@ const Single = ({ params }) => {
         mt={"15px"}
       >
         {!isTablet ? <SidePanel /> : null}
-        <SlugPrams params={params} />
+
+      {!isMobile ?  <SlugPrams params={params} /> : <NotMobileCompatible />}
       </HStack>
     </div>
   );
