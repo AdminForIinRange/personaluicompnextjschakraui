@@ -14,9 +14,7 @@ import {
   AccordionButton,
   AccordionPanel,
   AccordionIcon,
-  Skeleton,
-  SkeletonCircle,
-  SkeletonText,
+  
   ButtonGroup,
   useMediaQuery,
   Divider,

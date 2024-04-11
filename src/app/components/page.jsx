@@ -9,6 +9,7 @@ const ComponentsPage = () => {
   return (
     <div>
       <HStack
+
         align={"start"}
         gap={["15px", "15px", "25px", "25px", "25px"]}
         mt={"15px"}

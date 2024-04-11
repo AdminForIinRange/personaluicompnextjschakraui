@@ -54,17 +54,17 @@ const SlugPrams = ({ params }) => {
 
 const Single = ({ params }) => {
   const [isTablet] = useMediaQuery("(max-width: 768px)");
-  const [isMobile] = useMediaQuery("(max-width: 425px)");
+
   return (
     <div>
       <HStack
-        align={"start"}
-        gap={["15px", "15px", "25px", "25px", "25px"]}
-        mt={"15px"}
+          align={"start"}
+        
+          mt={"15px"}
       >
         {!isTablet ? <SidePanel /> : null}
 
-      {!isMobile ?  <SlugPrams params={params} /> : <NotMobileCompatible />}
+      <SlugPrams params={params} />
       </HStack>
     </div>
   );

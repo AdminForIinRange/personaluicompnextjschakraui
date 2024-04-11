@@ -24,15 +24,15 @@ const BasicLogin = () => {
         h={"100%"}
         border={"1.8px solid #B5B5B5"}
         rounded={"xl"}
-        px={"70px"}
+        px={["20px", "20px", "20px", "30px", "30px"]}
         py={10}
       >
         <VStack justify={"center"} align={"center"} w={"100%"} h={"100%"}>
-          <Text fontSize={"46"} fontWeight={"700"} textAlign={"center"}>
+          <Text fontSize={["26", "36", "36", "46", "46"]} fontWeight={"700"} textAlign={"center"} >
             Login to your account
           </Text>
           <Text
-            fontSize={"20"}
+            fontSize={["16", "18", "18", "20", "20"]}
             fontWeight={"300"}
             textAlign={"center"}
             as={"span"}
@@ -53,7 +53,7 @@ const BasicLogin = () => {
             px={5}
             py={5}
             mt={"25px"}
-            w={"500px"}
+            w={["350px", "400px", "400px", "500px", "500px"]}
             h={"100%"}
             rounded={"xl"}
             boxShadow={"0 1px 5px gray"}
