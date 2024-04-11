@@ -34,8 +34,8 @@ const AuthForm = () => {
         align={"center"}
       >
         <Accordion defaultIndex={[0]} allowMultiple w={"95%"} h={"100%"}>
-          <Text fontSize={"50"} fontWeight={"600"}>
-            Card
+          <Text fontSize={"50"} fontWeight={"600"} align={["center", "center", "left", "left", "left"]}>
+            Auth Form
           </Text>
 
           <AccordionItem>

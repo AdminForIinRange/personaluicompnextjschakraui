@@ -30,7 +30,7 @@ const Hero = () => {
         align={"center"}
       >
         <Accordion defaultIndex={[0]} allowMultiple w={"95%"} h={"100%"}>
-          <Text fontSize={"50"} fontWeight={"600"}>
+        <Text fontSize={"50"} fontWeight={"600"} align={["center", "center", "left", "left", "left"]}>
             Hero
           </Text>
 
@@ -57,6 +57,7 @@ const Hero = () => {
                 w={"100%"}
                 gap={["10px", "10px", "20px", "20px", "30px"]}
               >
+                
    
               </HStack>
             </AccordionPanel>
