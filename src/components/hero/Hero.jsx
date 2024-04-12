@@ -17,8 +17,6 @@ import {
 
 import React from "react";
 
-import { GiHypersonicBolt } from "react-icons/gi";
-
 import HeroBtn from "../button/HeroBtn";
 
 const Hero = () => {

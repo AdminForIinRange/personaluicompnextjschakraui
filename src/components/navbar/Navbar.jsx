@@ -39,7 +39,7 @@ const Navbar = () => {
             For the mean time, feel free to look around
           </Text>
           <Text fontSize={"16px"} textAlign={"center"}>
-            My First Solo NextJS project 😔👉👈
+            My First Solo NextJS project 
           </Text>
         </Box>
       ),
