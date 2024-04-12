@@ -29,7 +29,7 @@ import CollageCard from "./BasicCards/collage/CollageCard";
 import HrzonCard from "./BasicCards/collage/HrzonCard";
 import TicketCard from "./ComplexCards/TicketCard";
 import { CopyIcon } from "@chakra-ui/icons";
-import CodePerCopy from "./CodePerCopy";
+import CodePerCopy from "../Playground/CodeCopy/CodePerCopy";
 const Card = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [name, setName] = useState("");
