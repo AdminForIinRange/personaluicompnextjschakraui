@@ -16,15 +16,15 @@ const MobileMenuLinks = () => {
           <MenuList>
             <MenuItem gap={"10px"}>
               <FaPen size={"23px"} />
-              sum
+             
             </MenuItem>
             <MenuItem gap={"10px"}>
               <GoGoal size={"23px"} />
-              sum
+             
             </MenuItem>
             <MenuItem gap={"10px"}>
               <FaCog size={"23px"} />
-              sum
+             
             </MenuItem>
           </MenuList>
         </Menu>

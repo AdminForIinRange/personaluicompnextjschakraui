@@ -43,6 +43,8 @@ const Navbar = () => {
           </Text>
         </Box>
       ),
+
+      
     });
   }
 

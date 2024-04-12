@@ -15,6 +15,9 @@ import {
   Box,
 } from "@chakra-ui/react";
 const Animations = () => {
+
+
+
   const AnimationsDataSet = [
     {
       title: "Expand",
@@ -64,12 +67,13 @@ const Animations = () => {
                 w={"100%"}
                 gap={["10px", "10px", "20px", "20px", "30px"]}
               >
-                {AnimationsDataSet.map(({ title, code }, index) => {
+                {AnimationsDataSet.map(({ title }, index) => {
                   <Box
                     key={index}
                     transition="transform, 0.3s ease-in-out"
                     _hover={{
                       transform: "scale(1.06)",
+
                     }}
                     w={"175px"}
                     h={"175px"}
