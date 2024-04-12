@@ -26,11 +26,11 @@ const HeroPage = () => {
         <HStack
           justify={"center"}
           align={"center"}
-          w={["90%", "90%", "80%", "60%"]}
+          w={["90%", "90%", "80%", "80%"]}
           mt={"100px"}
         >
           <Text
-            fontSize={["35px", "45px", "45px", "65px"]}
+            fontSize={["35px", "45px", "55px", "65px"]}
             fontWeight={700}
             textAlign={"center"}
             fontFamily={"Raleway"}
