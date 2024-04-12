@@ -8,6 +8,8 @@ import { HStack, useMediaQuery } from "@chakra-ui/react";
 import SidePanel from "@/components/SidePanel/SidePanel";
 import NotMobileCompatible from "@/components/DevlopmentNotice/NotMobileCompatible";
 
+import Animations from "@/components/presets/Animations";
+
 const SlugPrams = ({ params }) => {
   if (params.slug === "cards") {
     return  <Card /> 
@@ -17,24 +19,12 @@ const SlugPrams = ({ params }) => {
         <hi>Modal</hi>
       </div>
     );
-  } else if (params.slug === "frames") {
-    return (
-      <div>
-        <hi>Frames</hi>
-      </div>
-    );
+  
   } else if (params.slug === "animations") {
     return (
-      <div>
-        <hi>Animations</hi>
-      </div>
+      <Animations />
     );
-  } else if (params.slug === "charts") {
-    return (
-      <div>
-        <hi>Charts</hi>
-      </div>
-    );
+  
   } else if (params.slug === "loginForm") {
     return (
     

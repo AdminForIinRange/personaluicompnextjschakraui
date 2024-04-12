@@ -52,7 +52,7 @@ const SimpleCard = () => {
             justify={"end"}
             align={"end"}
             fontWeight={"500"}
-            transition="transform, 0.3s ease-in-out"
+            transition="transform, 0.3s ease-in-out" 
             _hover={{
               marginLeft: "5px",
             }}
