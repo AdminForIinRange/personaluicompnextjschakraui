@@ -1,5 +1,13 @@
 "use client";
-import { HStack, Spacer, useMediaQuery } from "@chakra-ui/react";
+import {
+  HStack,
+  Spacer,
+  useMediaQuery,
+  Button,
+  useToast,
+  Box,
+  Text,
+} from "@chakra-ui/react";
 
 import React from "react";
 
@@ -17,6 +25,21 @@ const Navbar = () => {
 
   const [isTablet] = useMediaQuery("(max-width: 1024px)");
 
+  function ToastExample() {
+    const toast = useToast();
+    return toast({
+      position: "top-center",
+      render: () => (
+        <Box color="Black" p={8} bg="gray.100" rounded={"md"} shadow={"xl"}>
+           <Text fontSize={"20px"} fontWeight={"bold"} textAlign={"center"}> We are still Under Devlopment.</Text>
+          <Text mt={"10px"} fontSize={"16px"} textAlign={"center"}  >For the mean time, feel free to look around</Text>
+          <Text  fontSize={"16px"} textAlign={"center"}  >My First Solo NextJS project 😔👉👈</Text>
+        </Box>
+      ),
+    
+    });
+  }
+
   return (
     <>
       <HStack
@@ -30,6 +53,7 @@ const Navbar = () => {
         px={7}
         gap={"20px"}
       >
+        {ToastExample()}
         <Logo />
         <Spacer />
         <HStack fontWeight={500}>

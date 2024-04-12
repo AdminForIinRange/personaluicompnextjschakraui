@@ -3,7 +3,7 @@ import NotFound from "@/app/not-found";
 import Card from "@/components/presets/Card";
 import LoginForm from "@/components/presets/AuthForm";
 import React from "react";
-import Hero from "@/components/presets/Hero";
+
 import { HStack, useMediaQuery } from "@chakra-ui/react";
 import SidePanel from "@/components/SidePanel/SidePanel";
 import NotMobileCompatible from "@/components/DevlopmentNotice/NotMobileCompatible";
@@ -41,10 +41,7 @@ const SlugPrams = ({ params }) => {
         <LoginForm />
   
     );
-  } else if (params.slug === "Hero") {
-    return (
-      <Hero />
-    );
+  
   } else {
     return <NotFound />;
   }

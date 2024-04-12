@@ -14,7 +14,6 @@ import {
   AccordionButton,
   AccordionPanel,
   AccordionIcon,
-  
   ButtonGroup,
   useMediaQuery,
   Divider,
@@ -34,11 +33,6 @@ const PresetCardList = () => {
       title: "🪵 Login Form",
       path: "/components/loginForm",
       sectionImg: LoginFormImg,
-    },
-    {
-      title: "🦸 Hero",
-      path: "/components/Hero",
-      sectionImg: HeroCardImg,
     },
   ];
 
@@ -84,26 +78,6 @@ const PresetCardList = () => {
               </Box>
             </VStack>
           </Box>
-        </VStack>
-      );
-
-    if (card.title === "🦸 Hero")
-      return (
-        <VStack
-          justify={"center"}
-          align={"center"}
-          w={"100%"}
-          h={"100%"}
-          p={"5"}
-        >
-          <Box
-            bgColor={"gray.200"}
-            w={"100%"}
-            h={"10%"}
-            rounded={"xl"}
-            p={"4"}
-          ></Box>
-          <Box bgColor={"gray.400"} w={"20%"} h={"20px"} rounded={"md"}></Box>
         </VStack>
       );
 
@@ -265,8 +239,8 @@ const PresetCardList = () => {
                 {CompItems.map(({ title, path, sectionImg }) => (
                   <Link key={title} href={`${path}`}>
                     <Box
-                        w={["200px", "200px", "250px", "250px", "250px"]}
-                        h={["290px", "290px", "300px", "300px", "300px"]}
+                      w={["200px", "200px", "250px", "250px", "250px"]}
+                      h={["290px", "290px", "300px", "300px", "300px"]}
                       border={"1.8px solid #B5B5B5"}
                       rounded={"xl"}
                       transition="transform, 0.3s ease-in-out"
