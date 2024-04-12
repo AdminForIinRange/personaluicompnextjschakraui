@@ -8,7 +8,6 @@ const SidePanel = () => {
       title: "🪵 Login Form",
       path: "/components/loginForm",
     },
- 
   ];
 
   const CompItems = [

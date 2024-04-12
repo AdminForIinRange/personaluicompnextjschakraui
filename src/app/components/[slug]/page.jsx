@@ -12,26 +12,17 @@ import Animations from "@/components/presets/Animations";
 
 const SlugPrams = ({ params }) => {
   if (params.slug === "cards") {
-    return  <Card /> 
+    return <Card />;
   } else if (params.slug === "modal") {
     return (
       <div>
         <hi>Modal</hi>
       </div>
     );
-  
   } else if (params.slug === "animations") {
-    return (
-      <Animations />
-    );
-  
+    return <Animations />;
   } else if (params.slug === "loginForm") {
-    return (
-    
-        <LoginForm />
-  
-    );
-  
+    return <LoginForm />;
   } else {
     return <NotFound />;
   }
@@ -42,14 +33,10 @@ const Single = ({ params }) => {
 
   return (
     <div>
-      <HStack
-          align={"start"}
-        
-          mt={"15px"}
-      >
+      <HStack align={"start"} mt={"15px"}>
         {!isTablet ? <SidePanel /> : null}
 
-      <SlugPrams params={params} />
+        <SlugPrams params={params} />
       </HStack>
     </div>
   );

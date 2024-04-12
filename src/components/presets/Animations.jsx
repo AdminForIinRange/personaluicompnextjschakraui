@@ -65,7 +65,8 @@ const Animations = () => {
                 gap={["10px", "10px", "20px", "20px", "30px"]}
               >
                 {AnimationsDataSet.map(({ title, code }, index) => {
-                  <Box key={index}
+                  <Box
+                    key={index}
                     transition="transform, 0.3s ease-in-out"
                     _hover={{
                       transform: "scale(1.06)",

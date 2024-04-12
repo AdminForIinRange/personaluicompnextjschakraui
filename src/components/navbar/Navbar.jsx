@@ -31,12 +31,18 @@ const Navbar = () => {
       position: "top-center",
       render: () => (
         <Box color="Black" p={8} bg="gray.100" rounded={"md"} shadow={"xl"}>
-           <Text fontSize={"20px"} fontWeight={"bold"} textAlign={"center"}> We are still Under Devlopment.</Text>
-          <Text mt={"10px"} fontSize={"16px"} textAlign={"center"}  >For the mean time, feel free to look around</Text>
-          <Text  fontSize={"16px"} textAlign={"center"}  >My First Solo NextJS project 😔👉👈</Text>
+          <Text fontSize={"20px"} fontWeight={"bold"} textAlign={"center"}>
+            {" "}
+            We are still Under Devlopment.
+          </Text>
+          <Text mt={"10px"} fontSize={"16px"} textAlign={"center"}>
+            For the mean time, feel free to look around
+          </Text>
+          <Text fontSize={"16px"} textAlign={"center"}>
+            My First Solo NextJS project 😔👉👈
+          </Text>
         </Box>
       ),
-    
     });
   }
 

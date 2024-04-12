@@ -1,54 +1,51 @@
 "use client";
 import {
-    HStack,
-    Button,
-    Text,
-    MenuButton,
-    Menu,
-    MenuList,
-    MenuItem,
-    Spacer,
-    ButtonGroup,
-    useMediaQuery,
-    Box,
-    VStack,
-  } from "@chakra-ui/react";
-  
+  HStack,
+  Button,
+  Text,
+  MenuButton,
+  Menu,
+  MenuList,
+  MenuItem,
+  Spacer,
+  ButtonGroup,
+  useMediaQuery,
+  Box,
+  VStack,
+} from "@chakra-ui/react";
+
 const NotMobileCompatible = () => {
   return (
     <>
-
       <VStack justify={"center"} align={"center"} p={"20px"}>
-      <HStack
-        justify={"center"}
-        align={"center"}
-        w={["90%", "90%", "80%", "60%"]}
-        mt={"100px"}
-      >
+        <HStack
+          justify={"center"}
+          align={"center"}
+          w={["90%", "90%", "80%", "60%"]}
+          mt={"100px"}
+        >
+          <Text
+            fontSize={["35px", "45px", "45px", "65px"]}
+            fontWeight={700}
+            textAlign={"center"}
+            fontFamily={"Raleway"}
+          >
+            Sorry Not Mobile Compatible Yet
+          </Text>
+        </HStack>
         <Text
-          fontSize={["35px", "45px", "45px", "65px"]}
-          fontWeight={700}
+          fontSize={["15px", "24px", "24px", "24px"]}
           textAlign={"center"}
           fontFamily={"Raleway"}
         >
-        Sorry Not Mobile Compatible Yet
+          We are still working on this site, 70% of teh page is Mobile
+          Compatible however we are still working on the 30%.
         </Text>
-      </HStack>
-      <Text
-        fontSize={["15px", "24px", "24px", "24px"]}
-        textAlign={"center"}
-        fontFamily={"Raleway"}
-      >
-        We are still working on this site, 70% of teh page is Mobile Compatible however we are still working on the 30%.
-      </Text>
 
-      <HStack justify={"center"} align={"center"} mt={"50px"}>
-  
-      </HStack>
-    </VStack>
-
+        <HStack justify={"center"} align={"center"} mt={"50px"}></HStack>
+      </VStack>
     </>
-  )
-}
+  );
+};
 
-export default NotMobileCompatible
+export default NotMobileCompatible;

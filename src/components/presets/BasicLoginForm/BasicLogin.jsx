@@ -28,7 +28,11 @@ const BasicLogin = () => {
         py={10}
       >
         <VStack justify={"center"} align={"center"} w={"100%"} h={"100%"}>
-          <Text fontSize={["26", "36", "36", "46", "46"]} fontWeight={"700"} textAlign={"center"} >
+          <Text
+            fontSize={["26", "36", "36", "46", "46"]}
+            fontWeight={"700"}
+            textAlign={"center"}
+          >
             Login to your account
           </Text>
           <Text

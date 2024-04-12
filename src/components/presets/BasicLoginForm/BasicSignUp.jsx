@@ -27,11 +27,15 @@ const BasicSignUp = () => {
         py={10}
       >
         <VStack justify={"center"} align={"center"} w={"100%"} h={"100%"}>
-          <Text  fontSize={["26", "36", "36", "46", "46"]} fontWeight={"700"} textAlign={"center"}>
+          <Text
+            fontSize={["26", "36", "36", "46", "46"]}
+            fontWeight={"700"}
+            textAlign={"center"}
+          >
             Create an account
           </Text>
           <Text
-                  fontSize={["16", "18", "18", "20", "20"]}
+            fontSize={["16", "18", "18", "20", "20"]}
             fontWeight={"300"}
             textAlign={"center"}
             as={"span"}
