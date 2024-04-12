@@ -20,8 +20,9 @@ const Animations = () => {
       title: "Expand",
       code: `scale(1.05)`,
     },
-    {title: "FadeIn/Out",
-      code: `0`,},
+    { title: "FadeIn/Out", code: `0` },
+    { title: "Left Shift", code: `5px` },
+    { title: "Right Shift", code: `5px` },
   ];
 
   return (
@@ -63,34 +64,35 @@ const Animations = () => {
                 w={"100%"}
                 gap={["10px", "10px", "20px", "20px", "30px"]}
               >
-                <Box
-                  transition="transform, 0.3s ease-in-out"
-                  _hover={{
-                    transform: "scale(1.05)",
-                  }}
-                  w={"175px"}
-                  h={"175px"}
-                  border={"1.8px solid #B5B5B5"}
-                  rounded={"xl"}
-                  p={"3"}
-                >
-                  <HStack
-                    w={"100%"}
-                    h={"100%"}
-                    justify={"center"}
-                    align={"center"}
+                {AnimationsDataSet.map(({ title, code }, index) => {
+                  <Box key={index}
+                    transition="transform, 0.3s ease-in-out"
+                    _hover={{
+                      transform: "scale(1.06)",
+                    }}
+                    w={"175px"}
+                    h={"175px"}
+                    border={"1.8px solid #B5B5B5"}
+                    rounded={"xl"}
+                    p={"3"}
                   >
-                    <VStack
+                    <HStack
                       w={"100%"}
                       h={"100%"}
                       justify={"center"}
                       align={"center"}
                     >
-                      <Text fontSize={"24"}>Expand</Text>
-                    </VStack>
-                  </HStack>
-                </Box>
-
+                      <VStack
+                        w={"100%"}
+                        h={"100%"}
+                        justify={"center"}
+                        align={"center"}
+                      >
+                        <Text fontSize={"24"}>{title}</Text>
+                      </VStack>
+                    </HStack>
+                  </Box>;
+                })}
                 <Box
                   transition="transform, 0.3s ease-in-out"
                   _hover={{
@@ -115,6 +117,34 @@ const Animations = () => {
                       align={"center"}
                     >
                       <Text fontSize={"24"}>FadeIn/Out</Text>
+                    </VStack>
+                  </HStack>
+                </Box>
+
+                <Box
+                  transition="transform, 0.3s ease-in-out"
+                  _hover={{
+                    marginLeft: "5px",
+                  }}
+                  w={"175px"}
+                  h={"175px"}
+                  border={"1.8px solid #B5B5B5"}
+                  rounded={"xl"}
+                  p={"3"}
+                >
+                  <HStack
+                    w={"100%"}
+                    h={"100%"}
+                    justify={"center"}
+                    align={"center"}
+                  >
+                    <VStack
+                      w={"100%"}
+                      h={"100%"}
+                      justify={"center"}
+                      align={"center"}
+                    >
+                      <Text fontSize={"24"}>Shift Left</Text>
                     </VStack>
                   </HStack>
                 </Box>
