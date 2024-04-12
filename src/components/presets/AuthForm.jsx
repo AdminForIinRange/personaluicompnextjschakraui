@@ -4,6 +4,9 @@ import React, { useState } from "react";
 import {
   FormLabel,
   Input,
+  Modal,
+  ModalOverlay,
+  ModalContent,
   Accordion,
   AccordionItem,
   AccordionButton,
@@ -12,6 +15,8 @@ import {
   HStack,
   VStack,
   Checkbox,
+  useDisclosure,
+  ModalBody,
   Button,
   Divider,
   Text,
@@ -22,7 +27,11 @@ import { FaGoogle } from "react-icons/fa";
 import BasicLogin from "./BasicLoginForm/BasicLogin";
 import BasicSignUp from "./BasicLoginForm/BasicSignUp";
 import { FaGithub } from "react-icons/fa";
+import CodePerCopy from "../Playground/CodeCopy/CodePerCopy";
+
 const AuthForm = () => {
+  const { isOpen, onOpen, onClose } = useDisclosure();
+  const [name, setName] = useState("");
   return (
     // the other one was ez because it was ezz beacuse
     //i alredy had doen it itn figma, do teh same for this
@@ -65,13 +74,47 @@ const AuthForm = () => {
                 w={"100%"}
                 gap={["10px", "10px", "20px", "20px", "30px"]}
               >
-                <BasicLogin />
-                <BasicSignUp />
+                <Box
+                
+                  onClick={() => {
+                    onOpen(), setName("BasicLogin");
+                  }}
+                >
+                  <BasicLogin />
+                </Box>
+                <Box
+                 
+                  onClick={() => {
+                    onOpen(), setName("BasicSignUp");
+                  }}
+                >
+                  <BasicSignUp />
+                </Box>
               </HStack>
             </AccordionPanel>
           </AccordionItem>
         </Accordion>
       </HStack>
+      <Modal isOpen={isOpen} onClose={onClose} size={"4xl"}>
+        <ModalOverlay />
+        <ModalContent bgColor={"#011627"}>
+          <ModalBody>
+            <>
+              <Box p={5} rounded={"lg"} color={"white"} w={"100%"} h={"100%"}>
+                <HStack justify={"right"} w="100%" h="100%" align="center">
+                  {" "}
+                </HStack>
+
+                <pre>
+                  <code className="language-html">
+                    <CodePerCopy name={name} />
+                  </code>
+                </pre>
+              </Box>
+            </>
+          </ModalBody>
+        </ModalContent>
+      </Modal>
     </>
   );
 };

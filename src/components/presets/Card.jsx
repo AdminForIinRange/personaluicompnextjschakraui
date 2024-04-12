@@ -33,7 +33,7 @@ import CodePerCopy from "../Playground/CodeCopy/CodePerCopy";
 const Card = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [name, setName] = useState("");
-  const [copied, setCopied] = useState(false);
+
   return (
     <>
       <HStack
