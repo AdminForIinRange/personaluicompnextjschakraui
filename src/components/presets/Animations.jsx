@@ -1,10 +1,13 @@
-import React from 'react'
-import DevelopmentInProgress from '../DevlopmentNotice/DevelopmenttInProgress'
+import React from "react";
+import DevelopmentInProgress from "../DevlopmentNotice/DevelopmenttInProgress";
 
 const Animations = () => {
   return (
-    <>  <DevelopmentInProgress /> </>
-  )
-}
+    <>
+      {" "}
+      <DevelopmentInProgress />{" "}
+    </>
+  );
+};
 
-export default Animations
+export default Animations;

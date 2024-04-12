@@ -402,7 +402,7 @@ const PlayGround = () => {
             </Tabs>
 
             <Button
-            colorScheme={"gray"}
+              colorScheme={"gray"}
               mt={"15px"}
               w={"100%"}
               onClick={handleClick}

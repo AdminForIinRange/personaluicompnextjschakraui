@@ -17,7 +17,6 @@ import {
   Checkbox,
   useDisclosure,
   ModalBody,
-  
   Button,
   Divider,
   Text,
@@ -57,7 +56,7 @@ const AuthForm = () => {
               <AccordionButton>
                 <Box as="span" flex="1" textAlign="left">
                   <Text fontSize={"30"} fontWeight={"400"}>
-                    Basic 
+                    Basic
                   </Text>
                 </Box>
                 <AccordionIcon />
@@ -76,14 +75,11 @@ const AuthForm = () => {
                 gap={["10px", "10px", "20px", "20px", "30px"]}
               >
                 <Box
-                transition="transform, 0.3s ease-in-out"
-                cursor={"pointer"}
-                _hover={
-                  {
-            transform: "scale(1.05)",
-                  }
-                }
-       
+                  transition="transform, 0.3s ease-in-out"
+                  cursor={"pointer"}
+                  _hover={{
+                    transform: "scale(1.05)",
+                  }}
                   onClick={() => {
                     onOpen(), setName("BasicLogin");
                   }}
@@ -91,14 +87,11 @@ const AuthForm = () => {
                   <BasicLogin />
                 </Box>
                 <Box
-                 transition="transform, 0.3s ease-in-out"
-                 cursor={"pointer"}
-                 _hover={
-                   {
-             transform: "scale(1.05)",
-                   }
-                 }
-        
+                  transition="transform, 0.3s ease-in-out"
+                  cursor={"pointer"}
+                  _hover={{
+                    transform: "scale(1.05)",
+                  }}
                   onClick={() => {
                     onOpen(), setName("BasicSignUp");
                   }}

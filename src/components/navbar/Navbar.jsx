@@ -25,8 +25,6 @@ const Navbar = () => {
 
   const [isTablet] = useMediaQuery("(max-width: 1024px)");
 
- 
-
   return (
     <>
       <HStack
@@ -40,17 +38,11 @@ const Navbar = () => {
         px={7}
         gap={"20px"}
       >
-
-
-       
         <Logo />
-    
 
-      
         <HStack fontWeight={500}>
           {isTablet ? <MobileMenuLinks /> : <Links />}
         </HStack>
-
       </HStack>
     </>
   );

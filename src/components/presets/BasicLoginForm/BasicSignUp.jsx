@@ -119,7 +119,6 @@ const BasicSignUp = () => {
                 <FaGoogle color="white" size={"20px"} />
               </Button>
               {/* allowed btn to be an anchor */}
-             
             </HStack>
           </Box>
         </VStack>

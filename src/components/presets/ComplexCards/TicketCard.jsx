@@ -6,8 +6,8 @@ const TicketCard = () => {
     <>
       {" "}
       <Box
-         w={["260px", "260px", "260px", "280px", "350px"]}
-         h={["260px", "260px", "260px", "260px", "310px"]}
+        w={["260px", "260px", "260px", "280px", "350px"]}
+        h={["260px", "260px", "260px", "260px", "310px"]}
         border={"1.8px solid #B5B5B5"}
         rounded={"xl"}
       >

@@ -20,8 +20,8 @@ const ImageSimpleCard = () => {
     <>
       {" "}
       <Box
-      w={["360px", "360px", "450px", "550px", "650px"]}
-      h={["250px", "250px", "250px", "290px", "310px"]}
+        w={["360px", "360px", "450px", "550px", "650px"]}
+        h={["250px", "250px", "250px", "290px", "310px"]}
         border={"1.8px solid #B5B5B5"}
         rounded={"xl"}
         p={["2", "2", "2", "3", "4"]}
@@ -74,7 +74,10 @@ const ImageSimpleCard = () => {
               }}
             >
               <HStack align={"center"} mr={"5px"}>
-                <Text fontSize={["10px", "10px", "12px", "12px", "16px"]} as={"span"}>
+                <Text
+                  fontSize={["10px", "10px", "12px", "12px", "16px"]}
+                  as={"span"}
+                >
                   Learn more
                 </Text>{" "}
                 <HiArrowLongRight fontSize={"30px"} />

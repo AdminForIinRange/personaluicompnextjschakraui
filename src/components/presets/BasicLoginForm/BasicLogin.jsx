@@ -7,7 +7,6 @@ import {
   HStack,
   VStack,
   Checkbox,
-   
   Button,
   Divider,
   Text,
@@ -20,7 +19,6 @@ const BasicLogin = () => {
   const [showPassword, setShowPassword] = useState(false);
   return (
     <>
-
       {" "}
       <Box
         h={"100%"}
@@ -113,7 +111,6 @@ const BasicLogin = () => {
                 <FaGoogle color="white" size={"20px"} />
               </Button>
               {/* allowed btn to be an anchor */}
-             
             </HStack>
           </Box>
         </VStack>

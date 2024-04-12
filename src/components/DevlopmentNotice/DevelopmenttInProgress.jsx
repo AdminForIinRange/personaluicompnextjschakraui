@@ -38,7 +38,8 @@ const DevelopmentInProgress = () => {
           textAlign={"center"}
           fontFamily={"Raleway"}
         >
-          We are still working on this site, feel free to try out our other presets
+          We are still working on this site, feel free to try out our other
+          presets
         </Text>
 
         <HStack justify={"center"} align={"center"} mt={"50px"}></HStack>
@@ -47,6 +48,4 @@ const DevelopmentInProgress = () => {
   );
 };
 
-
 export default DevelopmentInProgress;
-
