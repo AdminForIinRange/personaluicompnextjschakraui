@@ -20,7 +20,7 @@ import {
   VStack,
 } from "@chakra-ui/react";
 import { HiArrowLongRight } from "react-icons/hi2";
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import SimpleCard from "./BasicCards/SimpleCard";
 import WideSimpleCard from "./BasicCards/WideSimpleCard";
@@ -28,9 +28,12 @@ import ImageSimpleCard from "./BasicCards/ImageSimpleCard";
 import CollageCard from "./BasicCards/collage/CollageCard";
 import HrzonCard from "./BasicCards/collage/HrzonCard";
 import TicketCard from "./ComplexCards/TicketCard";
-
+import { CopyIcon } from "@chakra-ui/icons";
+import CodePerCopy from "./CodePerCopy";
 const Card = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
+  const [name, setName] = useState("");
+  const [copied, setCopied] = useState(false);
   return (
     <>
       <HStack
@@ -71,9 +74,32 @@ const Card = () => {
                 w={"100%"}
                 gap={["10px", "10px", "20px", "20px", "30px"]}
               >
-                <SimpleCard />
-                <WideSimpleCard />
-                <ImageSimpleCard />
+                <Box
+                  as="button"
+                  onClick={() => {
+                    onOpen(), setName("SimpleCard");
+                  }}
+                >
+                  <SimpleCard />
+                </Box>
+
+                <Box
+                  as="button"
+                  onClick={() => {
+                    onOpen(), setName("WideSimpleCard");
+                  }}
+                >
+                  <WideSimpleCard />
+                </Box>
+
+                <Box
+                  as="button"
+                  onClick={() => {
+                    onOpen(), setName("ImageSimpleCard");
+                  }}
+                >
+                  <ImageSimpleCard />
+                </Box>
               </HStack>
             </AccordionPanel>
           </AccordionItem>
@@ -101,9 +127,23 @@ const Card = () => {
                 w={"100%"}
                 gap={["10px", "10px", "20px", "20px", "30px"]}
               >
-                <CollageCard />
+                <Box
+                  as="button"
+                  onClick={() => {
+                    onOpen(), setName("CollageCard");
+                  }}
+                >
+                  <CollageCard />
+                </Box>
 
-                <HrzonCard />
+                <Box
+                  as="button"
+                  onClick={() => {
+                    onOpen(), setName("HrzonCard");
+                  }}
+                >
+                  <HrzonCard />
+                </Box>
               </HStack>
             </AccordionPanel>
           </AccordionItem>
@@ -131,12 +171,41 @@ const Card = () => {
                 w={"100%"}
                 gap={["10px", "10px", "20px", "20px", "30px"]}
               >
-                <TicketCard />
+                 <Box
+                  as="button"
+                  onClick={() => {
+                    onOpen(), setName("TicketCard");
+                  }}
+                >
+                  <TicketCard />
+                </Box>
+        
               </HStack>
             </AccordionPanel>
           </AccordionItem>
         </Accordion>
       </HStack>
+
+      <Modal isOpen={isOpen} onClose={onClose} size={"4xl"}>
+        <ModalOverlay />
+        <ModalContent bgColor={"#011627"}>
+          <ModalBody>
+            <>
+              <Box p={5} rounded={"lg"} color={"white"} w={"100%"} h={"100%"}>
+                <HStack justify={"right"} w="100%" h="100%" align="center">
+                  {" "}
+                </HStack>
+
+                <pre>
+                  <code className="language-html">
+                    <CodePerCopy name={name} />
+                  </code>
+                </pre>
+              </Box>
+            </>
+          </ModalBody>
+        </ModalContent>
+      </Modal>
     </>
   );
 };

@@ -111,24 +111,7 @@ const BasicLogin = () => {
                 <FaGoogle color="white" size={"20px"} />
               </Button>
               {/* allowed btn to be an anchor */}
-              <Button
-                as="a"
-                colorScheme="gray"
-                w={"20%"}
-                href="https://github.com/AdminForIinRange"
-                target="_blank"
-              >
-                <FaGithub color="black" size={"20px"} />
-              </Button>
-              <Button
-                as="a"
-                colorScheme="blue"
-                w={"20%"}
-                target="_blank"
-                href="https://www.linkedin.com/in/anjesh-bhattarai/"
-              >
-                <FaLinkedin color="white" size={"20px"} />
-              </Button>
+             
             </HStack>
           </Box>
         </VStack>
