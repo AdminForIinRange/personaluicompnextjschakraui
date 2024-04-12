@@ -75,7 +75,14 @@ const Card = () => {
                 gap={["10px", "10px", "20px", "20px", "30px"]}
               >
                 <Box
-                  as="button"
+                 transition="transform, 0.3s ease-in-out"
+                cursor={"pointer"}
+                _hover={
+                  {
+            transform: "scale(1.05)",
+                  }
+                }
+       
                   onClick={() => {
                     onOpen(), setName("SimpleCard");
                   }}
@@ -84,7 +91,14 @@ const Card = () => {
                 </Box>
 
                 <Box
-                  as="button"
+                transition="transform, 0.3s ease-in-out"
+                cursor={"pointer"}
+                _hover={
+                  {
+            transform: "scale(1.05)",
+                  }
+                }
+       
                   onClick={() => {
                     onOpen(), setName("WideSimpleCard");
                   }}
@@ -93,7 +107,14 @@ const Card = () => {
                 </Box>
 
                 <Box
-                  as="button"
+                transition="transform, 0.3s ease-in-out"
+                cursor={"pointer"}
+                _hover={
+                  {
+            transform: "scale(1.05)",
+                  }
+                }
+       
                   onClick={() => {
                     onOpen(), setName("ImageSimpleCard");
                   }}
@@ -128,7 +149,14 @@ const Card = () => {
                 gap={["10px", "10px", "20px", "20px", "30px"]}
               >
                 <Box
-                  as="button"
+                transition="transform, 0.3s ease-in-out"
+                cursor={"pointer"}
+                _hover={
+                  {
+            transform: "scale(1.05)",
+                  }
+                }
+       
                   onClick={() => {
                     onOpen(), setName("CollageCard");
                   }}
@@ -137,7 +165,14 @@ const Card = () => {
                 </Box>
 
                 <Box
-                  as="button"
+        transition="transform, 0.3s ease-in-out"
+        cursor={"pointer"}
+        _hover={
+          {
+    transform: "scale(1.05)",
+          }
+        }
+
                   onClick={() => {
                     onOpen(), setName("HrzonCard");
                   }}
@@ -172,7 +207,14 @@ const Card = () => {
                 gap={["10px", "10px", "20px", "20px", "30px"]}
               >
                  <Box
-                  as="button"
+               transition="transform, 0.3s ease-in-out"
+               cursor={"pointer"}
+               _hover={
+                 {
+           transform: "scale(1.05)",
+                 }
+               }
+      
                   onClick={() => {
                     onOpen(), setName("TicketCard");
                   }}
