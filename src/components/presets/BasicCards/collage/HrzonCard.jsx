@@ -27,11 +27,11 @@ const CollageCard = () => {
     <>
       {" "}
       <Box
-        w={"650px"}
-        h={"310px"}
+         w={["360px", "360px", "450px", "550px", "650px"]}
+          h={["200px", "200px", "250px", "290px", "310px"]}
         border={"1.8px solid #B5B5B5"}
         rounded={"xl"}
-        p={"4"}
+        p={["2", "2", "2", "3", "4"]}
       >
         <HStack w={"in"} h={"100%"} align={"left"} px={2}>
           <HStack justify={"left"} align={"start"} w={"100%"} h={"100%"}>

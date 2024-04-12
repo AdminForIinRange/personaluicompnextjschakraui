@@ -6,16 +6,16 @@ const TicketCard = () => {
     <>
       {" "}
       <Box
-        w={"415px"}
-        h={"295px"}
+         w={["260px", "260px", "260px", "280px", "350px"]}
+         h={["260px", "260px", "260px", "260px", "310px"]}
         border={"1.8px solid #B5B5B5"}
         rounded={"xl"}
       >
         <VStack justify={"left"} align={"inherit"} w={"100%"} h={"100%"}>
-          <HStack w={"100%"} p={"4"}>
+          <HStack w={"100%"} p={["2", "2", "2", "3", "4"]}>
             <Text
               align={"center"}
-              fontSize={"23px"}
+              fontSize={["22px", "22px", "28px", "28px", "32px"]}
               fontWeight={"700"}
               textAlign={"left"}
             >
@@ -30,7 +30,7 @@ const TicketCard = () => {
               <Text
                 fontFamily={"sans-serif"}
                 align={"right"}
-                fontSize={"12px"}
+                fontSize={["12px", "12px", "12px", "12px", "16px"]}
                 textAlign={"right"}
               >
                 01/01/2024
@@ -43,7 +43,7 @@ const TicketCard = () => {
           <VStack w={"100%"} py={"8px"} px={"4"}>
             <Text
               align={"center"}
-              fontSize={"18px"}
+              fontSize={["12px", "12px", "12px", "12px", "16px"]}
               fontWeight={"500"}
               textAlign={"left"}
             >
@@ -57,6 +57,7 @@ const TicketCard = () => {
               align={"left"}
               gap={"12px"}
               mt={"5px"}
+              fontSize={["12px", "12px", "12px", "12px", "16px"]}
             >
               <Badge p={"5px"} borderRadius={"5px"} colorScheme="green">
                 IT Support

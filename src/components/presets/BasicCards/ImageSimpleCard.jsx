@@ -20,11 +20,11 @@ const ImageSimpleCard = () => {
     <>
       {" "}
       <Box
-        w={"650px"}
-        h={"310px"}
+      w={["360px", "360px", "450px", "550px", "650px"]}
+      h={["250px", "250px", "250px", "290px", "310px"]}
         border={"1.8px solid #B5B5B5"}
         rounded={"xl"}
-        p={"4"}
+        p={["2", "2", "2", "3", "4"]}
       >
         <HStack justify={"left"} align={"start"} w={"100%"} h={"100%"}>
           <HStack w={"100%"} h={"100%"}>
@@ -44,7 +44,7 @@ const ImageSimpleCard = () => {
           <VStack w={"100%"} h={"100%"} align={"left"} px={2}>
             <Text
               align={"center"}
-              fontSize={"24px"}
+              fontSize={["22px", "22px", "28px", "28px", "32px"]}
               fontWeight={"700"}
               textAlign={"left"}
             >
@@ -52,7 +52,7 @@ const ImageSimpleCard = () => {
             </Text>
             <Text
               align={"center"}
-              fontSize={"16px"}
+              fontSize={["10px", "10px", "12px", "12px", "16px"]}
               fontWeight={"500"}
               textAlign={"left"}
             >
@@ -74,7 +74,7 @@ const ImageSimpleCard = () => {
               }}
             >
               <HStack align={"center"} mr={"5px"}>
-                <Text fontSize={"12px"} as={"span"}>
+                <Text fontSize={["10px", "10px", "12px", "12px", "16px"]} as={"span"}>
                   Learn more
                 </Text>{" "}
                 <HiArrowLongRight fontSize={"30px"} />
