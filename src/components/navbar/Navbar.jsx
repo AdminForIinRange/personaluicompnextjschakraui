@@ -33,19 +33,24 @@ const Navbar = () => {
         fontFamily={"Raleway"}
         h={"100%"}
         w={"100%"}
-        justify={"center"}
+        justify={"space-between"}
         align={"center"}
         // boxShadow={"xl"}\
         mt={"15px"}
         px={7}
         gap={"20px"}
       >
-        {ToastExample()}
+
+
+       
         <Logo />
-        <Spacer />
+    
+
+      
         <HStack fontWeight={500}>
           {isTablet ? <MobileMenuLinks /> : <Links />}
         </HStack>
+
       </HStack>
     </>
   );

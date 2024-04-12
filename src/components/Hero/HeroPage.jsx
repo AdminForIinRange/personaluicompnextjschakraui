@@ -49,6 +49,32 @@ const HeroPage = () => {
         <HStack justify={"center"} align={"center"} mt={"50px"}>
           <HeroBtn />
         </HStack>
+
+        <Box
+          w={["80%", "70%", "50%", "30%", "30%"]}
+          h={"100%"}
+          bg={"gray.100"}
+          rounded={"xl"}
+          p={"4"}
+          shadow={"md"}
+        >
+          <Text
+            fontSize={"16px"}
+            fontWeight={700}
+            textAlign={"center"}
+            fontFamily={"Raleway"}
+          >
+            🔨 Please keep in mind We are stil under development
+          </Text>
+          <Text
+            fontSize={"16px"}
+            fontWeight={400}
+            textAlign={"center"}
+            fontFamily={"Raleway"}
+          >
+            Feel free to look around
+          </Text>
+        </Box>
       </VStack>
     </>
   );
