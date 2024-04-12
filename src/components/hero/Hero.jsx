@@ -19,7 +19,7 @@ import React from "react";
 
 import HeroBtn from "../button/HeroBtn";
 
-const Hero = () => {
+const HeroPage = () => {
   return (
     <>
       <VStack justify={"center"} align={"center"} p={"20px"}>
@@ -54,4 +54,4 @@ const Hero = () => {
   );
 };
 
-export default Hero;
+export default HeroPage;
