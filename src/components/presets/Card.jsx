@@ -11,6 +11,11 @@ import {
   useDisclosure,
   ModalBody,
   ModalCloseButton,
+  Accordion,
+  AccordionItem,
+  AccordionButton,
+  AccordionPanel,
+  AccordionIcon,
   Box,
   VStack,
 } from "@chakra-ui/react";
@@ -28,106 +33,110 @@ const Card = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <>
-      <VStack px={2} mt={"50px"}>
-        <VStack justify={"left"} w={"100%"} h={"100%"} align={"left"}>
-          <Text fontSize={"50"} fontWeight={"600"}>
+      <HStack
+        h={"100%"}
+        w={"100%"}
+        justify={["center", "center", "left", "left", "left"]}
+        align={"center"}
+      >
+        <Accordion defaultIndex={[0]} allowMultiple w={"95%"} h={"100%"}>
+          <Text
+            fontSize={"50"}
+            fontWeight={"600"}
+            align={["center", "center", "left", "left", "left"]}
+          >
             Card
           </Text>
-          <HStack
-            justify={"left"}
-            w={"100%"}
-            h={"100%"}
-            mt={"20px"}
-            align={"left"}
-          >
-            <Text fontSize={"30"} fontWeight={"400"}>
-              Basic
-            </Text>
-          </HStack>
-        </VStack>
 
-        <HStack
-          mt={"20px"}
-          justify={"left"}
-          w={"100%"}
-          h={"100%"}
-          
-          flexWrap={"wrap"}
-          align={"left"}
-        >
-          <SimpleCard />
-          <WideSimpleCard />
-          <ImageSimpleCard />
-        </HStack>
+          <AccordionItem>
+            <h2>
+              <AccordionButton>
+                <Box as="span" flex="1" textAlign="left">
+                  <Text fontSize={"30"} fontWeight={"400"}>
+                    Basic
+                  </Text>
+                </Box>
+                <AccordionIcon />
+              </AccordionButton>
+            </h2>
+            <AccordionPanel pb={4}>
+              <HStack
+                ml={["0px", "0px", "20px", "20px", "20px"]}
+                mb={["0px", "0px", "20px", "20px", "20px"]}
+                flexWrap={"wrap"}
+                mt={"20px"}
+                align={"start"}
+                justify={["left", "left", "left", "left", "left"]}
+                h={"100%"}
+                w={"100%"}
+                gap={["10px", "10px", "20px", "20px", "30px"]}
+              >
+                <SimpleCard />
+                <WideSimpleCard />
+                <ImageSimpleCard />
+              </HStack>
+            </AccordionPanel>
+          </AccordionItem>
 
-        <HStack
-          justify={"left"}
-          w={"100%"}
-          h={"100%"}
-          mt={"20px"}
-          align={"left"}
-        >
-          <Text fontSize={"30"} fontWeight={"400"}>
-            Collage
-          </Text>
-        </HStack>
+          <AccordionItem>
+            <h2>
+              <AccordionButton>
+                <Box as="span" flex="1" textAlign="left">
+                  <Text fontSize={"30"} fontWeight={"400"}>
+                    Collage
+                  </Text>
+                </Box>
+                <AccordionIcon />
+              </AccordionButton>
+            </h2>
+            <AccordionPanel pb={4}>
+              <HStack
+                ml={["0px", "0px", "20px", "20px", "20px"]}
+                mb={["0px", "0px", "20px", "20px", "20px"]}
+                flexWrap={"wrap"}
+                mt={"20px"}
+                align={"start"}
+                justify={["left", "left", "left", "left", "left"]}
+                h={"100%"}
+                w={"100%"}
+                gap={["10px", "10px", "20px", "20px", "30px"]}
+              >
+                <CollageCard />
 
-        <HStack
-          mt={"20px"}
-          justify={"left"}
-          w={"100%"}
-          h={"100%"}
-          gap={"15px"}
-          flexWrap={"wrap"}
-          align={"left"}
-        >
-          <CollageCard />
-          <Box as={"div"} onClick={onOpen}>
-            {" "}
-            <HrzonCard />
-          </Box>
-        </HStack>
+                <HrzonCard />
+              </HStack>
+            </AccordionPanel>
+          </AccordionItem>
 
-        <HStack
-          justify={"left"}
-          w={"100%"}
-          h={"100%"}
-          mt={"20px"}
-          align={"left"}
-        >
-          <Text fontSize={"30"} fontWeight={"400"}>
-            Work Place
-          </Text>
-        </HStack>
-
-        <HStack
-          mt={"20px"}
-          justify={"left"}
-          w={"100%"}
-          h={"100%"}
-          gap={"15px"}
-          flexWrap={"wrap"}
-          align={"left"}
-        >
-          <TicketCard />
-        </HStack>
-      </VStack>
-
-      <Modal isOpen={isOpen} onClose={onClose}>
-        <ModalOverlay />
-        <ModalContent>
-          <ModalHeader>Code</ModalHeader>
-          <ModalCloseButton />
-          <ModalBody></ModalBody>
-
-          <ModalFooter>
-            <Button colorScheme="blue" mr={3} onClick={onClose}>
-              Close
-            </Button>
-            <Button variant="ghost">Secondary Action</Button>
-          </ModalFooter>
-        </ModalContent>
-      </Modal>
+          <AccordionItem>
+            <h2>
+              <AccordionButton>
+                <Box as="span" flex="1" textAlign="left">
+                  <Text fontSize={"30"} fontWeight={"400"}>
+                    Workplace
+                  </Text>
+                </Box>
+                <AccordionIcon />
+              </AccordionButton>
+            </h2>
+            <AccordionPanel pb={4}>
+              <HStack
+                ml={["0px", "0px", "20px", "20px", "20px"]}
+                mb={["0px", "0px", "20px", "20px", "20px"]}
+                flexWrap={"wrap"}
+                mt={"20px"}
+                align={"start"}
+                justify={["left", "left", "left", "left", "left"]}
+                h={"100%"}
+                w={"100%"}
+                gap={["10px", "10px", "20px", "20px", "30px"]}
+              >
+                <TicketCard />
+              </HStack>
+            </AccordionPanel>
+          </AccordionItem>
+        </Accordion>
+      </HStack>
     </>
   );
 };
