@@ -1,7 +1,8 @@
 # Personal UI Components with Next.js and Chakra UI
 
-This project involved tackling complex features of Next.js 14, including app routing, rendering logic, animations, and preset behavioral logic, while adhering to programming principles such as DRY (Don't Repeat Yourself) and readability. It was built with a tech stack comprising Next.js 14, Chakra UI, Framer Motion, emotion, and sharp.
-
+This project presented challenges, I implemented advanced features of Next.js 14 like the app router, rendering logic, 
+animations, and preset behavioral patterns, all while adhering to programming principles such as DRY and readability, 
+anticipating potential contributors. It's built with Next.js 14, Chakra UI, Framer Motion, emotion, and sharp. 
 
 ### Links
 
