@@ -141,7 +141,7 @@ const PresetCardList = () => {
         justify={["center", "center", "left", "left", "left"]}
         align={"center"}
       >
-        <Accordion defaultIndex={[0]} allowMultiple w={"90%"} h={"100%"}>
+        <Accordion  w={"90%"} h={"100%"}  defaultIndex={[1]}    allowMultiple>
           <AccordionItem>
             <h2>
               <AccordionButton>
@@ -213,7 +213,7 @@ const PresetCardList = () => {
             </AccordionPanel>
           </AccordionItem>
 
-          <AccordionItem defaultIndex={[0]} allowMultiple>
+          <AccordionItem  >
             <h2>
               <AccordionButton>
                 <Box as="span" flex="1" textAlign="left">
