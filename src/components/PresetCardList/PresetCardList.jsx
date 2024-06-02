@@ -213,7 +213,7 @@ const PresetCardList = () => {
             </AccordionPanel>
           </AccordionItem>
 
-          <AccordionItem>
+          <AccordionItem defaultIndex={[0]} allowMultiple>
             <h2>
               <AccordionButton>
                 <Box as="span" flex="1" textAlign="left">
